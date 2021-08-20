@@ -1,21 +1,18 @@
 <header class="header fixed">
     <div class="containerr">
         <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-expand-md
-                navbar-light">
+            <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light">
                 <a class="navbar-brand" href="#">
                     <div class="img-logo">
                         <p class="text-center">
-                            <img src="{{ asset('images/logo.png') }}" alt="fail
-                                image" />
+                            <img src="{{ asset('images/logo.png') }}" alt="failimage" />
                         </p>
                     </div>
                 </a>
                 <button class="navbar-toggler btn-menu" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false">
                     <span class="navbar-toggler-icon" onclick="showheader()" id="showheader"></span>
-                    <span class="my-1
-                        mx-1 close fa
+                    <span class="my-1 mx-1 close fa
                         fa-times" onclick="hideheader()" id="hideheader"></span>
                 </button>
                 <div class="collapse navbar-collapse navbar-menu-div" id="navbarNav">
@@ -26,8 +23,7 @@
                         </li>
                         <li class="nav-item item-menu">
                             <a class="nav-link text-center" aria-selected="false" data-toggle="pill" role="tab" href="#"
-                                onclick="hidenav()">ALL
-                                COURSES</a>
+                                onclick="hidenav()">ALL COURSES</a>
                         </li>
                         <li class="nav-item item-menu list-courses">
                             <a class="nav-link text-center" aria-selected="false" data-toggle="pill" role="tab" href="#"
@@ -35,8 +31,7 @@
                         </li>
                         <li class="nav-item item-menu list-courses">
                             <a class="nav-link text-center" aria-selected="false" data-toggle="pill" role="tab" href="#"
-                                onclick="hidenav()">LESSON
-                                DETAIL</a>
+                                onclick="hidenav()">LESSON DETAIL</a>
                         </li>
                         @if (!Auth::check())
                             <li class="nav-item item-menu">
@@ -61,3 +56,5 @@
         </div>
     </div>
 </header>
+
+@include('layouts.modal')

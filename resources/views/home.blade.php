@@ -27,6 +27,7 @@
             </div>
         </div>
     </div>
+
     <div class="fix-fixed">&nbsp;</div>
 
     <div class="banner-hapo">
@@ -50,8 +51,7 @@
     <div class="tutorial-hapo">
         <div class="container-card">
             <div class="row">
-                <div class="col-xl-4 col-md-4 d-flex
-                                                            justify-content-center">
+                <div class="col-xl-4 col-md-4 d-flex justify-content-center">
                     <div class="card-hapo">
                         <img src="{{ asset('images/hjs.PNG') }}" class="card-img-top" alt="hjs" />
                         <div class="card-body">
@@ -72,8 +72,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-4 d-flex
-                                                            justify-content-center">
+                <div class="col-xl-4 col-md-4 d-flex justify-content-center">
                     <div class="card-hapo">
                         <img src="{{ asset('images/laravel.PNG') }}" class="card-img-top" alt="laravel" />
                         <div class="card-body">
@@ -93,8 +92,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-4 d-flex
-                                                            justify-content-center">
+                <div class="col-xl-4 col-md-4 d-flex justify-content-center">
                     <div class="card-hapo">
                         <img src="{{ asset('images/php.PNG') }}" class="card-img-top" alt="php" />
                         <div class="card-body">
@@ -119,17 +117,14 @@
             <p class="text-center courses">Other courses</p>
             <div class="container-card">
                 <div class="row">
-                    <div class="col-xl-4 col-md-4 d-flex
-                                                                justify-content-center">
+                    <div class="col-xl-4 col-md-4 d-flex justify-content-center">
                         <div class="card-hapo">
                             <img src="{{ asset('images/css.PNG') }}" class="card-img-top" alt="css" />
                             <div class="card-body">
-                                <p class="card-title text-center
-                                                                            text-center">
+                                <p class="card-title text-center">
                                     CSS Tutorial
                                 </p>
-                                <p class="card-text text-center
-                                                                            text-title-frist">
+                                <p class="card-text text-center text-title-frist">
                                     I knew hardly anything about HTML, JS,
                                     and CSS before
                                     entering New Media,...
@@ -141,16 +136,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-4 d-flex
-                                                                justify-content-center">
+                    <div class="col-xl-4 col-md-4 d-flex justify-content-center">
                         <div class="card-hapo">
                             <img src="{{ asset('images/rails.PNG') }}" class="card-img-top" alt="rails" />
                             <div class="card-body">
                                 <p class="card-title text-center">
                                     Ruby on rails <span>Tutorial</span>
                                 </p>
-                                <p class="card-text text-center
-                                                                            text-title-frist">
+                                <p class="card-text text-center text-title-frist">
                                     I knew hardly anything about HTML, JS,
                                     and CSS before
                                     entering New Media,...
@@ -162,15 +155,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-4 d-flex
-                                                                justify-content-center">
+                    <div class="col-xl-4 col-md-4 d-flex justify-content-center">
                         <div class="card-hapo">
                             <img src="{{ asset('images/java.PNG') }}" class="card-img-top" alt="java" />
                             <div class="card-body">
                                 <p class="card-title text-center">Java
                                     Tutorial</p>
-                                <p class="card-text text-center
-                                                                            text-title-frist">
+                                <p class="card-text text-center text-title-frist">
                                     I knew hardly anything about HTML, JS,
                                     and CSS before
                                     entering New Media,...
@@ -225,8 +216,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="laptop-phone"><img src="{{ asset('images/lap-ipone.png') }}" alt="laptop-ipone">
-                </div>
+                <div class="laptop-phone"><img src="{{ asset('images/lap-ipone.png') }}" alt="laptop-ipone"></div>
             </div>
         </div>
     </div>
