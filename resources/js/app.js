@@ -5,6 +5,12 @@
  */
 
 require('./bootstrap');
+require('./jquery');
+require('./slick');
+require('./slicks');
+window.$ = window.jQuery = $;
+import $ from "jquery";
+window.Vue = require('vue').default;
 
 /**
  * The following block of code may be used to automatically register your

@@ -39,4 +39,25 @@ class LoginController extends Controller
      *
      * @return void
      */
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
+
+    public function login(LoginRequest $request)
+    {
+        $credentials = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+
+        $isLogined = Auth::attempt($credentials);
+
+        if (!$isLogined) {
+            $error = "Email or password you entered is incorrect";
+            return redirect()->back()->withErrors($error);
+        } else {
+            return redirect('/');
+        }
+    }
 }
