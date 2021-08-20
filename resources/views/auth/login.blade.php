@@ -1,25 +1,20 @@
 <div id="tabs-login"><br>
     <form class="login" method="POST" action="{{ route('login') }}">
         @csrf
-
         <div class="input">
             <label>Username:</label><br>
             <input type="email" name="email" class="@error('email') is-invalid @enderror"> <br>
         </div>
-
         @error('email')
             <div class=" alert-danger">{{ $message }}</div>
         @enderror
-
         <div class="input">
             <label>Password:</label><br>
             <input type="password" name="password" class="@error('password') is-invalid @enderror"><br>
         </div>
-
         @error('password')
             <div class=" alert-danger">{{ $message }}</div>
         @enderror
-
         <div class="login-check">
             <input type="checkbox" class="form-check-input remember-me-login-checkbox" id="remember-me-login-checkbox">
             <label class="form-check-label remember-me-label rememberme"
