@@ -224,10 +224,8 @@
 <div class="feedback">
     <p class="feedback-title">Feedback</p>
     <p class="feedback-info text-center">What other students turned
-        professionals have to say about us after learning with
-        us
-        and reaching their
-        goals</p>
+        professionals have to say about us after learning with us and reaching their goals
+    </p>
     <div class="fellback-all">
         <div class="feelbacks slick">
             <div class="feelback-card">
