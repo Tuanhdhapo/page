@@ -23,9 +23,16 @@
         </div>
         <div>
             <p class="text-center">
-                <button type="submit" class="btn btn-primary login-hapo">LOGIN</button>
+                <button type="submit" class="btn btn-primary login-hapo">{{ __('Login') }}</button>
             </p>
         </div>
+        @if(count($errors) > 0)
+        @foreach( $errors->all() as $error )
+        <span class="err-login" role="alert">
+            <strong>{{ $error }}</strong>
+        </span>
+        @endforeach
+        @endif
         <div class="line-login">
             <span class="login-with">Login with</span>
         </div>
