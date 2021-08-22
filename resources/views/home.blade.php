@@ -14,7 +14,7 @@
                 <img src="{{ asset('images/cu.png') }}">
                 <p>HapoLearn xin chào bạn.<br>
                     Bạn có cần chúng tôi hỗ trợ gì không? </p>
-            </div>
+            </div>draggable
             <div class="login-mess">
                 <img src="{{ asset('images/iconmess.png') }}">
                 <a href=""> <span> Đăng nhập vào Messenger</span></a>

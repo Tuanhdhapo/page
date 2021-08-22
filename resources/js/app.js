@@ -5,11 +5,10 @@
  */
 
 require('./bootstrap');
-require('./jquery');
-require('./slick');
 require('./slicks');
-window.$ = window.jQuery = $;
+require('popper.js');
 import $ from "jquery";
+window.$ = window.jQuery = $;
 window.Vue = require('vue').default;
 
 /**
