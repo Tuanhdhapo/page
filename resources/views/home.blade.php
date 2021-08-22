@@ -34,10 +34,7 @@
     <div class="banner">
         <div class="info-banner">
             <p>Learn Anytime, Anywhere</p>
-            <p>
-                at HapoLearn<span> <img src="{{ asset('images/cu.PNG') }}" />
-                </span>!
-            </p>
+            <p> at HapoLearn<span> <img src="{{ asset('images/cu.PNG') }}" /> !</p>
             <p>
                 Interactive lessons, "on-the-go"<br />
                 practice, peer support.
@@ -66,8 +63,7 @@
                             in regards to web development.
                         </p>
                         <div class="text-center take-course">
-                            <a href="#" class="btn btn-primary">Take
-                                This Course</a>
+                            <a href="#" class="btn btn-primary">Take This Course</a>
                         </div>
                     </div>
                 </div>
@@ -76,8 +72,7 @@
                 <div class="card-hapo">
                     <img src="{{ asset('images/laravel.PNG') }}" class="card-img-top" alt="laravel" />
                     <div class="card-body">
-                        <p class="card-title text-center">LARAVEL
-                            Tutorial</p>
+                        <p class="card-title text-center">LARAVEL Tutorial</p>
                         <p class="card-text text-center text-title">
                             I knew hardly anything about HTML, JS, and
                             CSS before entering
@@ -86,8 +81,7 @@
                             in regards to web development.
                         </p>
                         <div class="text-center take-course">
-                            <a href="#" class="btn btn-primary">Take
-                                This Course</a>
+                            <a href="#" class="btn btn-primary">Take This Course</a>
                         </div>
                     </div>
                 </div>
@@ -105,8 +99,7 @@
                             in regards to web development.
                         </p>
                         <div class="text-center take-course">
-                            <a href="#" class="btn btn-primary">Take
-                                This Course</a>
+                            <a href="#" class="btn btn-primary">Take This Course</a>
                         </div>
                     </div>
                 </div>
@@ -121,17 +114,14 @@
                     <div class="card-hapo">
                         <img src="{{ asset('images/css.PNG') }}" class="card-img-top" alt="css" />
                         <div class="card-body">
-                            <p class="card-title text-center">
-                                CSS Tutorial
+                            <p class="card-title text-center">CSS Tutorial
                             </p>
                             <p class="card-text text-center text-title-frist">
-                                I knew hardly anything about HTML, JS,
-                                and CSS before
+                                I knew hardly anything about HTML, JS,and CSS before
                                 entering New Media,...
                             </p>
                             <div class="text-center take-course">
-                                <a href="#" class="btn btn-primary">Take
-                                    This Course</a>
+                                <a href="#" class="btn btn-primary">Take This Course</a>
                             </div>
                         </div>
                     </div>
@@ -144,13 +134,11 @@
                                 Ruby on rails <span>Tutorial</span>
                             </p>
                             <p class="card-text text-center text-title-frist">
-                                I knew hardly anything about HTML, JS,
-                                and CSS before
+                                I knew hardly anything about HTML, JS,and CSS before
                                 entering New Media,...
                             </p>
                             <div class="text-center take-course">
-                                <a href="#" class="btn btn-primary">Take
-                                    This Course</a>
+                                <a href="#" class="btn btn-primary">Take This Course</a>
                             </div>
                         </div>
                     </div>
@@ -159,16 +147,13 @@
                     <div class="card-hapo">
                         <img src="{{ asset('images/java.PNG') }}" class="card-img-top" alt="java" />
                         <div class="card-body">
-                            <p class="card-title text-center">Java
-                                Tutorial</p>
+                            <p class="card-title text-center">Java Tutorial</p>
                             <p class="card-text text-center text-title-frist">
-                                I knew hardly anything about HTML, JS,
-                                and CSS before
+                                I knew hardly anything about HTML, JS,and CSS before
                                 entering New Media,...
                             </p>
                             <div class="text-center take-course">
-                                <a href="#" class="btn btn-primary">Take
-                                    This Course</a>
+                                <a href="#" class="btn btn-primary">Take This Course</a>
                             </div>
                         </div>
                     </div>
@@ -233,8 +218,7 @@
                     <div class="feelback-border">
                         <p>“A wonderful course on how to start. Eddie
                             beautifully conveys all essentials of a
-                            becoming
-                            a good Angular developer. Very glad to have
+                            becoming a good Angular developer. Very glad to have
                             taken this course. Thank you Eddie Bryan.”</p>
                     </div>
                     <div class="triangle"></div>
@@ -261,8 +245,7 @@
                     <div class="feelback-border">
                         <p>“A wonderful course on how to start. Eddie
                             beautifully conveys all essentials of a
-                            becoming
-                            a good Angular developer. Very glad to have
+                            becoming a good Angular developer. Very glad to have
                             taken this course. Thank you Eddie Bryan.”</p>
                     </div>
                     <div class="triangle"></div>
@@ -289,8 +272,7 @@
                     <div class="feelback-border">
                         <p>“A wonderful course on how to start. Eddie
                             beautifully conveys all essentials of a
-                            becoming
-                            a good Angular developer. Very glad to have
+                            becoming a good Angular developer. Very glad to have
                             taken this course. Thank you Eddie Bryan.”</p>
                     </div>
                     <div class="triangle"></div>
