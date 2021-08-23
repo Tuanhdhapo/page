@@ -9,10 +9,10 @@
                             src="{{ asset('images/close.png') }}" alt="close">
                         <ul>
                             <li class="login"><a href="#tabs-login">
-                                    <p class="active-tab" id="login-change" onclick="login()">LOGIN</p>
+                                    <p class="active-tab" id="login-change">LOGIN</p>
                                 </a></li>
                             <li class="register"><a href="#tabs-register">
-                                    <p id="register-change" onclick="register()">REGISTER</p>
+                                    <p id="register-change">REGISTER</p>
                                 </a></li>
                         </ul>
                         <div class="container tabs-container">
