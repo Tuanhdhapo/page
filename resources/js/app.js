@@ -7,6 +7,5 @@ require('popper.js');
 require('./main');
 
 $(function () {
-  // INIT JS DONE
-  console.log("AAAAA::: ", $('header'))
+    // INIT JS DONE
 });
