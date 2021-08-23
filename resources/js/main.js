@@ -16,7 +16,10 @@ $(function () {
 
   $('#show').on('click', function () {
     $("#hide").css({ "display": "block" })
-    $("#show").css({ "display": "none" })
+  });
+
+  $('#close-mess').on('click', function () {
+    $("#hide").css({ "display": "none" })
   });
 
   $('#showheader').on('click', function () {

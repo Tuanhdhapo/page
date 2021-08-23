@@ -3,25 +3,24 @@
 @section('content')
 
 <div id="draggable" class="ui-widget-content mess-facebook">
-    <img class="messfb" src="{{ asset('images/message.png') }}" onclick="show()">
+    <img id="show" class="messfb" src="{{ asset('images/message.png') }}">
     <div id="hide" class="hide">
         <div class="frame-mess">
             <div class="frame-hapo">
                 <p>HapoLearn</p>
-                <img onclick="hide()" src="{{ asset('images/close-mess.png') }}">
+                <img id="close-mess" src="{{ asset('images/close-mess.png') }}">
             </div>
             <div class="hello">
                 <img src="{{ asset('images/cu.png') }}">
                 <p>HapoLearn xin chào bạn.<br>
                     Bạn có cần chúng tôi hỗ trợ gì không? </p>
-            </div>draggable
+            </div>
             <div class="login-mess">
                 <img src="{{ asset('images/iconmess.png') }}">
                 <a href=""> <span> Đăng nhập vào Messenger</span></a>
             </div>
             <div class="chat-hapo">
-                <a href="">
-                    <p>Chat với HapoLearn trong Messenger</p>
+                <a href=""><p>Chat với HapoLearn trong Messenger</p>
                 </a>
             </div>
         </div>
