@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
   $('.slick').slick({
     infinite: true,
     slidesToShow: 2,
@@ -32,14 +32,9 @@ $(document).ready(function () {
     $("#navbarNav").css({ "display": "none" })
   });
 
+  $("#draggable").draggable();
 
-  $(function () {
-    $("#draggable").draggable();
-  });
-
-  $(function () {
-    $("#tabs").tabs();
-  });
+  $("#tabs").tabs();
 
   $('#register-change').on('click', function () {
     if ($('#login-change').hasClass('active-tab')) {
