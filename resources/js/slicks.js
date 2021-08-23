@@ -3,7 +3,7 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
-    prevArrow: '<i class="npfas fa-angle-left prev"></i>',
+    prevArrow: '<i class="fas fa-angle-left prev"></i>',
     nextArrow: '<i class="fas fa-angle-right next"></i>',
     responsive: [{
       breakpoint: 995,

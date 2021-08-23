@@ -1,6 +1,6 @@
 <header class="header fixed">
     <div class="containerr">
-        <div class="row">
+       
             <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light">
                 <a class="navbar-brand" href="#">
                     <div class="img-logo">
@@ -53,7 +53,7 @@
                     </ul>
                 </div>
             </nav>
-        </div>
+        
     </div>
 </header>
 

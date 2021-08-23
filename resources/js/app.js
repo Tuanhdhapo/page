@@ -5,8 +5,9 @@
  */
 
 require('./bootstrap');
-require('./slicks');
+require('slick-carousel');
 require('popper.js');
+require('./slicks');
 import $ from "jquery";
 window.$ = window.jQuery = $;
 window.Vue = require('vue').default;
