@@ -1,0 +1,1707 @@
+body {
+  padding: 0px;
+  margin: 0px;
+
+  a:hover {
+    color: $buton-hover;
+  }
+}
+
+@media only screen and (max-width: 1950px) {
+  .header {
+    padding: 5px;
+
+    .containerr {
+      width: 85%;
+      margin: auto;
+    }
+
+    .list-courses {
+      display: none;
+    }
+    .navbar {
+      padding: 0px;
+
+      img {
+        width: 320px;
+      }
+
+      .navbar-menu-div {
+        justify-content: flex-end;
+      }
+
+      .nav-link {
+        font-weight: 700;
+        font-family: san;
+        font-size: 14px;
+        color: $footer-bg;
+        width: 132px;
+        margin-left: 10px;
+        padding: 10px;
+        margin-top: -9px;
+      }
+      .active {
+        background-color: $color-blue;
+        color: $color-button !important;
+        border-radius: 20px;
+        padding: 8px;
+      }
+
+      .nav-link:hover {
+        background-color: $color-blue;
+        border-radius: 20px;
+        color: $color-button !important;
+        padding: 8px;
+      }
+    }
+  }
+
+  .fix-fixed {
+    margin-top: 0px;
+  }
+
+  .alert-danger {
+    margin-top: -20px;
+    background-color: $color-button;
+  }
+
+  .banner {
+    background-image: url("../assets/images/banner.png");
+    background-repeat: no-repeat;
+    background-size: 100% 655px;
+    margin-top: -30px;
+
+    .info-banner {
+      padding: 50px;
+      padding-left: 7%;
+
+      p:nth-child(1) {
+        margin-top: 140px;
+        font-size: 50px;
+        font-family: utm;
+        text-shadow: 5px;
+        color: $other-courses;
+      }
+
+      p:nth-child(2) {
+        font-size: 50px;
+        font-family: utm;
+        -webkit-text-stroke-width: 2px;
+        font-weight: bold;
+        margin-top: -30px;
+        color: $other-courses;
+        line-height: 60px;
+      }
+
+      img {
+        width: 45px;
+      }
+
+      p:nth-child(3) {
+        font-size: 16px;
+        font-family: utm;
+      }
+
+      button {
+        padding: 7px;
+        font-family: utm;
+        font-size: 28px;
+        border: 0;
+        background-color: $color-blue;
+        border-radius: 35px;
+        width: 350px;
+        box-shadow: 0px -2px 4px 0px $shadow-hapo;
+        margin-bottom: 100px;
+        color: $color-button;
+        font-weight: 700;
+        padding-bottom: 9px;
+      }
+      button:hover {
+        color: $buton-hover;
+      }
+    }
+  }
+
+  .bg-banner {
+    height: 200px;
+    background-image: linear-gradient(to top, $bg-banner, $color-button);
+  }
+  .container-card {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 95%;
+  }
+
+  .tutorial-hapo {
+    margin-top: -100px;
+
+    .text-title {
+      font-weight: 700;
+      font-size: 14px;
+      font-family: utm;
+      height: 90px;
+      line-height: 20px;
+      color: #505353;
+    }
+
+    .text-title-frist {
+      height: 50px;
+      font-weight: 700;
+      font-size: 14px;
+      font-family: utm;
+      line-height: 20px;
+      color: #505353;
+    }
+
+    .other-courses {
+      margin-top: 100px;
+
+      .courses {
+        font-size: 80px;
+        font-weight: 700;
+        color: $other-courses;
+        font-family: utm;
+        border-bottom: 5px solid $color-blue;
+        width: 510px;
+        margin: auto;
+        margin-bottom: 50px;
+        text-shadow: 1px 1px $other-courses;
+      }
+    }
+
+    .view-courses p {
+      font-size: 40px;
+      color: $view-courses;
+      margin-top: 60px;
+      margin-bottom: 120px;
+      font-weight: 700;
+      font-family: utm;
+      text-shadow: 1px 1px $view-courses;
+      height: 60px;
+    }
+
+    .view-courses p:hover {
+      font-size: 60px;
+    }
+
+    .card-hapo {
+      width: 340px;
+      margin: 5px;
+      img {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        box-shadow: 1px 1px 12px $shadow-hapo;
+        height: 215px;
+      }
+
+      a {
+        background-color: $color-blue;
+        font-size: 18px;
+        width: 200px;
+        border-radius: 35px;
+        border: 0;
+        box-shadow: 1px -2px $shadow-hapo;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-family: utm;
+        padding-bottom: 12px;
+      }
+
+      a:hover {
+        color: $buton-hover;
+      }
+
+      .card-body p:nth-child(1) {
+        font-size: 30px;
+        color: $color-blue;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 37px;
+        font-family: utm;
+        font-weight: 700;
+        height: 40px;
+      }
+    }
+
+    .card-body {
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+      box-shadow: 1px 1px 5px $shadow-hapo;
+      background-color: $color-button;
+    }
+  }
+
+  .why-hapo {
+    background-image: url("../assets/images/bg.png");
+    background-repeat: no-repeat;
+    height: 740px;
+    background-size: 100% 740px;
+
+    .laptop img {
+      margin-top: -260px;
+      width: 478px;
+    }
+
+    .laptop-phone img {
+      width: 650px;
+      margin-top: 60px;
+    }
+
+    .info-laptop {
+      display: flex;
+      margin-top: -300px;
+    }
+
+    .info-why {
+      float: right;
+      width: 50%;
+      margin-top: 180px;
+    }
+
+    p {
+      font-weight: 700;
+      font-family: utm;
+      color: $color-button;
+      font-size: 70px;
+      float: right;
+    }
+
+    .list-whyhapo {
+      color: $color-button;
+      line-height: 40px;
+
+      li {
+        float: right;
+      }
+
+      span {
+        font-size: 20px;
+        font-family: utm;
+        font-weight: normal;
+        letter-spacing: 1px;
+        line-height: 50px;
+      }
+    }
+  }
+
+  .feedback {
+    margin-top: 90px;
+
+    .fellback-all {
+      width: 85%;
+      margin: auto;
+    }
+
+    .triangle {
+      width: 100px;
+      height: 38px;
+      position: absolute;
+      margin-top: 25px;
+      overflow: hidden;
+      margin-left: -15px;
+    }
+
+    .triangle:after {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      background: #ffffff;
+      transform: rotate(45deg);
+      top: -25px;
+      left: 25px;
+      border: 0.5px solid rgba(0, 0, 0, 0.25);
+      box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
+    }
+    .feedback-title {
+      font-size: 80px;
+      font-weight: 700;
+      border-bottom: 5px solid $color-blue;
+      margin: auto;
+      width: 350px;
+      font-family: utm;
+      color: $other-courses;
+      text-shadow: 1px 1px $other-courses;
+    }
+
+    .feedback-info {
+      font-size: 25px;
+      margin-top: 20px;
+      font-family: utm;
+      width: 52%;
+      margin: auto;
+      padding-top: 25px;
+      position: relative;
+    }
+  }
+
+  .feelback-card {
+    margin-top: 50px;
+    margin-bottom: 70px;
+
+    .feelback-info {
+      margin: auto;
+      width: 95%;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0px 0px 10px $boder-slick;
+      font-size: 16px;
+      font-family: utm;
+    }
+
+    .feelback-border {
+      border-left: 2px solid $boder-slick;
+      margin-left: 5px;
+      padding: 10px;
+    }
+
+    .user {
+      margin: 40px 0px 0px 60px;
+      display: flex;
+
+      .image-user {
+        width: 80px;
+
+        img {
+          height: 70px;
+        }
+      }
+    }
+
+    .user-info {
+      .name-user {
+        font-size: 20px;
+        font-family: utm;
+        font-weight: 700;
+        color: $other-courses;
+        text-shadow: 1px 1px $other-courses;
+      }
+      .name-courses {
+        font-size: 16px;
+        margin-top: -20px;
+        font-weight: 700;
+        font-family: utm;
+      }
+
+      .star {
+        font-size: 14px;
+        margin-top: -16px;
+        color: #f2c54f;
+      }
+    }
+  }
+
+  .prev {
+    padding-top: 2px;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    font-size: 19px;
+    position: absolute;
+    top: 30%;
+    left: 0.1%;
+    border: 0.5px solid #c4c4c4;
+    background-color: $color-button;
+    text-align: center;
+    z-index: 1;
+    color: $next-color;
+  }
+
+  .next {
+    padding-top: 2px;
+    width: 25px;
+    height: 25px;
+    font-size: 19px;
+    border-radius: 100%;
+    background-color: $color-button;
+    position: absolute;
+    top: 30%;
+    right: 0.1%;
+    border: 0.5px solid #c4c4c4;
+    text-align: center;
+    color: $next-color;
+  }
+
+  .become-member {
+    background-image: url("../assets/images/become-member.png");
+    background-repeat: no-repeat;
+    background-size: 100% 500px;
+
+    .info-become {
+      padding: 120px;
+
+      p:nth-child(1) {
+        font-size: 60px;
+        font-weight: 700;
+        color: $color-button;
+        font-family: utm;
+        text-shadow: 1px 1px $color-button;
+        line-height: 73, 56px;
+      }
+
+      button {
+        font-size: 30px;
+        border: 0;
+        background-color: $color-button;
+        border-radius: 35px;
+        width: 400px;
+        box-shadow: 2px -2px 5px $shadow-hapo;
+        color: $color-blue;
+        font-weight: 700;
+        font-family: utm;
+        padding: 10px;
+        margin-bottom: 15px;
+        padding-bottom: 14px;
+      }
+
+      button:hover {
+        color: $buton-hover;
+      }
+    }
+  }
+
+  .statistic {
+    margin-top: 60px;
+    .statis {
+      font-size: 80px;
+      border-bottom: 5px solid $color-blue;
+      color: $other-courses;
+      font-family: utm;
+      width: 280px;
+      margin: auto;
+      text-shadow: 1px 1px $other-courses;
+      font-weight: 700;
+    }
+
+    .div-statistic {
+      margin: auto;
+      width: 98%;
+      margin-top: 50px;
+
+      .card-statistic {
+        border: none;
+        width: 33.33%;
+        margin: auto;
+      }
+
+      p:nth-child(1) {
+        font-size: 60px;
+        font-family: utm;
+        color: $footer-bg;
+        font-family: 700;
+        -webkit-text-stroke-width: 2px;
+      }
+
+      p:nth-child(2) {
+        font-size: 60px;
+        font-weight: 700;
+        color: $color-blue;
+        font-family: utm;
+      }
+    }
+  }
+
+  .footer {
+    padding: 40px;
+    background-color: $footer-bg;
+    margin-top: 100px;
+    color: $color-button;
+
+    a {
+      text-decoration: none;
+      color: $color-button;
+    }
+
+    .footer-image {
+      width: 38%;
+      img {
+        width: 290px;
+        margin-left: 14%;
+      }
+
+      p {
+        font-size: 20px;
+        margin-left: 27%;
+        font-family: utm;
+      }
+    }
+
+    .home {
+      width: 12%;
+      margin-top: 15px;
+
+      p {
+        font-size: 20px;
+        font-family: utm;
+        margin-left: 20%;
+      }
+
+      p:hover {
+        color: $buton-hover;
+      }
+    }
+
+    .contact {
+      width: 13%;
+      margin-top: 15px;
+
+      p {
+        font-size: 20px;
+        margin-left: 12%;
+        font-family: utm;
+      }
+
+      p:hover {
+        color: $buton-hover;
+      }
+    }
+
+    .footer-icon {
+      width: 37%;
+
+      .icon-footer {
+        margin-left: 38%;
+      }
+
+      img {
+        margin-top: 70px;
+        margin-left: 7%;
+      }
+
+      img:hover {
+        width: 70px;
+      }
+    }
+  }
+
+  .footer-end {
+    background-color: $footer-end;
+
+    p {
+      color: $color-button;
+      text-align: center;
+      font-size: 15px;
+      padding: 5px;
+      font-family: utm;
+      margin: 0px;
+    }
+  }
+
+  .mess-facebook {
+    border: 0;
+    width: 20px;
+    top: 88%;
+    left: 92%;
+    position: fixed;
+    z-index: 400;
+
+    a {
+      text-decoration: none;
+      color: $login-mess;
+    }
+
+    a:hover {
+      color: $login-mess;
+    }
+
+    .hide {
+      display: none;
+      width: 360px;
+      height: 190px;
+      float: right;
+    }
+
+    .frame-mess {
+      height: 190px;
+      width: 360px;
+      margin-right: -50px;
+      border-radius: 23px;
+      margin-top: -270px;
+      float: right;
+      box-sizing: border-box;
+      box-shadow: 1px 1px 4px 1px $shadow-hapo;
+      border: 1px solid $color-button;
+      background-color: $color-button;
+    }
+
+    .frame-hapo {
+      p {
+        margin-top: 5px;
+        margin-left: 60px;
+        font-weight: 600;
+        font-family: san;
+        padding: 8px;
+        display: inline-block;
+        font-size: 12px;
+        color: $hapo-message;
+      }
+
+      img {
+        float: right;
+        padding: 8px;
+        margin-right: 10px;
+        margin-top: 5px;
+      }
+
+      img:hover {
+        background-color: $color-blue;
+        border-radius: 100%;
+      }
+    }
+
+    .hello {
+      margin-top: -20px;
+
+      img {
+        margin-left: 11px;
+        margin-top: 10px;
+      }
+
+      p {
+        display: inline-block;
+        font-size: 12px;
+        margin-left: 5px;
+        background-color: $hello-color;
+        border-radius: 15px;
+        width: 256px;
+        height: 53px;
+        padding: 10px;
+        font-family: san;
+        color: $footer-bg;
+      }
+    }
+
+    .login-mess {
+      background-color: $mess;
+      margin: auto;
+      margin-top: 5px;
+      width: 276px;
+      border-radius: 10px;
+      padding: 5px;
+
+      img {
+        margin-left: 36px;
+      }
+
+      span {
+        font-size: 12px;
+        color: $color-button;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 20px;
+      }
+    }
+
+    .login-mess:hover {
+      background-color: $message;
+    }
+
+    .chat-hapo {
+      color: $login-mess;
+      text-align: center;
+      font-size: 12px;
+      font-family: san;
+      margin-top: 5px;
+    }
+
+    .chat-hapo:hover {
+      color: $login-mess;
+    }
+  }
+
+  .messfb:hover {
+    width: 65px;
+  }
+
+  .frame-login {
+    display: none;
+  }
+
+  .frame-loginn {
+    position: fixed;
+    margin-top: -130px;
+    margin-left: 40px;
+  }
+
+  .login-register {
+    padding: 0px;
+    margin: 0px;
+    width: 430px;
+    height: 640px;
+    position: relative;
+  }
+
+  .tabs {
+    .button-close {
+      border-radius: 100%;
+      border: none;
+      padding: 0px;
+      margin-left: 95%;
+      margin-top: -17px;
+      position: absolute;
+      width: 40px;
+    }
+    .rememberme {
+      margin-left: 10px;
+      font-size: 18px !important;
+      font-weight: normal;
+    }
+    .rememberme:hover {
+      cursor: pointer;
+    }
+
+    ul {
+      padding: 0px;
+      display: flex;
+    }
+
+    li {
+      list-style: none;
+      margin: auto;
+      width: 50%;
+      height: 70px;
+
+      a {
+        text-decoration: none;
+        color: $color-blue;
+      }
+
+      p {
+        text-align: center;
+        border-bottom: 1px solid $color-blue;
+      }
+    }
+
+    .login {
+      p {
+        padding: 20px;
+        font-size: 25px;
+        font-weight: 700;
+        font-family: utm;
+      }
+    }
+
+    .img-fb {
+      width: 15px;
+      margin-top: -2px;
+    }
+    .img-gg {
+      margin-top: -4px;
+    }
+    .register {
+      p {
+        padding: 20px;
+        font-size: 25px;
+        font-weight: 700;
+        font-family: utm;
+      }
+    }
+
+    .tabs-container {
+      width: 90%;
+
+      label {
+        font-size: 20px;
+        font-family: utm;
+        font-style: bold;
+        color: $footer-bg;
+        font-weight: 700;
+      }
+
+      .form-check-input {
+        height: 23px;
+        width: 23px;
+        float: left;
+        margin-top: 5px;
+      }
+
+      .form-check-input:checked {
+        background-color: $color-blue;
+        padding: 0px;
+        border: none;
+      }
+
+      .check-box:hover {
+        background-color: $color-blue;
+      }
+
+      input {
+        width: 100%;
+        height: 50px;
+        background-color: $bg-input;
+        border: none;
+        margin-bottom: 20px;
+      }
+
+      .user-input {
+        margin-top: -20px;
+      }
+      .login-check {
+        margin: auto;
+      }
+
+      .form-check-label a {
+        text-decoration: none;
+        color: $footer-bg;
+        cursor: pointer;
+      }
+
+      .form-check-label a:hover {
+        color: $message;
+      }
+
+      .forgot {
+        margin-left: 70px;
+        color: $color-blue;
+        font-size: 18px;
+        font-weight: normal;
+      }
+
+      .forgot:hover {
+        color: $message;
+      }
+
+      .login-hapo {
+        margin-left: -30px;
+        width: 200px;
+        background-color: $color-blue;
+        border-radius: 22px;
+        margin-top: 20px;
+        border: $color-blue;
+        font-weight: 700;
+        font-size: 18px;
+        font-family: utm;
+        padding: 8px;
+        box-shadow: 1px -2px 1px 1px $login-mess;
+      }
+
+      .login-registers {
+        margin-left: 0px;
+      }
+
+      .login-hapo:hover {
+        background-color: $message;
+      }
+
+      .login-with {
+        font-style: bold;
+        font-size: 20px;
+        font-family: utm;
+        font-weight: 700;
+        margin: 0px;
+        padding: 2px;
+        background-color: $color-button;
+      }
+
+      .line-login {
+        border-bottom: 1px solid $login-with;
+        text-align: center;
+        line-height: 0.1em;
+        margin-top: 30px;
+        width: 429px;
+        margin-left: -33px;
+      }
+
+      .facebook {
+        width: 100%;
+        margin-top: 10px;
+        background-color: $google-color;
+        height: 55px;
+        border: none;
+      }
+
+      .facebook:hover {
+        background-color: $red;
+      }
+
+      .google {
+        width: 100%;
+        background-color: $fb-color;
+        height: 55px;
+        border: none;
+        margin-top: -90px;
+      }
+
+      .google:hover {
+        background-color: $blue;
+      }
+    }
+  }
+
+  .active-tab {
+    background-color: $color-blue;
+    color: $color-button;
+  }
+}
+
+@media only screen and (max-width: 995px) {
+  .header {
+    .btn-menu {
+      box-shadow: none !important;
+      border: none;
+    }
+
+    button {
+      margin-left: -25px;
+    }
+
+    .navbar-toggler-icon {
+      width: 25px;
+    }
+
+    .navbar {
+      display: block;
+
+      img {
+        width: 300px;
+        margin-left: auto;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+
+    .navbar-nav {
+      margin: auto;
+      margin-top: -30px;
+
+      a {
+        color: red;
+      }
+
+      li {
+        margin-left: 10px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .banner {
+    margin-top: 12px;
+    background-size: 100% 350px;
+    .info-banner {
+      padding: 50px;
+      margin-top: -20px;
+      margin-left: -5px;
+
+      p:nth-child(1) {
+        margin-top: 15px;
+        font-size: 27px;
+      }
+
+      p:nth-child(2) {
+        font-size: 30px;
+        margin-top: -20px;
+      }
+
+      img {
+        width: 30px;
+      }
+
+      p:nth-child(3) {
+        font-size: 14px;
+        margin-top: -15px;
+      }
+
+      button {
+        font-size: 16px;
+        width: 190px;
+        padding: 2px 4px 2px 4px;
+        margin-bottom: 120px;
+        padding-bottom: 5px;
+      }
+    }
+  }
+
+  .bg-banner {
+    height: 50px;
+  }
+
+  .tutorial-hapo {
+    margin-top: -70px;
+
+    .other-courses {
+      margin-top: 50px;
+
+      .courses {
+        font-size: 50px;
+        width: 41%;
+        margin-bottom: 40px;
+      }
+    }
+    .text-title {
+      height: 80px;
+    }
+    .text-title-frist {
+      height: 80px;
+    }
+    .container-card {
+      width: 90%;
+    }
+    .card-hapo {
+      .card-body {
+        width: 225px;
+        p:nth-child(1) {
+          font-size: 20px;
+          height: 27px;
+        }
+      }
+      img {
+        height: 130px;
+      }
+      a {
+        width: 125px;
+        height: 24px;
+        font-size: 10px;
+        padding: 5px;
+      }
+    }
+
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 4;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+
+    .take-course {
+      margin-bottom: -10px;
+    }
+
+    .view-courses p {
+      font-size: 28px;
+      margin-top: 40px;
+      margin-bottom: 90px;
+    }
+
+    .view-courses p:hover {
+      font-size: 35px;
+    }
+
+    .arrow {
+      width: 34px;
+    }
+  }
+  .why-hapo {
+    height: 400px;
+    background-size: 100% 395px;
+
+    .list-whyhapo span {
+      line-height: 25px;
+    }
+
+    .bg-whyhapo img {
+      height: 400px;
+    }
+
+    .laptop img {
+      width: 277px;
+      margin-top: -180px;
+    }
+
+    .info-why {
+      margin-top: 230px;
+
+      width: 60%;
+    }
+    li {
+      margin-left: -50px;
+    }
+
+    .laptop-phone {
+      margin-top: 80px;
+    }
+    .laptop-phone img {
+      width: 360px;
+      margin-top: 125px;
+    }
+
+    p {
+      font-size: 50px;
+      display: block;
+      margin: -120px 0px 0px 220px;
+      position: absolute;
+    }
+
+    .list-whyhapo {
+      margin: 0px 0px 0px 0px;
+      color: $color-button;
+      line-height: 35px;
+
+      li {
+        margin-top: 10px;
+      }
+
+      span {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .feedback {
+    margin-top: 40px;
+
+    .feedback-title {
+      font-size: 50px;
+      width: 220px;
+    }
+
+    .feedback-info {
+      font-size: 18px;
+      width: 67%;
+    }
+  }
+
+  .user {
+    margin-top: 20px;
+
+    img {
+      margin-left: -5px;
+    }
+
+    .user-info {
+      margin-left: 0px;
+    }
+  }
+
+  .become-member {
+    margin-top: -10px;
+    background-size: 100% 270px;
+
+    .info-become {
+      padding: 50px;
+
+      p:nth-child(1) {
+        font-size: 35px;
+      }
+
+      button {
+        font-size: 20px;
+        width: 250px;
+        padding: 5px;
+        padding-bottom: 8px;
+      }
+    }
+  }
+
+  .statistic {
+    margin-top: 10px;
+    .statis {
+      font-size: 50px;
+      width: 180px;
+    }
+
+    .div-statistic {
+      margin-top: -0px;
+      width: 97%;
+      .card-statistic {
+        p:nth-child(1) {
+          font-size: 40px;
+        }
+
+        p:nth-child(2) {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 30px;
+    padding: 7px;
+
+    .footer-image {
+      width: 35%;
+      margin-top: 8px;
+
+      img {
+        width: 170px;
+        margin-left: 0;
+      }
+
+      p {
+        font-size: 16px;
+        margin: 0;
+        width: 200px;
+        width: 250px;
+      }
+    }
+
+    .home {
+      width: 10%;
+      margin-top: 20px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .contact {
+      margin-top: 20px;
+      width: 25%;
+
+      p {
+        font-size: 18px;
+        margin-left: 20px;
+      }
+    }
+    .footer-icon {
+      width: 30%;
+
+      .icon-footer {
+        width: 200px;
+        margin-left: -10px;
+      }
+
+      img {
+        width: 40px;
+        margin: 70px 0px 0px 20px;
+      }
+    }
+  }
+
+  .footer-end {
+    p {
+      font-size: 15px;
+      padding: 5px;
+    }
+  }
+
+  .mess-facebook {
+    left: 88%;
+  }
+
+  .frame-loginn {
+    position: fixed;
+    margin-left: 40px;
+    margin-top: 1%;
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  .header {
+    z-index: 100;
+    width: 100vw;
+    background-color: $color-button;
+    position: fixed;
+
+    .navbar {
+      .active {
+        color: $color-blue !important;
+        background-color: $color-button;
+
+        li {
+          text-align: center;
+          margin: auto;
+        }
+      }
+
+      .navbar-nav {
+        height: 750px;
+        .nav-link {
+          text-align: center;
+          margin-left: 60px;
+          font-family: san;
+          font-size: 16px;
+          margin-top: 15px;
+          width: 150px;
+        }
+      }
+
+      .active:hover {
+        color: $color-blue;
+      }
+    }
+
+    .list-courses {
+      display: block;
+    }
+
+    .close {
+      display: none;
+    }
+
+    .navbar-brand {
+      position: absolute;
+      top: -5px;
+      left: 25%;
+      width: 150px;
+      text-align: center;
+
+      .img-logo img {
+        width: 200px;
+      }
+    }
+
+    .navbar-menu-div {
+      margin: 40px;
+    }
+  }
+
+  .banner {
+    background-size: 100% 200px;
+    width: 100%;
+    margin-top: 60px;
+
+    .info-banner {
+      margin-left: 25px;
+
+      p:nth-child(1) {
+        font-size: 24px;
+        margin-top: 180px;
+        font-weight: 400;
+        line-height: 30px;
+      }
+
+      p:nth-child(2) {
+        margin-top: -30px;
+        font-size: 24px;
+      }
+
+      button {
+        width: 268px;
+        padding: 10px;
+        margin-bottom: 30px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .tutorial-hapo {
+    margin-top: -100px;
+    .card-hapo {
+      width: 280px;
+      margin-bottom: 35px;
+
+      .card-body {
+        width: 280px;
+      }
+
+      img {
+        height: 165px;
+        width: 280px;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      a {
+        width: 200px;
+        height: 42px;
+        font-size: 18px;
+        padding: 5px;
+      }
+    }
+
+    .text-title {
+      height: 100px;
+    }
+
+    .text-title-frist {
+      height: 70px;
+    }
+
+    .other-courses {
+      margin-top: 20px;
+
+      .courses {
+        font-size: 40px;
+        margin-bottom: 40px;
+        width: 61%;
+      }
+    }
+
+    .view-courses p {
+      margin-top: 5px;
+      font-size: 25px;
+      margin-bottom: 70px;
+
+      .arrow {
+        width: 31px;
+      }
+    }
+  }
+
+  .why-hapo {
+    height: 570px;
+    background-size: 100% 570px;
+
+    .bg-whyhapo img {
+      height: 570px;
+    }
+    .list-whyhapo {
+      margin-top: 40px;
+      margin-left: 3px;
+      width: 390px;
+      height: 400px;
+
+      span {
+        line-height: 25px;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    .laptop img {
+      width: 225px;
+      margin-top: -140px;
+    }
+
+    .laptop-phone {
+      width: 0%;
+    }
+
+    .laptop-phone img {
+      width: 316px;
+      margin-left: -200px;
+      margin-top: 370px;
+    }
+  }
+
+  .why-hapo p {
+    line-height: 40px;
+    font-size: 40px;
+    margin: -70px 0px 0px 150px;
+    width: 50%;
+  }
+
+  .become-member {
+    background-size: 100% 185px;
+    .info-become {
+      padding: 50px;
+
+      p:nth-child(1) {
+        font-size: 23px;
+        margin-top: -20px;
+      }
+
+      button {
+        padding: 5px;
+        font-size: 18px;
+        width: 180px;
+        color: $color-blue;
+      }
+    }
+  }
+
+  .feedback {
+    margin-top: 50px;
+
+    .feedback-all {
+      width: 100%;
+    }
+
+    .feedback-title {
+      font-size: 40px;
+      width: 180px;
+    }
+
+    .feedback-info {
+      font-size: 14px;
+      width: 280px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .feelback-card {
+    margin-top: 10px;
+    box-sizing: border-box;
+
+    .feelback-info {
+      padding: 5px;
+      height: 135px;
+      font-size: 14px;
+      margin-left: 8px;
+    }
+
+    .feelback-border {
+      padding: 5px;
+      margin-top: 7px;
+      margin-left: 12px;
+    }
+
+    .triangle {
+      margin-top: 12px;
+    }
+
+    .user {
+      margin-top: 30px;
+      margin-left: -20px;
+
+      img {
+        margin-left: 60px;
+        margin-top: -10px;
+      }
+    }
+
+    .user-info {
+      margin-left: 60px;
+      margin-top: -10px;
+
+      .name-user {
+        font-size: 16px;
+      }
+
+      .name-courses {
+        font-size: 14px;
+        margin-top: -20px;
+      }
+
+      .star {
+        font-size: 14px;
+        margin-top: -16px;
+      }
+    }
+  }
+
+  .prev {
+    top: 70px;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+  }
+
+  .next {
+    top: 70px;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+  }
+
+  .become-member {
+    background-size: 100% 185px;
+    .info-become {
+      padding: 50px;
+
+      p:nth-child(1) {
+        font-size: 23px;
+        margin-top: -20px;
+      }
+
+      button {
+        padding: 5px;
+        font-size: 18px;
+        width: 200px;
+      }
+    }
+  }
+  .statistic {
+    .statis {
+      font-size: 60px;
+      width: 200px;
+    }
+
+    .div-statistic {
+      margin-top: -2px;
+      width: 87%;
+
+      .card-statistic {
+        margin-left: 15px;
+        width: 94%;
+      }
+    }
+  }
+
+  .footer {
+    .footer-image {
+      width: 65%;
+      padding-bottom: 40px;
+
+      img {
+        width: 170px;
+        margin-left: 5px;
+        margin-top: 20px;
+      }
+
+      p {
+        font-size: 14px;
+        margin-left: 8px;
+      }
+    }
+
+    .home {
+      width: 50%;
+
+      p {
+        font-size: 17px;
+        margin-left: 15px;
+      }
+    }
+
+    .contact {
+      width: 50%;
+
+      p {
+        font-size: 17px;
+        margin-left: 20px;
+      }
+    }
+
+    .footer-icon {
+      width: 35%;
+
+      .icon-footer {
+        width: 130px;
+        margin-left: -24px;
+        margin-top: 9px;
+      }
+
+      img {
+        width: 30px;
+        margin: 25px 0px 0px 5px;
+      }
+    }
+  }
+
+  .footer-end {
+    p {
+      font-size: 15px;
+      padding: 5px;
+    }
+  }
+
+  .mess-facebook {
+    left: 80%;
+  }
+
+  .frame-loginn {
+    margin-top: 50px;
+    margin-left: 0px;
+    width: 400px;
+  }
+
+  .login-register {
+    padding: 0px;
+    margin: 0px;
+    width: 382px;
+    height: 600px;
+  }
+
+  .line-login {
+    width: 381px !important;
+    margin-left: -30px !important;
+  }
+
+  .tabs .tabs-container input {
+    height: 40px;
+  }
+  .tabs .tabs-container label {
+    font-size: 18px;
+
+    .forgot {
+      margin-left: 24px;
+    }
+  }
+  .tabs .tabs-container .login-hapo {
+    height: 35px;
+    padding: 0px;
+  }
+  .tabs .tabs-container .facebook {
+    height: 45px;
+  }
+  .tabs .tabs-container .google {
+    height: 45px;
+  }
+}
