@@ -5,7 +5,3 @@ require('./bootstrap');
 require('slick-carousel');
 require('popper.js');
 require('./main');
-
-$(function () {
-    // INIT JS DONE
-});
