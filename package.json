@@ -29,6 +29,7 @@
         "@fortawesome/fontawesome-free": "^5.15.4",
         "@popperjs/core": "^2.9.3",
         "font-awesome": "^4.7.0",
+        "select2": "^4.1.0-rc.0",
         "slick-carousel": "^1.8.1"
     }
 }

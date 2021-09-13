@@ -1,5 +1,5 @@
-<div class="frame-login modal fade modal-dialog modal-dialog-centered" id="exampleModal" tabindex="-1"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="frame-login modal fade modal-dialog" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="frame-loginn">
         <div class="modal-dialog">
             <div class="modal-content content">

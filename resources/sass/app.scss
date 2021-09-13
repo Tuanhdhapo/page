@@ -1,17 +1,25 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 //Jquery
-@import '~jquery-ui/themes/base/all.css';
+@import "~jquery-ui/themes/base/all.css";
 
 //Fontawesome
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-@import '~@fortawesome/fontawesome-free/scss/solid';
-@import '~@fortawesome/fontawesome-free/scss/brands';
-@import '~@fortawesome/fontawesome-free/scss/regular';
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/regular";
 // Variables
-@import 'variable';
-@import 'style';
+@import "variable";
+@import "style";
+@import "course";
+@import "course-detail";
+@import "lesson-detail";
+@import "lesson-review";
+@import "lesson-teacher";
+@import "lesson-program";
+@import "profile";
+
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
-@import '~slick-carousel/slick/slick';
+@import "~bootstrap/scss/bootstrap";
+@import "~slick-carousel/slick/slick";

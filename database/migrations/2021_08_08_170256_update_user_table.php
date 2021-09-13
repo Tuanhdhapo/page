@@ -19,6 +19,7 @@ class UpdateUserTable extends Migration
             $table->date('brithday')->nullable();
             $table->string('address')->nullable();
             $table->text('about')->nullable();
+            $table->string('img_user')->nullable();
             $table->integer('gender')->default(0)->comment("0: female, 1: male; 2: other");
             $table->softDeletes();
         });
@@ -37,6 +38,7 @@ class UpdateUserTable extends Migration
             $table->dropColumn('brithday');
             $table->dropColumn('address');
             $table->dropColumn('about');
+            $table->dropColumn('img_user');
             $table->dropColumn('gender');
             $table->dropSoftDeletes();
         });

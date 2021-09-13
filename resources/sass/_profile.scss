@@ -1,0 +1,105 @@
+.profile-detail {
+    background-color: aliceblue;
+    font-family: utm;
+}
+.all-profile {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: auto;
+}
+
+.all-profile-left {
+    .img-profile {
+        text-align: center;
+        .img-user {
+            width: 220px;
+            height: auto;
+            border-radius: 100%;
+            position: relative;
+            font-family: utm;
+        }
+    }
+    .potoss {
+        position: absolute;
+        border: none;
+        background-color: inherit;
+        margin-top: 177px;
+        margin-left: -132px;
+    }
+    .name-user {
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .email-user {
+        font-size: 16px;
+        margin-top: -10px;
+        text-align: center;
+        border-bottom: 2px solid gainsboro;
+        padding-bottom: 10px;
+    }
+
+    .info-user {
+        font-size: 18px;
+        border-bottom: 1px solid gainsboro;
+        padding-bottom: 20px;
+    }
+
+    .introduce {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+.profile-right {
+    width: 80%;
+    margin: auto;
+    .my-course {
+        font-size: 38px;
+        font-weight: 700;
+        border-bottom: 2px solid #b2d235;
+        margin-top: 57px;
+    }
+    .all-learned {
+        text-align: center;
+    }
+
+    .learned {
+        border-radius: 100%;
+        width: 65px;
+    }
+    .add-lesson-button {
+        border-radius: 100%;
+        width: 65px;
+        border: none;
+        background-color: inherit;
+        .add-lesson {
+            background-color: white;
+            padding: 22px;
+            border-radius: 100%;
+        }
+    }
+}
+
+.edit-profile-left {
+    float: left;
+}
+
+.edit-profile-right {
+    float: right;
+}
+
+.edit-profile {
+    .label-profile {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .input-profile {
+        width: 370px;
+        height: 40px;
+        border: 1px solid gainsboro;
+    }
+}

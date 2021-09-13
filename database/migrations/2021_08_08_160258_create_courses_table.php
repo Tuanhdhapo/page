@@ -17,7 +17,6 @@ class CreateCoursesTable extends Migration
             $table->increments('id');
             $table->string('title')->nullable();
             $table->string('img_path')->nullable();
-            $table->string('learners')->nullable();
             $table->string('times')->nullable();
             $table->bigInteger('quizzes')->nullable();
             $table->string('tag')->nullable();

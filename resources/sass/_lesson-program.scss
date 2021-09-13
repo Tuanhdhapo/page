@@ -1,0 +1,120 @@
+.lesson-detail-left {
+    font-family: utm;
+    img {
+        width: 740px;
+        height: 439px;
+    }
+
+    .lesson {
+        width: 740px;
+        box-sizing: border-box;
+        margin-top: 40px;
+        border: 1px solid gray;
+    }
+}
+
+.lesson-border {
+    width: 95%;
+    margin: auto;
+    .lesson-link {
+        border-bottom: 1px solid #DADADA;
+        a {
+            text-decoration: none;
+            margin-right: 40px;
+            font-size: 20px;
+            padding: 10px 10px 10px 0px;
+        }
+    }
+
+    .program {
+        font-size: 25px;
+        margin-top: 20px;
+        font-weight: 700;
+    }
+
+    .info-program {
+        border-top: 1px solid gainsboro;
+        padding: 20px;
+        img {
+            width: 18px;
+            height: auto;
+        }
+
+        span:nth-child(2) {
+            font-size: 14px;
+        }
+
+        span:nth-child(3) {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        button {
+            background-color: #b2d235;
+            border: none;
+            border-radius: 22px;
+            float: right;
+        }
+    }
+}
+
+.lesson-info {
+    box-sizing: border-box;
+    border: 1px solid gray;
+    .course-info-detail {
+        width: 95%;
+        margin: auto;
+        border-bottom: 1px solid #DADADA;
+        padding-bottom: 20px;
+        font-size: 25px;
+        padding: 20px;
+    }
+
+    .course-info-detaill {
+        width: 95%;
+        margin: auto;
+        padding-bottom: 20px;
+        font-size: 25px;
+        padding: 20px;
+    }
+    .view-all {
+        margin-left: 78px;
+        background-color: #b2d235;
+        border: none;
+        width: 200px;
+        border-radius: 22px;
+        margin-bottom: 15px;
+        margin-top: 20px;
+    }
+}
+
+.other-course {
+    margin-top: 30px;
+    border: 1px solid gray;
+    .title-other-course {
+        background-color: #b2d235;
+        padding: 15px;
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .content-other-course {
+        width: 90%;
+        margin: auto;
+
+        p {
+            border-bottom: 1px solid greenyellow;
+            padding-bottom: 10px;
+        }
+    }
+
+    .view-all {
+        margin-left: 78px;
+        background-color: #b2d235;
+        border: none;
+        width: 200px;
+        border-radius: 22px;
+        margin-bottom: 15px;
+    }
+}

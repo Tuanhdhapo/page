@@ -1,0 +1,268 @@
+.lesson-detail-left {
+    font-family: utm;
+    img {
+        width: 740px;
+        height: 439px;
+    }
+
+    .lesson {
+        width: 740px;
+        box-sizing: border-box;
+        margin-top: 40px;
+        border: 1px solid gray;
+    }
+}
+
+.lesson-border {
+    width: 95%;
+    margin: auto;
+    .lesson-link {
+        border-bottom: 1px solid #dadada;
+        a {
+            text-decoration: none;
+            margin-right: 40px;
+            font-size: 20px;
+            padding: 10px 10px 10px 0px;
+        }
+    }
+
+    .all-review {
+        border-bottom: 1px solid #dadada;
+        border-top: 1px solid #dadada;
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        box-sizing: border-box;
+    }
+
+    .review {
+        font-size: 25px;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+
+    .img-review {
+        background-color: #505353;
+        width: 244px;
+        text-align: center;
+        height: 176px;
+        padding-top: 35px;
+        line-height: 30px;
+        padding: 20px;
+
+        p:nth-child(1) {
+            color: white;
+            font-size: 60px;
+            font-weight: 700;
+        }
+
+        p:nth-child(2) {
+            color: #ffd567;
+            font-size: 30px;
+            letter-spacing: 12px;
+            margin-left: 8px;
+        }
+
+        p:nth-child(3) {
+            color: white;
+            font-size: 16px;
+            margin-top: -15px;
+        }
+    }
+    .show-review {
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 20px;
+        .img-arrow-down {
+            width: 8px;
+            height: auto;
+        }
+    }
+
+    .info-users {
+        border-bottom: 1px solid gainsboro;
+        padding-bottom: 20px;
+        margin-top: 20px;
+        img {
+            width: 40px;
+            height: auto;
+            border-radius: 100%;
+        }
+
+        span:nth-child(2) {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        span:nth-child(3) {
+            font-size: 30px;
+            letter-spacing: 3px;
+            color: #ffd567;
+        }
+
+        span:nth-child(4) {
+            font-size: 14px;
+            margin-left: 40px;
+        }
+
+        .review-users {
+            font-size: 18px;
+            line-height: 26px;
+            color: #949292;
+        }
+    }
+
+    .leave-review {
+        font-size: 22px;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+
+    .message-add-review {
+        font-size: 18px;
+        color: #747474;
+        margin-top: 10px;
+    }
+}
+
+.table-review {
+    border: 1px solid#DFDFDF;
+    height: 176px;
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 30px;
+
+    .border-review {
+        padding: 8px;
+
+        .bar-review {
+            width: 335px;
+            height: 6px;
+            background-color: gainsboro;
+            margin: auto;
+        }
+    }
+
+    .div-review {
+        margin-top: 5px;
+    }
+}
+
+.button-review {
+    width: 80px;
+    color: white;
+    background-color: #b2d235;
+    border: none;
+    height: 30px;
+    border-radius: 22px;
+}
+
+.lesson-info {
+    box-sizing: border-box;
+    border: 1px solid gray;
+    .course-info-detail {
+        width: 95%;
+        margin: auto;
+        border-bottom: 1px solid #dadada;
+        padding-bottom: 20px;
+        font-size: 25px;
+        padding: 20px;
+    }
+
+    .course-info-detaill {
+        width: 95%;
+        margin: auto;
+        padding-bottom: 20px;
+        font-size: 25px;
+        padding: 20px;
+    }
+    .view-all {
+        margin-left: 78px;
+        background-color: #b2d235;
+        border: none;
+        width: 200px;
+        border-radius: 22px;
+        margin-bottom: 15px;
+        margin-top: 20px;
+    }
+}
+
+.other-course {
+    margin-top: 30px;
+    border: 1px solid gray;
+    .title-other-course {
+        background-color: #b2d235;
+        padding: 15px;
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .content-other-course {
+        width: 90%;
+        margin: auto;
+
+        p {
+            border-bottom: 1px solid greenyellow;
+            padding-bottom: 10px;
+        }
+    }
+
+    .view-all {
+        margin-left: 78px;
+        background-color: #b2d235;
+        border: none;
+        width: 200px;
+        border-radius: 22px;
+        margin-bottom: 15px;
+    }
+}
+
+.rating {
+    float: left;
+}
+
+.rating:not(:checked) > input {
+    position: absolute;
+    display: none;
+}
+
+.rating:not(:checked) > label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #d8d8d8;
+}
+
+.rating:not(:checked) > label:before {
+    content: "★ ";
+}
+
+.rating:not(:checked) .half:before {
+    content: "★ ";
+    position: absolute;
+    width: 8px;
+    margin-left: 18px;
+    overflow: hidden;
+}
+
+.rating > input:checked ~ label {
+    color: #ffd567;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}

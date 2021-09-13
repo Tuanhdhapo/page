@@ -32,4 +32,11 @@ class Lesson extends Model
     {
         return $this->belongsToMany(User::class, 'user_lessons', 'user_id', 'lesson_id');
     }
+
+     public function scopeCourseOfLesson($query, $id)
+    {
+        $query->leftJoin('courses', 'lessons.course_id', 'courses.id')
+            ->where('lessons.id', $id)
+            ->select('courses.*');
+    }
 }
