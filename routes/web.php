@@ -4,6 +4,8 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\CourseController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +22,7 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
+Route::get('allcourse', [CourseController::class, 'course'])->name('course');
+Route::get('search', [CourseController::class, 'courseSearch'])->name('search');
 
 Auth::routes();

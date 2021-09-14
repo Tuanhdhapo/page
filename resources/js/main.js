@@ -51,4 +51,22 @@ $(function () {
 
     $(this).addClass('active-tab');
   });
+  var x = true;
+  $('#showfilter').on('click', function () {
+    if (x) {
+      $("#filter").css({ "display": "block" });
+      x = false;
+    }
+    else {
+      $("#filter").css({ "display": "none" });
+      x = true;
+    }
+  });
+
+  $("#btn-reset-filter").on('click', function () {
+    $("#filter-search").val("");
+    $(".inp-filter").val("");
+    $(".btn-latest").prop("checked", false);
+    $(".btn-oldest").prop("checked", false);
+  });
 });

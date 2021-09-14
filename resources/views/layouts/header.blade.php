@@ -1,5 +1,5 @@
 <header class="header fixed">
-    <div class="containerr"> 
+    <div class="containerr">
         <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light">
             <a class="navbar-brand" href="#">
                 <div class="img-logo">
@@ -18,19 +18,19 @@
                 <ul class="navbar-nav nav" role="tablist">
                     <li class="nav-item item-menu">
                         <a class="nav-link text-center active" role="tab" data-toggle="pill" aria-selected="true"
-                            href="#" >HOME</a>
+                            href="#">HOME</a>
                     </li>
                     <li class="nav-item item-menu">
-                        <a class="nav-link text-center" aria-selected="false" data-toggle="pill" role="tab" 
-                        href="#">ALL COURSES</a>
+                        <a class="nav-link text-center" aria-selected="false" data-toggle="pill" role="tab"
+                            href="{{ route('course') }}">ALL COURSES</a>
                     </li>
                     <li class="nav-item item-menu list-courses">
                         <a class="nav-link text-center" aria-selected="false" data-toggle="pill" role="tab"
-                            href="#">LIST lESSON</a>  
+                            href="#">LIST lESSON</a>
                     </li>
                     <li class="nav-item item-menu list-courses">
-                        <a class="nav-link text-center" aria-selected="false" data-toggle="pill" role="tab" 
-                        href="#" >LESSON DETAIL</a>   
+                        <a class="nav-link text-center" aria-selected="false" data-toggle="pill" role="tab"
+                            href="#">LESSON DETAIL</a>
                     </li>
                     @if (!Auth::check())
                         <li class="nav-item item-menu">
