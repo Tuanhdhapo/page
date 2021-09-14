@@ -46,7 +46,7 @@
                         <div class="col-sm-2 select-filter select-teacher ">
                             <select name="mentor" id="select-teacher" class="js-states form-control inp-filter">
                                 <option value="">Teacher</option>
-                                @foreach ($mentor as $item)
+                                @foreach ($mentors as $item)
                                     <option value="{{ $item->id }}" @if ($item->id == request('mentor')) selected @endif>
                                         {{ $item->name }}</option>
                                 @endforeach

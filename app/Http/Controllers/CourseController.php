@@ -9,15 +9,15 @@ use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
-    public function course()
+    public function index()
     {
         $courses = Course::orderBy('id')->paginate(config('constants.pagination'));
-        $mentor = User::where('role', User::ROLE['mentor'])->get();
+        $mentors = User::where('role', User::ROLE['mentor'])->get();
         $tags = Tag::all();
-        return view('course.index', compact('courses', 'mentor', 'tags'));
+        return view('course.index', compact('courses', 'mentors', 'tags'));
     }
 
-    public function courseSearch(Request $request)
+    public function search(Request $request)
     {
         $data = $request->all();
         if (isset($data['search_form_input'])) {
@@ -25,9 +25,9 @@ class CourseController extends Controller
         } else {
             $keyword = '';
         }
-        $mentor = User::where('role', User::ROLE['mentor'])->get();
+        $mentors = User::where('role', User::ROLE['mentor'])->get();
         $tags = Tag::all();
         $courses = Course::filter($data)->paginate(config('constants.pagination'));
-        return view('course.index', compact('courses', 'mentor', 'tags', 'keyword'));
+        return view('course.index', compact('courses', 'mentors', 'tags', 'keyword'));
     }
 }

@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
-Route::get('allcourse', [CourseController::class, 'course'])->name('course');
-Route::get('search', [CourseController::class, 'courseSearch'])->name('search');
+Route::get('allcourse', [CourseController::class, 'index'])->name('course');
+Route::get('search', [CourseController::class, 'search'])->name('search');
 
 Auth::routes();
