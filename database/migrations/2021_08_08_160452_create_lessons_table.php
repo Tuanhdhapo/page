@@ -19,6 +19,7 @@ class CreateLessonsTable extends Migration
             $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->text('requirement')->nullable();
+             $table->float('time')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
