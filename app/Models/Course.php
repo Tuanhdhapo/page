@@ -74,8 +74,7 @@ class Course extends Model
         }
 
         if (isset($data['mentor'])) {
-            $query->whereHas  ('users', function ($subquery) use ($data)
-            {
+            $query->whereHas('users', function ($subquery) use ($data) {
                 $subquery->where('user_id', $data['mentor']);
             });
         }

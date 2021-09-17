@@ -29,7 +29,7 @@ class FeedbackFactory extends Factory
             'course_id' => Course::all()->random()->id,
             'lesson_id' => Lesson::all()->random()->id,
             'content' => $this->faker->realText(),
-            'rate' => $this->faker->numberBetween(1,5),
+            'rate' => $this->faker->numberBetween(1, 5),
         ];
     }
 }
