@@ -29,12 +29,12 @@ class Course extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'user_courses', 'user_id', 'course_id');
+        return $this->belongsToMany(User::class, 'user_courses', 'course_id', 'user_id');
     }
 
     public function tags()
     {
-        return $this->belongsToMany(Tag::class, 'tag_courses', 'tag_id', 'course_id');
+        return $this->belongsToMany(Tag::class, 'tag_courses', 'course_id', 'tag_id');
     }
 
     public function feedback()
