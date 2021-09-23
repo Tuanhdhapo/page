@@ -13,13 +13,6 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        // User::create([
-        //     'name' => 'hapo',
-        //     'email' => 'test@haposoft.com',
-        //     'password' => bcrypt('12345678'),
-        //     'role' => '1',
-        // ]);
-
         User::factory(50)->create();
     }
 }

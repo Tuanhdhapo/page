@@ -1,5 +1,5 @@
 <header class="header fixed">
-    <div class="containerr">
+    <div class="container">
         <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light">
             <a class="navbar-brand" href="#">
                 <div class="img-logo">

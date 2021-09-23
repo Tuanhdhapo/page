@@ -6,10 +6,10 @@
     <div class="list-course container">
         <form class="form-inline" action="{{ route('search') }}" method="GET">
             <div class="search-course">
-                <div id="showfilter" class="filter">
-                    <div id="showfilter" class="filter-button">
-                        <img id="showfilter" src="{{ asset('images/fiter.PNG') }}" alt="filte">
-                        <p id="showfilter"> filter</p>
+                <div id="showFilter">
+                    <div class="filter-button">
+                        <img src="{{ asset('images/fiter.PNG') }}" alt="filte">
+                        <p> filter</p>
                     </div>
                 </div>
                 <div class="search">
@@ -116,7 +116,7 @@
             </div>
         </form>
 
-        @include('course.course');
+        @include('course.courses');
         
         <div class="link-course">
             {{ $courses->appends($_GET)->links('pagination::bootstrap-4') }}
