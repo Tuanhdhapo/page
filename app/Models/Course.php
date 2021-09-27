@@ -15,7 +15,6 @@ class Course extends Model
         'title',
         'img_path',
         'learners',
-        'times',
         'quizzes',
         'tag',
         'price',
@@ -95,14 +94,14 @@ class Course extends Model
             }
         }
 
-        if (isset($data['time'])) {
+        if (isset($data['times'])) {
             if ($data['times'] == config('constants.options.ascending')) {
                 $query->addSelect(['time' => Lesson::selectRaw('sum(time) as total')
-                    ->whereColumn('courses_id', 'courses.id')])
+                    ->whereColumn('course_id', 'courses.id')])
                     ->orderBy('time');
             } else {
                 $query->addSelect(['time' => Lesson::selectRaw('sum(time) as total')
-                    ->whereColumn('courses_id', 'courses.id')])
+                    ->whereColumn('course_id', 'courses.id')])
                     ->orderByDesc('time');
             }
         }

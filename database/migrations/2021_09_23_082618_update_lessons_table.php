@@ -27,7 +27,6 @@ class UpdateLessonsTable extends Migration
     {
         Schema::table('lessons', function (Blueprint $table) {
             $table->dropColumn('time');
-            $table->dropSoftDeletes();
         });
     }
 }

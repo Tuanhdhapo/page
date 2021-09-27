@@ -35,7 +35,7 @@
                     @if (!Auth::check())
                         <li class="nav-item item-menu">
                             <a class="nav-link text-center" role="tab" aria-selected="false" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal" data-toggle="pill" href="#">LOGIN/REGISTER
+                                data-bs-target="#modelHapo" data-toggle="pill" href="#">LOGIN/REGISTER
                             </a>
                         </li>
                     @endif

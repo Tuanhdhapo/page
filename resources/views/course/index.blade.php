@@ -116,7 +116,11 @@
             </div>
         </form>
 
-        @include('course.courses');
+        <div class="row row-course">
+            @foreach ($courses as $course)
+                @include('course.courses');
+            @endforeach
+        </div>
         
         <div class="link-course">
             {{ $courses->appends($_GET)->links('pagination::bootstrap-4') }}
