@@ -14,7 +14,7 @@ class CourseController extends Controller
         $courses = Course::orderBy('id')->paginate(config('constants.pagination'));
         $mentors = User::where('role', User::ROLE['mentor'])->get();
         $tags = Tag::all();
-        return view('course.index', compact('courses', 'mentors', 'tags'));
+        return view('courses.index', compact('courses', 'mentors', 'tags'));
     }
 
     public function search(Request $request)
@@ -28,6 +28,6 @@ class CourseController extends Controller
         $mentors = User::where('role', User::ROLE['mentor'])->get();
         $tags = Tag::all();
         $courses = Course::filter($data)->paginate(config('constants.pagination'));
-        return view('course.index', compact('courses', 'mentors', 'tags', 'keyword'));
+        return view('courses.index', compact('courses', 'mentors', 'tags', 'keyword'));
     }
 }

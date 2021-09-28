@@ -57,7 +57,6 @@
                             <select name="learner" id="select-learner" class="js-states form-control inp-filter">
                                 <option value="">Learner</option>
                                 <option value="{{ config('constants.options.ascending') }}" @if (request('learner') == config('constants.options.ascending')) selected @endif>
-
                                     Ascending
                                 </option>
                                 <option value="{{ config('constants.options.decrease') }}" @if (request('learner') == config('constants.options.decrease')) selected @endif>
@@ -95,8 +94,7 @@
                         <select name="tags" id="select-tags" class="js-states form-control inp-filter row-filter-two">
                             <option value="">Tags</option>
                             @foreach ($tags as $item)
-                                <option value="{{ $item->id }}" @if ($item->id == request('tags')) selected
-                            @endif>{{ $item->content }}</option>
+                                <option value="{{ $item->id }}" @if ($item->id == request('tags')) selected @endif>{{ $item->content }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -118,7 +116,7 @@
 
         <div class="row row-course">
             @foreach ($courses as $course)
-                @include('course.courses');
+                @include('courses.courses');
             @endforeach
         </div>
         
