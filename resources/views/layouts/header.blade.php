@@ -10,9 +10,9 @@
             </a>
             <button class="navbar-toggler btn-menu" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false">
-                <span class="navbar-toggler-icon" id="showheader"></span>
+                <span class="navbar-toggler-icon" id="showHeader"></span>
                 <span class="my-1 mx-1 close fa
-                    fa-times" id="hideheader"></span>
+                    fa-times" id="hideHeader"></span>
             </button>
             <div class="collapse navbar-collapse navbar-menu-div" id="navbarNav">
                 <ul class="navbar-nav nav" role="tablist">
