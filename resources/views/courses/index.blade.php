@@ -4,7 +4,7 @@
 
 <section class="all-course">
     <div class="list-course container">
-        <form class="form-inline" action="{{ route('search') }}" method="GET">
+        <form class="form-inline" action="{{ route('searchCourses') }}" method="GET">
             <div class="search-course">
                 <div id="showFilter">
                     <div class="filter-button">
@@ -13,7 +13,7 @@
                     </div>
                 </div>
                 <div class="search">
-                    <input class="search-input" id="filter-search" type="search" name="search_form_input"
+                    <input class="search-input" type="search" name="search_form_input"
                         placeholder="Search..." aria-label="Search" @if (isset($keyword)) value={{ $keyword }} @endif>
                     <img src="{{ asset('images/glass.png') }}" alt="glass">
                 </div>
@@ -116,7 +116,7 @@
 
         <div class="row row-course">
             @foreach ($courses as $course)
-                @include('courses.courses');
+                @include('courses.course');
             @endforeach
         </div>
         

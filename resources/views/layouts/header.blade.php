@@ -22,7 +22,7 @@
                     </li>
                     <li class="nav-item item-menu">
                         <a class="nav-link text-center" aria-selected="false" data-toggle="pill" role="tab"
-                            href="{{ route('course') }}">ALL COURSES</a>
+                            href="{{ route('courses') }}">ALL COURSES</a>
                     </li>
                     <li class="nav-item item-menu list-courses">
                         <a class="nav-link text-center" aria-selected="false" data-toggle="pill" role="tab"
