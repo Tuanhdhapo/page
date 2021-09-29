@@ -15,37 +15,37 @@
                     fa-times" id="hideHeader"></span>
             </button>
             <div class="collapse navbar-collapse navbar-menu-div" id="navbarNav">
-                <ul class="navbar-nav nav" role="tablist">
+                <ul class="navbar-nav nav list-group" role="tablist">
                     <li class="nav-item item-menu">
-                        <a class="nav-link text-center active" role="tab" data-toggle="pill" aria-selected="true"
-                            href="#">HOME</a>
+                        <a class="nav-link text-center {{Request::is('/') ? 'active': ''}} " role="tab"  aria-selected="true"
+                            href="/">HOME</a>
                     </li>
                     <li class="nav-item item-menu">
-                        <a class="nav-link text-center" aria-selected="false" data-toggle="pill" role="tab"
+                        <a class="nav-link text-center {{Request::is('courses*') ? 'active': ''}}"  role="tab" aria-selected="false"
                             href="{{ route('courses') }}">ALL COURSES</a>
                     </li>
                     <li class="nav-item item-menu list-courses">
-                        <a class="nav-link text-center" aria-selected="false" data-toggle="pill" role="tab"
+                        <a class="nav-link text-center" role="tab"
                             href="#">LIST lESSON</a>
                     </li>
                     <li class="nav-item item-menu list-courses">
-                        <a class="nav-link text-center" aria-selected="false" data-toggle="pill" role="tab"
+                        <a class="nav-link text-center" role="tab"
                             href="#">LESSON DETAIL</a>
                     </li>
                     @if (!Auth::check())
                         <li class="nav-item item-menu">
-                            <a class="nav-link text-center" role="tab" aria-selected="false" data-bs-toggle="modal"
-                                data-bs-target="#loginModal" data-toggle="pill" href="#">LOGIN/REGISTER
+                            <a class="nav-link text-center" role="tab" data-bs-toggle="modal"
+                                data-bs-target="#loginModal" href="#">LOGIN/REGISTER
                             </a>
                         </li>
                     @endif
                     <li class="nav-item item-menu">
-                        <a class="nav-link text-center" role="tab" aria-selected="false" data-toggle="pill" href="#"
+                        <a class="nav-link text-center" role="tab" href="#"
                             onclick="hidenav()">PROFILE</a>
                     </li>
                     @if (Auth::check())
                         <li class="nav-item item-menu">
-                            <a class="nav-link text-center" role="tab" aria-selected="false" href="/logout">LOGOUT</a>
+                            <a class="nav-link text-center" role="tab" href="/logout">LOGOUT</a>
                         </li>
                     @endif
                 </ul>

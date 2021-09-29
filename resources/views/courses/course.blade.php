@@ -6,7 +6,7 @@
         <div class="col-md-10">
             <div class="card-body">
                 <p class="card-title course-title">{{ $course->title }}</p>
-                <p class="card-text course-text">{{ $course->content }}</p>
+                <p class="card-text course-text">{{ $course->description }}</p>
             </div>
         </div>
         <div>

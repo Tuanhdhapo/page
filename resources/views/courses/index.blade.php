@@ -4,7 +4,7 @@
 
 <section class="all-course">
     <div class="list-course container">
-        <form class="form-inline" action="{{ route('searchCourses') }}" method="GET">
+        <form class="form-inline" action="{{ route('courses/search') }}" method="GET">
             <div class="search-course">
                 <div id="showFilter">
                     <div class="filter-button">
