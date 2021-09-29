@@ -1,10 +1,12 @@
 <?php
+
 namespace Database\Seeders;
 
+use App\Models\Feedback;
 use Illuminate\Database\Seeder;
-use App\Models\User;
+use App\Models\Review;
 
-class UsersTableSeeder extends Seeder
+class FeedbackSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +15,6 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        User::factory(50)->create();
+        Feedback::factory()->count(5)->create();
     }
 }
