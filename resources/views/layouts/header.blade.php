@@ -17,11 +17,11 @@
             <div class="collapse navbar-collapse navbar-menu-div" id="navbarNav">
                 <ul class="navbar-nav nav list-group" role="tablist">
                     <li class="nav-item item-menu">
-                        <a class="nav-link text-center {{Request::is('/') ? 'active': ''}} " role="tab"  aria-selected="true"
-                            href="/">HOME</a>
+                        <a class="nav-link text-center {{Route::is('home') ? 'active': ''}} " role="tab"  aria-selected="true"
+                            href="{{ route('home') }}">HOME</a>
                     </li>
                     <li class="nav-item item-menu">
-                        <a class="nav-link text-center {{Request::is('courses*') ? 'active': ''}}"  role="tab" aria-selected="false"
+                        <a class="nav-link text-center {{Route::is('courses*') ? 'active': ''}}" role="tab" aria-selected="false"
                             href="{{ route('courses') }}">ALL COURSES</a>
                     </li>
                     <li class="nav-item item-menu list-courses">

@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,7 @@ use App\Http\Controllers\CourseController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
 Route::get('courses', [CourseController::class, 'index'])->name('courses');
 Route::get('courses/search', [CourseController::class, 'search'])->name('courses/search');
