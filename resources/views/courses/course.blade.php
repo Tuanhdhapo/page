@@ -10,7 +10,7 @@
             </div>
         </div>
         <div>
-            <a href="" class="btn btn-primary button-more">More</a>
+            <a href="{{ route('courses.detail', $course->id) }}" class="btn btn-primary button-more">More</a>
         </div>
         <div class="info-course">
             <div class="info-detail-one">

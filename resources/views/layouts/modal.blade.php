@@ -8,7 +8,7 @@
                         <img class="btn btn-secondary button-close" data-bs-dismiss="modal"
                             src="{{ asset('images/close.png') }}" alt="close">
                         <ul>
-                            <li class="login"><a href="#tabs-login">
+                            <li class="login"><a id="nav-login" href="#tabs-login">
                                     <p class="active-tab" id="login-change">LOGIN</p>
                                 </a></li>
                             <li class="register"><a href="#tabs-register">

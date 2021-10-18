@@ -7,21 +7,23 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Auth;
 
-class UserCourse extends Model
+class DocumentUser extends Model
 {
     use HasFactory;
     use SoftDeletes;
 
+    public $table = "document_users";
+
     protected $fillable = [
-        'course_id',
+        'document_id',
         'user_id'
     ];
 
-     public function scopeJoined($query, $id)
+    public function scopeLearned($query, $id)
     {
         if (Auth::check()) {
             $query->where('user_id', '=', Auth::user()->id)
-                ->where('course_id', '=', $id);
+                ->where('document_id', '=', $id);
         }
     }
 }

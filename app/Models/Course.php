@@ -57,6 +57,14 @@ class Course extends Model
         return $this->users()->where('role', config('constants.role.student'))->count();
     }
 
+     public function scopeTeacherOfCourse($query, $id)
+    {
+        $query->leftJoin('user_courses', 'courses.id', 'user_courses.course_id')
+            ->leftJoin('users', 'user_courses.user_id', 'users.id')
+            ->where('users.role', User::ROLE['mentor'])
+            ->where('user_courses.course_id', $id);
+    }
+
     public function scopefilter($query, $data)
     {
         if (isset($data['search_form_input'])) {
@@ -105,5 +113,47 @@ class Course extends Model
                 ->whereColumn('courses_id', 'courses.id')]);
             ($data['review'] == config('constants.options.ascending')) ? $query->orderBy('rate') : $query->orderByDesc('rate');
         }
+    }
+
+
+    public function scopeTagsCourse($query, $id)
+    {
+        $query->leftJoin('tag_courses', 'courses.id', 'tag_courses.course_id')
+            ->leftJoin('tags', 'tag_courses.tag_id', 'tags.id')
+            ->where('tag_courses.course_id', $id);
+    }
+
+    public function scopeMentorOfCourse($query, $id)
+    {
+        $query->leftJoin('user_courses', 'courses.id', 'user_courses.course_id')
+            ->leftJoin('users', 'user_courses.user_id', 'users.id')
+            ->where('users.role', User::ROLE['mentor'])
+            ->where('user_courses.course_id', $id);
+    }
+
+    public function scopeInforLessons($query, $id)
+    {
+        $query->join('lessons', 'courses.id', '=', 'lessons.course_id')
+            ->select('lessons.*')
+            ->where('lessons.course_id', '=', $id);
+    }
+
+
+    public function scopeMainCourse($query)
+    {
+        $query->withCount(['users' => function ($subquery) {
+            $subquery->where('role', config('constants.role.student'));
+        }
+        ])->orderByDesc('users_count')->limit(3);
+    }
+
+    public function scopeOtherCourse($query)
+    {
+        $query->orderByDesc('id')->limit(3);
+    }
+
+     public function scopeShowOtherCourses($query, $courseId)
+    {
+        $query->where('id', '<>', $courseId)->limit(5);
     }
 }

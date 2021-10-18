@@ -32,7 +32,8 @@ class UserFactory extends Factory
             'role' => rand(0, 1),
             'phone' => $this->faker->phoneNumber,
             'address' => $this->faker->address(),
-            'about' => $this->faker->realText()
+            'about' => $this->faker->realText(),
+             'img_path' => $this->faker->imageUrl()
 
         ];
     }
