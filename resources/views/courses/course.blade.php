@@ -1,7 +1,7 @@
 <div class="card mb-1 col-md-6 col-12 card-course">
     <div class="row g-0 row-card-course">
         <div class="col-md-2 img-course">
-            <img src="{{ $course->img_path }}" class="img-fluid rounded-start" alt="img-course">
+            <img src="{{ $course->img_path }}" class="img-fluid " alt="img-course">
         </div>
         <div class="col-md-10">
             <div class="card-body">
@@ -10,7 +10,7 @@
             </div>
         </div>
         <div>
-            <a href="" class="btn btn-primary button-more">More</a>
+            <a href="{{ route('courses.detail', $course->id) }}" class="btn btn-primary button-more">More</a>
         </div>
         <div class="info-course">
             <div class="info-detail-one">

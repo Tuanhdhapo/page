@@ -1,0 +1,155 @@
+.course-detail{
+    background-color: $color-button;
+    margin-bottom: -100px;
+    padding: 15px;
+
+    .col-show-other{
+        background-color: $color-button;
+    }
+
+     .col-icon{
+         img{
+             margin-left:20px;
+         }
+     }
+
+     .course-tags{
+         color: $color-tag;
+     }
+}
+.detail-lesson-of-course {
+    padding-top: 15px;
+
+    .btn-leave-course {
+        text-align: center;
+
+        a {
+            padding: 8px 18px;
+            background: $color-blue;
+            box-shadow: $next-color;
+            border-radius: 22px;
+            font-family: utm;
+            font-size: 18px;
+            color: $color-button;
+            font-weight: bold;
+
+            &:hover {
+               color: $buton-hover;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.descriptions-container {
+    padding-bottom: 30px;
+
+    .title-container {
+        .title {
+            font-family: utm;
+            font-size: 25px;
+            font-weight: 700;
+            color: $buton-hover;
+            margin-bottom: 10px;
+        }
+    }
+
+    .content-container {
+        .content {
+            font-family: utm;
+            font-size: 18px;
+            color: $login-mess;
+           
+
+        }
+
+        .tags {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.document-container {
+    .title-documents {
+        p {
+            font-family: utm;
+            font-size: 25px;
+            font-weight: 700;
+            color: $buton-hover;
+            margin-bottom: 10px;
+        }
+    }
+
+    .type-file-container {
+        .pdf {
+            width: 17.5px;
+            height: 24px;
+        }
+    }
+
+    .name-file-container {
+        a {
+            font-family: utm;
+            font-size: 18px;
+            font-weight: 700;
+            color: $buton-hover;
+            margin-bottom: 10px;
+
+            &:hover {
+                text-decoration: none;
+                color: $view-courses;
+            }
+        }
+    }
+
+    .button-preview-container {
+        text-align: right;
+
+        a {
+            color: $color-button;
+            background: $view-courses;
+            box-shadow: $next-color;
+            border-radius: 22px;
+            padding: 8px 15px;
+            font-family: utm;
+            font-weight: bold;
+            font-size: 15px;
+            width: 85px;
+            height: 34px;
+            line-height: 34px;
+
+            &:hover {
+                color: $buton-hover;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.row-progress {
+    margin-top: 25px;
+
+    p {
+      margin: 0;
+    }
+
+    .col-txt {
+        font-family: utm;
+        font-weight: 700;
+        font-size: 20px;
+        color: $buton-hover;
+        text-align: center;
+    }
+}
+
+.progress {
+    height: 1.5rem !important;
+
+    .progress-bar {
+        background-color: $view-courses;
+
+        span {
+            font-size: 16px;
+        }
+    }
+}

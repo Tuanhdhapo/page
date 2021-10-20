@@ -47,77 +47,39 @@
 <div class="tutorial-hapo">
     <div class="container-card">
         <div class="row">
+        @foreach ($courses as $course )
             <div class="col-xl-4 col-md-4 d-flex justify-content-center">
                 <div class="card-hapo">
-                    <img src="{{ asset('images/hjs.PNG') }}" class="card-img-top" alt="hjs" />
-                    <div class="card-body">
-                        <p class="card-title text-center">
-                            HTML/CSS/js <span>Tutorial</span>
-                        </p>
-                        <p class="card-text text-center text-title">
-                            I knew hardly anything about HTML, JS, and
-                            CSS before entering
-                            New Media. I had coded quite a bit, but
-                            never touched anything
-                            in regards to web development.
-                        </p>
-                        <div class="text-center take-course">
-                            <a href="#" class="btn btn-primary">Take This Course</a>
+                        <img src="{{ asset($course->img_path) }}" class="card-img-top" alt="hjs" />
+                        <div class="card-body">
+                            <p class="card-title text-center">
+                                {{ $course->title }}<span>Tutorial</span>
+                            </p>
+                            <p class="card-text text-center text-title">
+                               {{ $course->description }}
+                            </p>
+                            <div class="text-center take-course">
+                                <a href="#" class="btn btn-primary">Take This Course</a>
+                            </div>
                         </div>
-                    </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-md-4 d-flex justify-content-center">
-                <div class="card-hapo">
-                    <img src="{{ asset('images/laravel.PNG') }}" class="card-img-top" alt="laravel" />
-                    <div class="card-body">
-                        <p class="card-title text-center">LARAVEL Tutorial</p>
-                        <p class="card-text text-center text-title">
-                            I knew hardly anything about HTML, JS, and
-                            CSS before entering
-                            New Media. I had coded quite a bit, but
-                            never touched anything
-                            in regards to web development.
-                        </p>
-                        <div class="text-center take-course">
-                            <a href="#" class="btn btn-primary">Take This Course</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-md-4 d-flex justify-content-center">
-                <div class="card-hapo">
-                    <img src="{{ asset('images/php.PNG') }}" class="card-img-top" alt="php" />
-                    <div class="card-body">
-                        <p class="card-title text-center">PHP Tutorial</p>
-                        <p class="card-text text-center text-title">
-                            I knew hardly anything about HTML, JS, and
-                            CSS before entering
-                            New Media. I had coded quite a bit, but
-                            never touched anything
-                            in regards to web development.
-                        </p>
-                        <div class="text-center take-course">
-                            <a href="#" class="btn btn-primary">Take This Course</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        @endforeach
         </div>
     </div>
     <div class="other-courses">
         <p class="text-center courses">Other courses</p>
         <div class="container-card">
             <div class="row">
+                @foreach ($otherCourses as $otherCourse)
                 <div class="col-xl-4 col-md-4 d-flex justify-content-center">
                     <div class="card-hapo">
-                        <img src="{{ asset('images/css.PNG') }}" class="card-img-top" alt="css" />
+                        <img src="{{ asset($otherCourse->img_path) }}" class="card-img-top" alt="css" />
                         <div class="card-body">
-                            <p class="card-title text-center">CSS Tutorial
+                            <p class="card-title text-center">{{ $otherCourse->title }}
                             </p>
                             <p class="card-text text-center text-title-frist">
-                                I knew hardly anything about HTML, JS,and CSS before
-                                entering New Media,...
+                                {{ $otherCourse->description }}
                             </p>
                             <div class="text-center take-course">
                                 <a href="#" class="btn btn-primary">Take This Course</a>
@@ -125,38 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-4 d-flex justify-content-center">
-                    <div class="card-hapo">
-                        <img src="{{ asset('images/rails.PNG') }}" class="card-img-top" alt="rails" />
-                        <div class="card-body">
-                            <p class="card-title text-center">
-                                Ruby on rails <span>Tutorial</span>
-                            </p>
-                            <p class="card-text text-center text-title-frist">
-                                I knew hardly anything about HTML, JS,and CSS before
-                                entering New Media,...
-                            </p>
-                            <div class="text-center take-course">
-                                <a href="#" class="btn btn-primary">Take This Course</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-4 d-flex justify-content-center">
-                    <div class="card-hapo">
-                        <img src="{{ asset('images/java.PNG') }}" class="card-img-top" alt="java" />
-                        <div class="card-body">
-                            <p class="card-title text-center">Java Tutorial</p>
-                            <p class="card-text text-center text-title-frist">
-                                I knew hardly anything about HTML, JS,and CSS before
-                                entering New Media,...
-                            </p>
-                            <div class="text-center take-course">
-                                <a href="#" class="btn btn-primary">Take This Course</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -312,19 +243,19 @@
             <div class="card text-center card-statistic">
                 <div class="card-body">
                     <p class="card-title">Courses</p>
-                    <p class="card-text">1,586</p>
+                    <p class="card-text">{{$totalCourses}}</p>
                 </div>
             </div>
             <div class="card text-center card-statistic">
                 <div class="card-body">
                     <p class="card-title">Lessons</p>
-                    <p class="card-text">2,689</p>
+                    <p class="card-text">{{$totalLessons}}</p>
                 </div>
             </div>
             <div class="card text-center card-statistic">
                 <div class="card-body">
                     <p class="card-title">Learners</p>
-                    <p class="card-text">16,882</p>
+                    <p class="card-text">{{$totalUsers}}</p>
                 </div>
             </div>
         </div>

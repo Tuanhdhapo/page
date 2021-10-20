@@ -1,7 +1,7 @@
 <header class="header fixed">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{route('home')}}">
                 <div class="img-logo">
                     <p class="text-center">
                         <img src="{{ asset('images/logo.png') }}" alt="failimage" />
@@ -34,13 +34,13 @@
                     </li>
                     @if (!Auth::check())
                         <li class="nav-item item-menu">
-                            <a class="nav-link text-center" role="tab" data-bs-toggle="modal"
+                            <a class="nav-link text-center" role="tab" data-bs-toggle="modal" id="btn-regis-login"
                                 data-bs-target="#loginModal" href="#">LOGIN/REGISTER
                             </a>
                         </li>
                     @endif
                     <li class="nav-item item-menu">
-                        <a class="nav-link text-center" role="tab" href="#"
+                        <a class="nav-link text-center {{Route::is('profile') ? 'active': ''}}" role="tab" href="{{route('profile')}}"
                             onclick="hidenav()">PROFILE</a>
                     </li>
                     @if (Auth::check())
