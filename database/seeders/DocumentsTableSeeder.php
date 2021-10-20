@@ -28,6 +28,6 @@ class DocumentsTableSeeder extends Seeder
             'name' => 'Seoul.mp4',
             'description' => 'File video demo',
             'type' => 'mp4'
-        ]);
+          ]);
     }
 }

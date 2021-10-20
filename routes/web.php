@@ -11,9 +11,6 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\UserController;
 
-
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes

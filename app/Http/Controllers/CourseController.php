@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\Document;
 use App\Models\Feedback;
 use App\Models\Lesson;
-use App\Models\ReplyReview;   
+use App\Models\ReplyReview;
 use App\Models\UserCourse;
 use Illuminate\Support\Facades\Auth;
 
@@ -37,7 +37,7 @@ class CourseController extends Controller
         return view('courses.index', compact('courses', 'mentors', 'tags', 'keyword'));
     }
 
-      public function detail($id)
+    public function detail($id)
     {
         $course = Course::find($id);
         $tags = Course::tagsCourse($id)->get();
@@ -49,7 +49,7 @@ class CourseController extends Controller
         // dd($reviews);
         $totalRate  = Feedback::feedbacksOfCourse($course->id)->sum('rate');
         $avgRating = $reviews->count() > 0 ? round($totalRate / $reviews->count()) : 0;
-        $totalDocuments = Lesson::documentsOfLesson($lessons->first()->id)->get()  ;
+        $totalDocuments = Lesson::documentsOfLesson($lessons->first()->id)->get();
 
         if (Auth::check()) {
             $documentsLearned = Document::documentLearned($lessons->first()->id)->get();
@@ -65,10 +65,10 @@ class CourseController extends Controller
 
        
 
-        return view('courses.course_detail', compact('course', 'lessons', 'tags', 'otherCourses', 'mentors','isJoined','reviews','totalRate','learnedPart','avgRating','totalDocuments'));
+        return view('courses.course_detail', compact('course', 'lessons', 'tags', 'otherCourses', 'mentors', 'isJoined', 'reviews', 'totalRate', 'learnedPart', 'avgRating', 'totalDocuments'));
     }
 
-     public function join($id)
+    public function join($id)
     {
         $course = Course::find($id);
         $course->users()->attach(Auth::user()->id);

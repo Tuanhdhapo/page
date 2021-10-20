@@ -15,7 +15,7 @@ class UpdateUserFirstTable extends Migration
     {
          Schema::table('users', function (Blueprint $table) {
             $table->string('img_path')->nullable();
-        });
+         });
     }
 
     /**

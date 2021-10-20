@@ -57,12 +57,12 @@ class Course extends Model
         return $this->users()->where('role', config('constants.role.student'))->count();
     }
 
-     public function scopeTeacherOfCourse($query, $id)
+    public function scopeTeacherOfCourse($query, $id)
     {
         $query->leftJoin('user_courses', 'courses.id', 'user_courses.course_id')
-            ->leftJoin('users', 'user_courses.user_id', 'users.id')
-            ->where('users.role', User::ROLE['mentor'])
-            ->where('user_courses.course_id', $id);
+           ->leftJoin('users', 'user_courses.user_id', 'users.id')
+           ->where('users.role', User::ROLE['mentor'])
+           ->where('user_courses.course_id', $id);
     }
 
     public function scopefilter($query, $data)
@@ -144,7 +144,6 @@ class Course extends Model
     public function getFiveStarAttribute()
     {
         return $this->feedback()->where('rate', '=', 5)->count();
-    
     }
 
 
@@ -187,7 +186,7 @@ class Course extends Model
         $query->orderByDesc('id')->limit(3);
     }
 
-     public function scopeShowOtherCourses($query, $courseId)
+    public function scopeShowOtherCourses($query, $courseId)
     {
         $query->where('id', '<>', $courseId)->limit(5);
     }

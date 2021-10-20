@@ -29,7 +29,7 @@ class LessonController extends Controller
         return view('courses.course_detail', compact('course', 'lessons', 'tags', 'otherCourses', 'mentors', 'keyword', 'isJoined', 'reviews', 'totalRate', 'avgRating'));
     }
 
-     public function index($id)
+    public function index($id)
     {
         
         $lessons = Lesson::find($id);
@@ -47,6 +47,6 @@ class LessonController extends Controller
         $avgRating = $reviews->count() > 0 ? round($totalRate / $reviews->count()) : 0;
 
 
-        return view('lessons.index', compact('reviews','totalRate','avgRating','lessons', 'course', 'otherCourses', 'tags', 'numberStudent', 'mentors', 'documents', 'documentsLearned', 'percentage'));
+        return view('lessons.index', compact('reviews', 'totalRate', 'avgRating', 'lessons', 'course', 'otherCourses', 'tags', 'numberStudent', 'mentors', 'documents', 'documentsLearned', 'percentage'));
     }
 }
