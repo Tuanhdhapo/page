@@ -1,7 +1,7 @@
 .profile-container {
   padding-top: 25px;
   padding-bottom: 25px;
-  background-color:#E5E5E5;
+  background-color:$bg-banner;
   margin-bottom: -100px;
 
   .main-profile {
@@ -37,14 +37,14 @@
       font-family:utm;
       font-weight: bold;
       font-size: 25px;
-      color:#505353;
+      color:$footer-bg;;
     }
 
     .email-user {
       font-family:utm;
       font-weight: bold;
       font-size: 18px;
-      color:#505353;
+      color:$footer-bg;;
       padding-bottom: 0.5rem;
     }
   }
@@ -64,7 +64,7 @@
     .txt-user {
       font-size: 18px;
       font-family:utm;
-      color:#505353;
+      color:$footer-bg;;
       margin-left: 10px;
       margin-bottom: 0;
     }
@@ -78,7 +78,7 @@
     p {
       font-size: 18px;
       font-family:utm;
-      color:#505353;
+      color:$footer-bg;;
       margin-bottom: 0;
     }
   }
@@ -88,7 +88,7 @@
   margin-top: 130px;
 
   .txt-my-profile {
-    border-bottom: 1px solid #b2d235;
+    border-bottom: 1px solid $color-blue;
 
     p {
       font-family:utm;
@@ -96,13 +96,13 @@
       font-weight: bold;
       font-size: 38px;
       line-height: 47px;
-      color:#505353;
+      color:$footer-bg;;
       margin: 0;
     }
   }
 
   .img-your-courses {
-    border-top: 1px solid gray;
+    border-top: 1px solid $footer-bg;;
     margin-top: 2px;
     padding: 25px 0;
     margin-left: 0;
@@ -125,7 +125,7 @@
   }
 
   .edit-profile-input {
-    border-top: 1px solid gray;
+    border-top: 1px solid $footer-bg;
     margin-top: 2px;
     margin-left: 0;
     margin-right: 0;
@@ -138,26 +138,26 @@
       font-weight: bold;
       font-size: 20px;
       line-height: 25px;
-      color:#505353;
+      color:$footer-bg;;
     }
 
     .edit-input-profile {
-      color: black;
+      color: $buton-hover;
     }
 
     .btn-save-profile {
       width: 100px;
       height: 40px;
-      background-color: #b2d235;
-      border: 1px solid #b2d235;
+      background-color: $color-blue;
+      border: 1px solid $color-blue;
       border-radius: 5px;
-      color: white;
+      color: $color-button;
       font-size: 20px;
       font-weight: bold;
       font-family:utm;
 
       &:hover {
-        color:black;
+        color:$buton-hover;
       }
     }
   }
@@ -168,7 +168,7 @@
   cursor: pointer;
   font-size: 30px;
   position: absolute;
-  color: #505353;
+  color: $footer-bg;;
   opacity: 0.8;
   top: 13rem;
 

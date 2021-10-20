@@ -28,20 +28,20 @@
 }
 
 .course-tags{
-    color: #5D8BD0;
+    color: $color-tag;
 }
 
 .info-course-detail{
-    background-color: white;
+    background-color: $color-button;
     padding:10px;
 }
 .description-detail-course {
   padding-top: 15px;
   padding-bottom: 15px;
   margin-top: 15px;
-  border: 1px solid #DFDFDF;
+  border: 1px solid $color-border-detail;
   height: 500px;
-  background-color: white;
+  background-color: $color-button;
 
   .title-description-container {
     padding: 15px;
@@ -50,8 +50,8 @@
       font-family: utm;
       font-weight: 700;
       font-size: 25px;
-      color: #505353;
-      border-bottom: 1px #b2d235 solid;
+      color: $footer-bg;
+      border-bottom: 1px $color-blue solid;
     }
   }
 
@@ -62,26 +62,26 @@
       font-family: utm;
       font-weight: 700;
       font-size: 18px;
-      color:#949292;
+      color:$next-color;
     }
   }
 }
 
 .nav-course-detail-container {
-  background-color: white;
+  background-color: $color-button;
   border-radius: 10px 10px 0 0;
 
   .nav-tabs .nav-link.active,
   .nav-tabs .nav-item.show .nav-link {
     border: unset;
-    border-bottom: 2px solid #b2d235;
-    background-color: white;
-    color: #b2d235;
+    border-bottom: 2px solid $color-blue;
+    background-color: $color-button;
+    color: $color-blue;
   }
 
   .nav-tabs {
     border: unset;
-    border-bottom: 2px solid #DFDFDF;
+    border-bottom: 2px solid $color-border-detail;
   }
 }
 
@@ -103,21 +103,21 @@
     font-family: utm;
     font-weight: 700;
     font-size: 20px;
-    color: #505353;
+    color: $footer-bg;
     text-decoration: none;
     padding: 0;
     display: initial;
     padding-bottom: 19px;
 
     &:hover {
-      color: #b2d235;
+      color: $color-blue;
       border: unset;
     }
   }
 }
 
 .lessons-teacher-reiews-container {
-  background-color: white;
+  background-color: $color-button;
   border-radius: 0 0 10px 10px;
 
   .tab-content {
@@ -137,7 +137,7 @@
   .detail-lessons {
     .search-lessons {
       height: 40px;
-      color: black;
+      color:$buton-hover;
     }
   }
 
@@ -145,16 +145,16 @@
     .btn-search {
       width: 100px;
       height: 40px;
-      background: #b2d235;
+      background: $color-blue;
       border-radius: 5px;
       border: none;
-      color: white;
+      color: $color-button;
       font-family: utm;
       font-weight: bold;
       font-size: 18px;
 
       &:hover {
-        color: #505353;
+        color: $footer-bg;
       }
     }
   }
@@ -164,17 +164,17 @@
 
     .btn-join-course {
       padding: 9px 16px;
-      background: #b2d235;
-      box-shadow:#DFDFDF;
+      background: $color-blue;
+      box-shadow:$color-border-detail;
       border-radius: 22px;
       border: unset;
-      color: white;
+      color: $color-button;
       font-family: utm;
       font-weight: bold;
       font-size: 18px;
 
       &:hover {
-        color: #505353;
+        color: $footer-bg;
         text-decoration: none;
       }
     }
@@ -187,16 +187,16 @@
     font-family: utm;
     font-size: 18px;
     font-weight: bold;
-    color: #505353;
+    color: $footer-bg;
     margin: 0;
     cursor: pointer;
 
     &:hover {
-      color: #b2d235;
+      color: $color-blue;
     }
   }
   .boder-tab-lesson{
-      border-bottom: 1px solid #DFDFDF;
+      border-bottom: 1px solid $color-border-detail;
   }
 
   .btn-more-lessons {
@@ -205,10 +205,10 @@
     align-items: center;
 
     a {
-      background: #b2d235;
-      box-shadow:#DFDFDF;
+      background: $color-blue;
+      box-shadow:$color-border-detail;
       border-radius: 22px;
-      color: white;
+      color: $color-button;
       font-family: utm;
       font-size: 15px;
       font-weight: bold;
@@ -219,7 +219,7 @@
 
       &:hover {
         text-decoration: none;
-        color: #505353;
+        color: $footer-bg;
       }
     }
   }
@@ -234,7 +234,7 @@
 .col-show-other {
   padding-top: 15px;
   padding-bottom: 15px;
-  border: 1px solid #DFDFDF;
+  border: 1px solid $color-border-detail;
 
   .row-detail {
     padding: 15px 0;
@@ -249,7 +249,7 @@
       margin: 0;
       font-family: utm;
       font-size: 25px;
-      color: #505353;
+      color: $footer-bg;
     }
   }
 
@@ -261,25 +261,25 @@
 
   .col-txt-tags {
     p {
-      color:#505353;
+      color:$footer-bg;
     }
   }
 }
 
 .show-other-courses-container {
-  background: white;
-  border: 1px solid #DFDFDF;;
+  background: $color-button;
+  border: 1px solid $color-border-detail;;
   margin-top: 30px;
   
 
   .txt-show-other-courses {
     text-align: center;
-    background: #b2d235;
+    background: $color-blue;
 
     p {
       padding: 15px;
       margin: 0;
-      color: white;
+      color: $color-button;
       font-family: utm;
       font-weight: bold;
       font-size: 25px;
@@ -296,7 +296,7 @@
       font-size: 16px;
       font-weight: bold;
       font-family: utm;
-      border-bottom: 1px solid#DFDFDF;
+      border-bottom: 1px solid$color-border-detail;
     }
   }
 
@@ -306,12 +306,12 @@
 
     a {
       padding: 8px 18px;
-      background: #b2d235;
-      box-shadow:#DFDFDF;
+      background: $color-blue;
+      box-shadow:$color-border-detail;
       border-radius: 22px;
       font-family: utm;
       font-size: 18px;
-      color: white;
+      color: $color-button;
       font-weight: bold;
     }
   }
@@ -325,7 +325,7 @@
   .txt-main-teacher {
     p {
       font-family: utm;
-      color: #505353;
+      color: $footer-bg;
       font-size: 25px;
       font-weight: bold;
     }
@@ -344,14 +344,14 @@
     .name-mentor {
       font-family: utm;
       font-size: 18px;
-      color: #505353;
+      color: $footer-bg;
       font-weight: bold;
     }
 
     .exp-mentor {
       font-family: utm;
       font-size: 14px;
-      color:#DFDFDF;
+      color:$color-border-detail;
       padding-bottom: 5px;
     }
   }
@@ -360,22 +360,21 @@
     p {
       font-family: utm;
       font-size: 18px;
-      color:#DFDFDF;
+      color:$color-border-detail;
     }
   }
 }
 
 .icon-check-learned {
-  color: #b2d235;
+  color: $color-blue;
   margin-right: 15px;
 }
 
 .icon-check-learning {
-  color: #505353;
+  color: $footer-bg;
   margin-right: 15px;
 }
 
-// tab review
 .review-container {
   .leave-review-txt,
   .vote-txt {
@@ -383,7 +382,7 @@
       font-family: utm;
       font-size: 22px;
       font-weight: bold;
-      color: #505353;
+      color: $footer-bg;
       margin-bottom: 0;
       -webkit-text-stroke-width: 0.5px;
     }
@@ -401,7 +400,7 @@
       font-family: utm;
       font-size: 25px;
       font-weight: bold;
-      color: #505353;
+      color: $footer-bg;
       margin-bottom: 0;
       -webkit-text-stroke-width: 1px;
     }
@@ -409,7 +408,7 @@
 }
 
 .col-star-left {
-  background-color: #505353;
+  background-color: $footer-bg;
   border-radius: 5px;
   padding: 15px 0;
 
@@ -417,7 +416,7 @@
     p {
       font-family: utm;
       font-size: 60px;
-      color: white;
+      color: $color-button;
       font-weight: bold;
       line-height: 74px;
       margin-bottom: 5px;
@@ -427,18 +426,18 @@
 
   .star-show {
     i {
-      color: #DFDFDF;
+      color: $color-border-detail;
       font-size: 27px;
     }
 
     .checked {
-      color: #FFD567 !important;
+      color: $color-star !important;
     }
   }
 
   .total-rating {
     p {
-      color: white;
+      color: $color-button;
       font-family: utm;
       font-weight: bold;
       font-size: 16px;
@@ -453,7 +452,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border: 1px solid #DFDFDF;
+    border: 1px solid $color-border-detail;
     border-radius: 5px;
     height: 228px;
   }
@@ -462,7 +461,7 @@
 .star-review{
     font-size:18px;
     margin-top:10px;
-    color:#747474;
+    color:$footer-bg;
 }
 
 .social-mentor{
@@ -477,7 +476,7 @@
     font-family: utm;
     font-size: 16px;
     font-weight: bold;
-    color: #505353;
+    color: $footer-bg;
     line-height: 20px;
   }
 
@@ -485,12 +484,12 @@
     font-family: utm;
     font-size: 14px;
     font-weight: bold;
-    color: #FFD567;
+    color: $color-star;
     line-height: 17px;
   }
 
   .bg-success {
-    background-color: #FFD567 !important;
+    background-color: $color-star !important;
   }
 }
 
@@ -499,7 +498,7 @@
     font-family: utm;
     font-size: 18px;
     font-weight: bold;
-    color: #505353;
+    color: $footer-bg;
     margin-bottom: 0;
     -webkit-text-stroke-width: 0.5px;
   }
@@ -527,7 +526,7 @@
       font-size: 18px;
       font-weight: bold;
       font-family: utm;
-      color: #505353;
+      color: $footer-bg;
       margin: 0;
     }
   }
@@ -540,7 +539,7 @@
     }
 
     .checked {
-      color: #FFD567;
+      color: $color-star;
     }
   }
 
@@ -550,9 +549,9 @@
     p {
       font-size: 14px;
       font-family: utm;
-      color: #505353;
+      color: $footer-bg;
       margin: 0;
-      color: gainsboro;
+      color: $color-gainsboro;
     }
   }
 }
@@ -563,9 +562,9 @@
   p {
     font-size: 18px;
     font-family: utm;
-    color: #505353;
+    color: $footer-bg;
     margin: 0;
-    color: gainsboro;
+    color: $color-gainsboro;
   }
 }
 
@@ -579,18 +578,18 @@
   input {
     height: 30px;
     width: 80px;
-    background-color: #b2d235;
-    box-shadow:#DFDFDF;
+    background-color: $color-blue;
+    box-shadow:$color-border-detail;
     border: unset;
     border-radius: 22px;
-    color: white;
+    color: $color-button;
     font-family: utm;
     font-size: 15px;
     line-height: 18px;
     font-weight: bold;
 
     &:hover {
-      color: #505353;
+      color: $footer-bg;
     }
   }
 }
@@ -598,11 +597,11 @@
 .label-input-review {
   font-family: utm;
   font-size: 18px;
-  color: #DFDFDF;
+  color: $color-border-detail;
 }
 
 .err-review {
-  color: #505353;
+  color: $footer-bg;
   display: none;
 }
 
@@ -614,8 +613,6 @@
 
 .rate:not(:checked) > input {
   position: absolute;
-  //top: -9999px;
-  //bottom: 0;
   display: none;
 }
 
@@ -626,7 +623,7 @@
   white-space: nowrap;
   cursor: pointer;
   font-size: 30px;
-  color: #D8D8D8;
+  color: $login-with;
 }
 
 .rate:not(:checked) > label:before {
@@ -634,12 +631,12 @@
 }
 
 .rate > input:checked ~ label {
-  color: red;
+  color: $color-star;
 }
 
 .rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label {
-  color: #D8D8D8;
+  color: $boder-slick;
 }
 
 .rate > input:checked + label:hover,
@@ -647,11 +644,11 @@
 .rate > input:checked ~ label:hover,
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
-  color: #FFD567;
+  color: $color-star;
 }
 
 .course-detail{
-    background-color: #F2F2F2;
+    background-color: $bg-input;
     margin-bottom: -100px;
     padding: 15px;
 }
@@ -660,14 +657,14 @@
     font-family: utm;
     .descriptions-course {
         height: 439px;
-        border: 1px solid #DFDFDF;
+        border: 1px solid $color-border-detail;
         box-sizing: border-box;
         padding: 10px;
 
         p:nth-child(1) {
             font-size: 25px;
             font-weight: 700;
-            border-bottom: 2px solid #b2d235;
+            border-bottom: 2px solid $color-blue;
         }
     }
 
@@ -675,11 +672,11 @@
         box-sizing: border-box;
 
         margin-top: 40px;
-        border: 1px solid #DFDFDF;
+        border: 1px solid $color-border-detail;
         .course-info-detail {
             width: 95%;
             margin: auto;
-            border-bottom: 1px solid #DADADA;
+            border-bottom: 1px solid $boder-slick;
             padding-bottom: 20px;
             font-size: 25px;
             padding: 20px;
@@ -696,12 +693,12 @@
 
     .other-course {
         margin-top: 30px;
-        border: 1px solid #DFDFDF;
+        border: 1px solid $color-border-detail;
         .title-other-course {
-            background-color: #b2d235;
+            background-color: $color-blue;
             padding: 15px;
             text-align: center;
-            color: white;
+            color: $color-button;
             font-size: 25px;
             font-weight: 700;
         }
@@ -710,14 +707,14 @@
             margin: auto;
 
             p {
-                border-bottom: 1px solid green#FFD567;
+                border-bottom: 1px solid $color-star;
                 padding-bottom: 10px;
             }
         }
 
         .view-all {
             margin-left: 78px;
-            background-color: #b2d235;
+            background-color: $color-blue;
             border: none;
             width: 200px;
             border-radius: 22px;

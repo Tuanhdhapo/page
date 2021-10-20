@@ -1,10 +1,10 @@
 .course-detail{
-    background-color: #F2F2F2;
+    background-color: $color-button;
     margin-bottom: -100px;
     padding: 15px;
 
     .col-show-other{
-        background-color: white;
+        background-color: $color-button;
     }
 
      .col-icon{
@@ -14,7 +14,7 @@
      }
 
      .course-tags{
-         color: #5D8BD0;
+         color: $color-tag;
      }
 }
 .detail-lesson-of-course {
@@ -25,16 +25,16 @@
 
         a {
             padding: 8px 18px;
-            background: #b2d235;
-            box-shadow: grey;
+            background: $color-blue;
+            box-shadow: $next-color;
             border-radius: 22px;
             font-family: utm;
             font-size: 18px;
-            color: white;
+            color: $color-button;
             font-weight: bold;
 
             &:hover {
-               color: black;
+               color: $buton-hover;
                 text-decoration: none;
             }
         }
@@ -49,7 +49,7 @@
             font-family: utm;
             font-size: 25px;
             font-weight: 700;
-            color: black;
+            color: $buton-hover;
             margin-bottom: 10px;
         }
     }
@@ -58,7 +58,7 @@
         .content {
             font-family: utm;
             font-size: 18px;
-            color: #949292;
+            color: $login-mess;
            
 
         }
@@ -75,7 +75,7 @@
             font-family: utm;
             font-size: 25px;
             font-weight: 700;
-            color: black;
+            color: $buton-hover;
             margin-bottom: 10px;
         }
     }
@@ -92,12 +92,12 @@
             font-family: utm;
             font-size: 18px;
             font-weight: 700;
-            color: black;
+            color: $buton-hover;
             margin-bottom: 10px;
 
             &:hover {
                 text-decoration: none;
-                color: greenyellow;
+                color: $view-courses;
             }
         }
     }
@@ -106,9 +106,9 @@
         text-align: right;
 
         a {
-            color: white;
-            background: greenyellow;
-            box-shadow: grey;
+            color: $color-button;
+            background: $view-courses;
+            box-shadow: $next-color;
             border-radius: 22px;
             padding: 8px 15px;
             font-family: utm;
@@ -119,7 +119,7 @@
             line-height: 34px;
 
             &:hover {
-                color: black;
+                color: $buton-hover;
                 text-decoration: none;
             }
         }
@@ -137,7 +137,7 @@
         font-family: utm;
         font-weight: 700;
         font-size: 20px;
-        color: black;
+        color: $buton-hover;
         text-align: center;
     }
 }
@@ -146,7 +146,7 @@
     height: 1.5rem !important;
 
     .progress-bar {
-        background-color: greenyellow;
+        background-color: $view-courses;
 
         span {
             font-size: 16px;

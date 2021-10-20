@@ -402,7 +402,7 @@ body {
     position: absolute;
     top: 30%;
     left: 0.1%;
-    border: 0.5px solid #c4c4c4;
+    border: 0.5px solid $border-card;
     background-color: $color-button;
     text-align: center;
     z-index: 1;
@@ -419,7 +419,7 @@ body {
     position: absolute;
     top: 30%;
     right: 0.1%;
-    border: 0.5px solid #c4c4c4;
+    border: 0.5px solid $border-card;
     text-align: center;
     color: $next-color;
   }

@@ -1,5 +1,5 @@
 .all-course {
-  background-color: #E5E5E5;
+  background-color: $bg-banner;
   padding: 50px;
   margin-bottom: -100px;
 
@@ -16,7 +16,7 @@
     height: 40px;
     background-color:$color-button;
     display: flex;
-    border: 1px solid #C4C4C4;
+    border: 1px solid $border-card;
     border-radius: 5px;
 
     img {
@@ -39,7 +39,7 @@
       width: 355px;
       height: 40px;
       border-radius: 5px;
-      border: 1px solid #C4C4C4;
+      border: 1px solid $border-card;
       margin-left: 12px;
       margin-right: 10px;
     }
@@ -93,7 +93,7 @@
 
     .label-radio {
       width: 90px;
-      background-color: #E5E6E7;
+      background-color: $bg-banner;
     }
 
     .filter-by {
@@ -163,7 +163,7 @@
     width: 540px;
     height: 350px;
     margin-top: 30px;
-    border: 1px solid #C4C4C4;
+    border: 1px solid $border-card;
     border-radius: 8px;
     margin-right: 38px;
 
