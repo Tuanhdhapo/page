@@ -115,6 +115,41 @@ class Course extends Model
         }
     }
 
+    
+    public function getreviewsAttribute()
+    {
+        return $this->feedback()->count();
+    }
+
+    public function getOneStarAttribute()
+    {
+        return $this->feedback()->where('rate', '=', 1)->count();
+    }
+
+    public function getTwoStarAttribute()
+    {
+        return $this->feedback()->where('rate', '=', 2)->count();
+    }
+
+    public function getThreeStarAttribute()
+    {
+        return $this->feedback()->where('rate', '=', 3)->count();
+    }
+
+    public function getFourStarAttribute()
+    {
+        return $this->feedback()->where('rate', '=', 4)->count();
+    }
+
+    public function getFiveStarAttribute()
+    {
+        return $this->feedback()->where('rate', '=', 5)->count();
+    
+    }
+
+
+
+
 
     public function scopeTagsCourse($query, $id)
     {

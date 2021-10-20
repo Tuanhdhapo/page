@@ -10,7 +10,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="description-detail-course">
+                    <div class="description-detail-course" >
                         <div class="title-description-container">
                             <p class="title-description">Descriptions course</p>
                         </div>
@@ -54,12 +54,12 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="col-lg-12 ">
+                    <div class="col-lg-12 info-course-detail ">
                         <div class="row row-detail">
                             <div class="col-lg-2 align-self-center col-icon">
                                 <img src="{{ asset('images/img-learners.png') }}" alt="">
                             </div>
-                            <div class="col-lg-3 pr-0 align-self-center col-txt">
+                            <div class="col-lg-4 pr-0 align-self-center col-txt">
                                 <p>Learners :</p>
                             </div>
                             <div class="col-lg-4 pl-0 align-self-center col-txt col-txt-main">
@@ -99,7 +99,7 @@
                                 <p>Tags :</p>
                             </div>
                             <div class="col-lg-7 pl-0 align-self-center col-txt col-txt-tags">
-                                <p>@foreach ($tags as $tag) #{{ $tag->content }} @endforeach</p>
+                                <p class="course-tags">@foreach ($tags as $tag) #{{ $tag->content }} @endforeach</p>
                             </div>
                         </div>
                         <hr>
@@ -125,7 +125,7 @@
                             </div>
                         @endforeach
                         <div class="col-kg-12 btn-view-all">
-                            <a href="/allcourses">View all ours courses</a>
+                            <a href="{{route('courses')}}">View all ours courses</a>
                         </div>
                     </div>
                 </div>

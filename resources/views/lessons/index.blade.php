@@ -8,28 +8,17 @@
                     <div class="img-container">
                         <img src="{{ asset($course->img_path) }}" alt="anh">
                     </div>
-                    <div class="row p-0 row-progress">
-                        <div class="col-lg-2  col-txt">
-                            <p>Progress :</p>
-                        </div>
-                        <div class="progress p-0 col-lg-9 ">
-                            <div class="progress-bar" id="progress" role="progressbar" aria-valuenow="{{ $percentage }}"
-                                aria-valuemin="0" aria-valuemax="100" style="width:{{ $percentage }}%">
-                                <span id="show-percentage">{{ $percentage }}%</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="col-lg-4 detail-lesson-of-course">
                     <div class="col-lg-12 col-show-other">
-                        <div class="row row-detail">
+                        <div class="row row-detail ">
                             <div class="col-lg-2  col-icon">
-                                <img src="{{ asset('images/img-course.png') }}" alt="">
+                                <img src="{{ asset('images/img-course.png') }}" alt="icon">
                             </div>
-                            <div class="col-lg-3 pr-0  col-txt">
+                            <div class="col-lg-4 pr-0  col-txt">
                                 <p>Course :</p>
                             </div>
-                            <div class="col-lg-7 pl-0  col-txt col-txt-main">
+                            <div class="col-lg-6 pl-0  col-txt col-txt-main">
                                 <p>{{ $course->title }}</p>
                             </div>
                         </div>
@@ -38,10 +27,10 @@
                             <div class="col-lg-2  col-icon">
                                 <img src="{{ asset('images/img-learners.png') }}" alt="">
                             </div>
-                            <div class="col-lg-3 pr-0  col-txt">
+                            <div class="col-lg-5 pr-0  col-txt">
                                 <p>Learners :</p>
                             </div>
-                            <div class="col-lg-7 pl-0  col-txt col-txt-main">
+                            <div class="col-lg-5 pl-0  col-txt col-txt-main">
                                 <p>{{ $numberStudent->numberUserStudent }}</p>
                             </div>
                         </div>
@@ -50,10 +39,10 @@
                             <div class="col-lg-2  col-icon">
                                 <img src="{{ asset('images/img-times.png') }}" alt="">
                             </div>
-                            <div class="col-lg-3 pr-0  col-txt">
+                            <div class="col-lg-5 pr-0  col-txt">
                                 <p>Times :</p>
                             </div>
-                            <div class="col-lg-7 pl-0  col-txt col-txt-tags">
+                            <div class="col-lg-5 pl-0  col-txt col-txt-main">
                                 <p>{{ $numberStudent->courseTime }} h</p>
                             </div>
                         </div>
@@ -66,8 +55,8 @@
                                 <p>Tags :</p>
                             </div>
                             <div class="col-lg-7 pl-0  col-txt col-txt-main">
-                                <p>@foreach ($tags as $tag) {{ $tag->content }} @endforeach</p>
-                            </div>
+                                <p class="course-tags">@foreach ($tags as $tag) {{ $tag->content }} @endforeach</p>
+                            </div> 
                         </div>
                         <hr>
                         <div class="row row-detail">
@@ -84,7 +73,7 @@
                         <hr>
                         <div class="row row-detail">
                             <div class="col-lg 12 btn-leave-course">
-                                <a href="/leave/{{ $course->id }}">Leave the course</a>
+                                <a href="/courses/detail/{{ $course->id }}">Leave the course</a>
                             </div>
                         </div>
                     </div>
@@ -98,7 +87,7 @@
                                 <a class="nav-link active btn-nav-detail" data-bs-toggle="pill"
                                     href="#descriptions">Descriptions</a>
                             </li>
-                            <li class="nav-item col-lg-2 pl-0">
+                            <li  class="nav-item col-lg-2 pl-0">
                                 <a class="nav-link btn-nav-detail" data-bs-toggle="pill" href="#teacher">Tearcher</a>
                             </li>
                             <li class="nav-item col-lg-2 pl-0">
@@ -137,7 +126,7 @@
                             </div>
                         @endforeach
                         <div class="col-kg-12 btn-view-all">
-                            <a href="/allcourses">View all ours courses</a>
+                            <a href="{{route('courses')}}">View all ours courses</a>
                         </div>
                     </div>
                 </div>

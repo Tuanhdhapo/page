@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="col-lg-8 col-star-right">
-            <div style="height: 228px" class="rating-chart-container">
+            <div  class="rating-chart-container">
                 <div class="row rating-chart justify-content-around">
                     <div class="col-lg-2 pr-0 text-center align-self-center number-start">5 star</div>
                     <div class="col-lg-9 p-0 text-center align-self-center">
@@ -99,8 +99,8 @@
         @foreach ($reviews as $review)
             <div class="col-lg-12 show-comment-user">
                 <div class=" d-flex comment-header justify-content-start align-items-center ">
-                    <div class="ava-user-cmt ">
-                        <img src="{{ asset('storage/avatar_user/' . $review->img_path) }}" alt="avatar user">
+                    <div  class="ava-user-cmt ">
+                        <img  src="{{ $review->img_path }}" alt="avatar user">
                     </div>
                     <div class="name-user-cmt ">
                         <p>{{ $review->name }}</p>
@@ -199,7 +199,7 @@
                             stars</label>
                     </div>
 
-                    <div style="font-size:18px;margin-top:10px;color:#747474">(stars)</div>
+                    <div class="star-review">(stars)</div>
                 </div>
                  <div class="col-lg-9 text-right align-self-center">
                         <span class="err-review">Bạn cần điền đầy đủ trước khi gửi !</span>

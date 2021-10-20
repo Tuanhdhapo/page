@@ -11,7 +11,7 @@
                     <img class="pdf" @if ($item->type == 'pdf')
                     src="{{ asset('images/pdf.png') }}" alt="pdf"
                     @elseif ($item->type == 'docx')
-                    src="{{ asset('images/docx.png') }}" alt="docx"
+                    src="{{ asset('images/doc.png') }}" alt="docx"
                         @elseif ($item->type == 'mp4')
                     src="{{ asset('images/video.png') }}" alt="docx"
                     @endif>

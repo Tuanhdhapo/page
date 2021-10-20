@@ -40,7 +40,7 @@
                         </li>
                     @endif
                     <li class="nav-item item-menu">
-                        <a class="nav-link text-center" role="tab" href="#"
+                        <a class="nav-link text-center {{Route::is('profile') ? 'active': ''}}" role="tab" href="{{route('profile')}}"
                             onclick="hidenav()">PROFILE</a>
                     </li>
                     @if (Auth::check())

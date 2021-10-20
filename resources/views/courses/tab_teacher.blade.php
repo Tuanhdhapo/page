@@ -6,20 +6,20 @@
         @foreach ($mentors as $item)
         <div class="row row-infor-mentor">
             <div class="col-lg-2 pr-0 col-ava-mentor">
-                <img src="{{ asset('images/cucu.png') }}" alt="anh">
+                <img src="{{$item->img_path}}" alt="anh">
             </div>
             <div class="col-lg-4 align-self-center infor-mentor">
                 <div class="row name-mentor">{{$item->name}}</div>
                 <div class="row exp-mentor">{{$item->email}}</div>
                 <div class="row social-mentor">
                     <div class="col-lg-1 pl-0">
-                        <img src="{{ asset('images/fb_icon_detail.png') }}" alt="fb">
+                        <img src="{{ asset('images/facebook-mentor.png') }}" alt="fb">
                     </div>
                     <div class="col-lg-1 pl-0">
-                        <img src="{{ asset('images/gg_icon_detail.png') }}" alt="gg">
+                        <img src="{{ asset('images/google-mentor.png') }}" alt="gg">
                     </div>
                     <div class="col-lg-1 pl-0">
-                        <img src="{{ asset('images/slack.png') }}" alt="sl">
+                        <img src="{{ asset('images/slack-mentor.png') }}" alt="sl">
                     </div>
                 </div>
             </div>

@@ -23,5 +23,11 @@ class DocumentsTableSeeder extends Seeder
             'description' => 'File docs demo',
             'type' => 'docx'
         ]);
+
+          Document::create([
+            'name' => 'Seoul.mp4',
+            'description' => 'File video demo',
+            'type' => 'mp4'
+        ]);
     }
 }

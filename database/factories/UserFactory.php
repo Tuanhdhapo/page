@@ -28,12 +28,12 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'password' => bcrypt('12345678'),  // password
             'remember_token' => Str::random(10),
-            'brithday' => $this->faker->date(),
+            'birthday' => $this->faker->date(),
             'role' => rand(0, 1),
             'phone' => $this->faker->phoneNumber,
             'address' => $this->faker->address(),
             'about' => $this->faker->realText(),
-             'img_path' => $this->faker->imageUrl()
+            'img_path' => $this->faker->imageUrl()
 
         ];
     }

@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\UserController;
 
 
 
@@ -34,4 +35,8 @@ Route::get('courses/detail/{id}/search', [LessonController::class, 'search'])->m
 Route::get('courses/detail/lesson/{id}', [LessonController::class, 'index'])->middleware('login')->name('courses/search/lesson');
 Route::post('/addreview', [ReviewController::class, 'add'])->middleware('login')->name('course.feedback');
 Route::get('/view/{file}', [DocumentController::class, 'show']);
+
+Route::get('/profile', [UserController::class, 'index'])->middleware('login')->name('profile');
+Route::post('/profile/edit', [UserController::class, 'update'])->middleware('login');
+
 Auth::routes();

@@ -1,6 +1,7 @@
 .course-detail-container {
   width: 85%;
   margin: auto;
+ 
 
   .row-one {
     margin-bottom: 25px;
@@ -26,12 +27,21 @@
   }
 }
 
+.course-tags{
+    color: #5D8BD0;
+}
+
+.info-course-detail{
+    background-color: white;
+    padding:10px;
+}
 .description-detail-course {
   padding-top: 15px;
   padding-bottom: 15px;
   margin-top: 15px;
   border: 1px solid #DFDFDF;
   height: 500px;
+  background-color: white;
 
   .title-description-container {
     padding: 15px;
@@ -40,8 +50,8 @@
       font-family: utm;
       font-weight: 700;
       font-size: 25px;
-      color: red;
-      border-bottom: 1px blue solid;
+      color: #505353;
+      border-bottom: 1px #b2d235 solid;
     }
   }
 
@@ -52,7 +62,7 @@
       font-family: utm;
       font-weight: 700;
       font-size: 18px;
-      color:#DFDFDF;
+      color:#949292;
     }
   }
 }
@@ -93,7 +103,7 @@
     font-family: utm;
     font-weight: 700;
     font-size: 20px;
-    color: red;
+    color: #505353;
     text-decoration: none;
     padding: 0;
     display: initial;
@@ -144,7 +154,7 @@
       font-size: 18px;
 
       &:hover {
-        color: red;
+        color: #505353;
       }
     }
   }
@@ -164,7 +174,7 @@
       font-size: 18px;
 
       &:hover {
-        color: red;
+        color: #505353;
         text-decoration: none;
       }
     }
@@ -177,7 +187,7 @@
     font-family: utm;
     font-size: 18px;
     font-weight: bold;
-    color: red;
+    color: #505353;
     margin: 0;
     cursor: pointer;
 
@@ -209,7 +219,7 @@
 
       &:hover {
         text-decoration: none;
-        color: red;
+        color: #505353;
       }
     }
   }
@@ -239,7 +249,7 @@
       margin: 0;
       font-family: utm;
       font-size: 25px;
-      color: red;
+      color: #505353;
     }
   }
 
@@ -251,7 +261,7 @@
 
   .col-txt-tags {
     p {
-      color:red;
+      color:#505353;
     }
   }
 }
@@ -315,7 +325,7 @@
   .txt-main-teacher {
     p {
       font-family: utm;
-      color: red;
+      color: #505353;
       font-size: 25px;
       font-weight: bold;
     }
@@ -326,6 +336,7 @@
       border-radius: 50%;
       height: 100px;
       width: 100px;
+     
     }
   }
 
@@ -333,7 +344,7 @@
     .name-mentor {
       font-family: utm;
       font-size: 18px;
-      color: red;
+      color: #505353;
       font-weight: bold;
     }
 
@@ -360,7 +371,7 @@
 }
 
 .icon-check-learning {
-  color: red;
+  color: #505353;
   margin-right: 15px;
 }
 
@@ -372,7 +383,7 @@
       font-family: utm;
       font-size: 22px;
       font-weight: bold;
-      color: red;
+      color: #505353;
       margin-bottom: 0;
       -webkit-text-stroke-width: 0.5px;
     }
@@ -390,7 +401,7 @@
       font-family: utm;
       font-size: 25px;
       font-weight: bold;
-      color: red;
+      color: #505353;
       margin-bottom: 0;
       -webkit-text-stroke-width: 1px;
     }
@@ -416,7 +427,7 @@
 
   .star-show {
     i {
-      color: #FFD567;
+      color: #DFDFDF;
       font-size: 27px;
     }
 
@@ -444,8 +455,21 @@
     justify-content: space-around;
     border: 1px solid #DFDFDF;
     border-radius: 5px;
-    height: 193px;
+    height: 228px;
   }
+}
+
+.star-review{
+    font-size:18px;
+    margin-top:10px;
+    color:#747474;
+}
+
+.social-mentor{
+    img{
+        width:20px;
+        height:auto;
+    }
 }
 
 .rating-chart {
@@ -453,7 +477,7 @@
     font-family: utm;
     font-size: 16px;
     font-weight: bold;
-    color: red;
+    color: #505353;
     line-height: 20px;
   }
 
@@ -461,12 +485,12 @@
     font-family: utm;
     font-size: 14px;
     font-weight: bold;
-    color: #DFDFDF;
+    color: #FFD567;
     line-height: 17px;
   }
 
   .bg-success {
-    background-color: blue !important;
+    background-color: #FFD567 !important;
   }
 }
 
@@ -475,7 +499,7 @@
     font-family: utm;
     font-size: 18px;
     font-weight: bold;
-    color: red;
+    color: #505353;
     margin-bottom: 0;
     -webkit-text-stroke-width: 0.5px;
   }
@@ -492,6 +516,7 @@
     img {
       height: 40px;
       width: 40px;
+      border-radius: 100%;
     }
   }
 
@@ -502,7 +527,7 @@
       font-size: 18px;
       font-weight: bold;
       font-family: utm;
-      color: red;
+      color: #505353;
       margin: 0;
     }
   }
@@ -525,7 +550,7 @@
     p {
       font-size: 14px;
       font-family: utm;
-      color: red;
+      color: #505353;
       margin: 0;
       color: gainsboro;
     }
@@ -538,7 +563,7 @@
   p {
     font-size: 18px;
     font-family: utm;
-    color: red;
+    color: #505353;
     margin: 0;
     color: gainsboro;
   }
@@ -565,7 +590,7 @@
     font-weight: bold;
 
     &:hover {
-      color: red;
+      color: #505353;
     }
   }
 }
@@ -577,7 +602,7 @@
 }
 
 .err-review {
-  color: red;
+  color: #505353;
   display: none;
 }
 
@@ -609,7 +634,7 @@
 }
 
 .rate > input:checked ~ label {
-  color: #FFD567;
+  color: red;
 }
 
 .rate:not(:checked) > label:hover,
@@ -623,6 +648,12 @@
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
   color: #FFD567;
+}
+
+.course-detail{
+    background-color: #F2F2F2;
+    margin-bottom: -100px;
+    padding: 15px;
 }
 
 .course-detail-right {

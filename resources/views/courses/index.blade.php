@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="all-course">
+<section class="all-course" >
     <div class="list-course container">
         <form class="form-inline" action="{{ route('courses/search') }}" method="GET">
             <div class="search-course">
