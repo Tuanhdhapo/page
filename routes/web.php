@@ -25,7 +25,6 @@ use App\Http\Controllers\UserController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
 
-
 Route::resource('courses', CourseController::class)->only(['index','show']);
 
 Route::middleware(['auth'])->group(function () {
@@ -35,15 +34,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/view/{file}', [DocumentController::class, 'show']);
     Route::resource('user', UserController::class)->only(['index', 'update']);
 });
-
-//Route::get('courses/detail/{id}', [CourseController::class, 'detail'])->name('courses.detail');
-//Route::get('insert/{id}', [CourseController::class, 'join'])->middleware('login')->name('insert');
-//Route::get('courses/{id}/search', [LessonController::class, 'search'])->middleware('login')->name('filterdetail');
-//Route::get('courses/lesson/{id}', [LessonController::class, 'index'])->middleware('login')->name('courses/search/lesson');
-// Route::post('/addreview', [ReviewController::class, 'add']);
-//Route::get('/view/{file}', [DocumentController::class, 'show']);
-
-// Route::get('/profile', [UserController::class, 'index'])->middleware('login')->name('profile');
-// Route::post('/profile/edit', [UserController::class, 'update'])->middleware('login');
 
 Auth::routes();
