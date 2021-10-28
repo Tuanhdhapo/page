@@ -126,7 +126,7 @@
                             </div>
                         @endforeach
                         <div class="col-kg-12 btn-view-all">
-                            <a href="{{route('courses')}}">View all ours courses</a>
+                            {{-- <a href="{{route('courses')}}">View all ours courses</a> --}}
                         </div>
                     </div>
                 </div>

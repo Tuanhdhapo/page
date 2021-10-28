@@ -1,5 +1,5 @@
 <div class="row ml-0 mr-0 detail-lessons-container">
-    <form class="row form-search-detail" action="{{ route('filterdetail', $course->id) }}" method="get">
+    <form class="row form-search-detail" method="get">
         <div class="col-lg-8 detail-lessons">
             <input type="text" class="form-control search-lessons" name="key_detail_course" placeholder="Search"
                 aria-label="Search" @if (isset($keyword)) value={{ $keyword }} @endif>
@@ -12,7 +12,7 @@
         @if (Auth::check() && $isJoined == true)
             <a href="#" class="btn-join-course" id="btn-joined-course">Joined the course</a>
         @else
-            <a href="{{ route('insert', $course->id) }}" class="btn-join-course" id="btn-join-course">Join the course</a>
+            <a href="{{ route('courses.join', $course->id) }}" class="btn-join-course" id="btn-join-course">Join the course</a>
         @endif
     </div>
 </div>
@@ -40,7 +40,7 @@
                                 <a href="/allcourses/coursedetail/lesson/{{ $lesson->id }}">Learn</a>
                             @endif
                         @else
-                        <a href="{{ route('courses/search/lesson', $lesson->id) }}" onsubmit="return false">Learn</a>
+                        <a href="{{ route('courses.lessons.show', ['course' => $course->id, 'lesson' => $lesson->id]) }}" onsubmit="return false">Learn</a>
                         @endif
                     @endif
                 </div>

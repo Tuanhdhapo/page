@@ -2,12 +2,13 @@
 
 @section('content')
     <section class="container-fluid profile-container">
-        <form class="row main-profile" action="profile/edit" method="post" enctype="multipart/form-data">
+        <form class="row main-profile" action="{{ route('user.update', $users->id) }}" method="post" enctype="multipart/form-data">
+            @method('patch')
             @csrf
             <div class="col-lg-3 profile align-self-center">
                 <div class="avatar-user row justify-content-md-center">
                     @if (isset($users->img_path))
-                        <img src="{{ asset('storage/avatar_user/' . $users->img_path) }}" alt="ava-user">
+                        <img src="{{ $users->img_path }}" alt="ava-user">
                         <i class="fas fa-camera icon-upload-ava" id="icon-upload-ava"></i>
                         <input type="file" name="favauser" class="input-upload-ava" id="input-upload-ava">
                     @else
@@ -52,7 +53,7 @@
                         </div>
                     @endforeach
                     <div class="img-your-course">
-                        <a href="{{route('courses')}}">
+                        <a href="{{route('courses.index')}}">
                             <img class="img_add" src="{{ asset('images/add_course.png') }}" alt="img_add">
                         </a>
                     </div>
@@ -71,7 +72,7 @@
                         <div class="col-lg-6">
                             <p class="edit-input-label">Email:</p>
                             <input type="text" id="femail" class="form-control edit-input-profile" name="femail"
-                                placeholder="Your email..." value="{{ $users->email }}">
+                                placeholder="Your email..." value="{{ $users->email }}" disabled>
                         </div>
                     </div>
                     <div class="row form-group ">

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Course;
 use App\Models\User;
 use App\Models\Tag;
-use Illuminate\Http\Request;
 use App\Models\Document;
 use App\Models\Feedback;
 use App\Models\Lesson;
@@ -15,15 +15,12 @@ use Illuminate\Support\Facades\Auth;
 
 class CourseController extends Controller
 {
-    public function index()
-    {
-        $courses = Course::orderBy('id')->paginate(config('constants.pagination'));
-        $mentors = User::where('role', User::ROLE['mentor'])->get();
-        $tags = Tag::all();
-        return view('courses.index', compact('courses', 'mentors', 'tags'));
-    }
-
-    public function search(Request $request)
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index(Request $request)
     {
         $data = $request->all();
         if (isset($data['search_form_input'])) {
@@ -37,7 +34,34 @@ class CourseController extends Controller
         return view('courses.index', compact('courses', 'mentors', 'tags', 'keyword'));
     }
 
-    public function detail($id)
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Request $request, $id)
     {
         $course = Course::find($id);
         $tags = Course::tagsCourse($id)->get();
@@ -66,6 +90,40 @@ class CourseController extends Controller
        
 
         return view('courses.course_detail', compact('course', 'lessons', 'tags', 'otherCourses', 'mentors', 'isJoined', 'reviews', 'totalRate', 'learnedPart', 'avgRating', 'totalDocuments'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
     }
 
     public function join($id)

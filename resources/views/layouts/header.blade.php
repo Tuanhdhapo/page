@@ -22,7 +22,7 @@
                     </li>
                     <li class="nav-item item-menu">
                         <a class="nav-link text-center {{Route::is('courses*') ? 'active': ''}}" role="tab" aria-selected="false"
-                            href="{{ route('courses') }}">ALL COURSES</a>
+                            href="{{ route('courses.index') }}">ALL COURSES</a>
                     </li>
                     <li class="nav-item item-menu list-courses">
                         <a class="nav-link text-center" role="tab"
@@ -40,7 +40,7 @@
                         </li>
                     @endif
                     <li class="nav-item item-menu">
-                        <a class="nav-link text-center {{Route::is('profile') ? 'active': ''}}" role="tab" href="{{route('profile')}}"
+                        <a class="nav-link text-center {{Route::is('user.index') ? 'active': ''}}" role="tab" href="{{route('user.index')}}"
                             onclick="hidenav()">PROFILE</a>
                     </li>
                     @if (Auth::check())
