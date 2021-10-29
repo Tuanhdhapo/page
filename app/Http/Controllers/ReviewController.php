@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class ReviewController extends Controller
 {
-    public function add(Request $request)
+    public function store(Request $request)
     {
         $review = new Feedback();
         $review['user_id'] = Auth::user()->id;

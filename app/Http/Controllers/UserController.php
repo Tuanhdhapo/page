@@ -10,15 +10,15 @@ use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
-    public function index()
+    public function show()
     {
         $users = User::students()->find(Auth::user()->id);
         $birthday = Carbon::parse($users->birthday)->format('d/m/Y');
         $courses = User::courseAttended()->get();
-       
-
+        
         return view('users.profile', compact('users', 'birthday', 'courses'));
     }
+  
 
     public function update(Request $request)
     {

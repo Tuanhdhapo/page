@@ -53,7 +53,7 @@
                         </div>
                     @endforeach
                     <div class="img-your-course">
-                        <a href="{{route('courses.index')}}">
+                        <a href="{{ route('courses.index') }}">
                             <img class="img_add" src="{{ asset('images/add_course.png') }}" alt="img_add">
                         </a>
                     </div>
@@ -72,7 +72,7 @@
                         <div class="col-lg-6">
                             <p class="edit-input-label">Email:</p>
                             <input type="text" id="femail" class="form-control edit-input-profile" name="femail"
-                                placeholder="Your email..." value="{{ $users->email }}" disabled>
+                                placeholder="Your email..." value="{{ $users->email }}" >
                         </div>
                     </div>
                     <div class="row form-group ">

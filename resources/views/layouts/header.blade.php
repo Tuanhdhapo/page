@@ -39,11 +39,11 @@
                             </a>
                         </li>
                     @endif
-                    <li class="nav-item item-menu">
-                        <a class="nav-link text-center {{Route::is('user.index') ? 'active': ''}}" role="tab" href="{{route('user.index')}}"
+                    @if (Auth::check())
+                     <li class="nav-item item-menu">
+                        <a class="nav-link text-center {{Route::is('user.show') ? 'active': ''}}" role="tab" href="{{ route('user.show', Auth::user()->id) }}"
                             onclick="hidenav()">PROFILE</a>
                     </li>
-                    @if (Auth::check())
                         <li class="nav-item item-menu">
                             <a class="nav-link text-center" role="tab" href="/logout">LOGOUT</a>
                         </li>
