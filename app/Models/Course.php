@@ -23,7 +23,7 @@ class Course extends Model
 
     public function lessons()
     {
-        return $this->hasMany(Lesson::class);
+        return $this->hasMany(Lesson::class, 'course_id');
     }
 
     public function users()

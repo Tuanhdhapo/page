@@ -128,7 +128,7 @@ class CourseController extends Controller
 
     public function join($id)
     {
-        $course = Course::find($id)->users()->attach(Auth::user()->id);
+        $course = Course::find($id);
         $course->users()->attach(Auth::user()->id);
 
         return redirect()->route('courses.join', [$id]);
