@@ -41,14 +41,14 @@
                     <div class="lessons-teacher-reiews-container">
                         <div class="tab-content">
                             <div id="lessons" class="tab-pane fade show active" role="tabpanel">
-                                @include('courses.tab_lessons', [$lessons, $course,$isJoined,$learnedPart,
+                                @include('courses.tab_lessons', [$lessons, $course,$learnedPart,
                                 $totalDocuments])
                             </div>
                             <div id="teacher" class="tab-pane fade " role="tabpanel">
-                                @include('courses.tab_teacher', $mentors)
+                                @include('courses.tab_teacher')
                             </div>
                             <div id="reviews" class="tab-pane ">
-                                @include('courses.tab_review', [$course, $reviews, $totalRate, $avgRating])
+                                @include('courses.tab_review', [$course ,$totalRate])
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                                 <p>Tags :</p>
                             </div>
                             <div class="col-lg-7 pl-0 align-self-center col-txt col-txt-tags">
-                                <p class="course-tags">@foreach ($tags as $tag) #{{ $tag->content }} @endforeach</p>
+                                <p class="course-tags">@foreach ($course->tags as $tag) #{{ $tag->content }} @endforeach</p>
                             </div>
                         </div>
                         <hr>
@@ -119,13 +119,13 @@
                         <div class="txt-show-other-courses">
                             <p>Other Courses</p>
                         </div>
-                        @foreach ($otherCourses as $key => $item)
+                        @foreach ($course->other_courses as $key => $item)
                             <div class="show-other-courses">
                                 <p>{{ $key + 1 }}. {{ $item->title }}</p>
                             </div>
                         @endforeach
                         <div class="col-kg-12 btn-view-all">
-                            <a href="{{route('courses')}}">View all ours courses</a>
+                            <a href="{{route('courses.index')}}">View all ours courses</a>
                         </div>
                     </div>
                 </div>

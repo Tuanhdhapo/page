@@ -73,7 +73,7 @@
                         <hr>
                         <div class="row row-detail">
                             <div class="col-lg 12 btn-leave-course">
-                                <a href="/courses/detail/{{ $course->id }}">Leave the course</a>
+                                <a href="{{ route('courses.leave', $course->id) }}">Leave the course</a>
                             </div>
                         </div>
                     </div>
@@ -120,13 +120,13 @@
                         <div class="txt-show-other-courses">
                             <p>Other Courses</p>
                         </div>
-                        @foreach ($otherCourses as $key => $item)
+                        @foreach ($course->other_course as $key => $item)
                             <div class="show-other-courses">
                                 <p>{{ $key + 1 }}. {{ $item->title }}</p>
                             </div>
                         @endforeach
                         <div class="col-kg-12 btn-view-all">
-                            <a href="{{route('courses')}}">View all ours courses</a>
+                            <a href="{{route('courses.index')}}">View all ours courses</a>
                         </div>
                     </div>
                 </div>

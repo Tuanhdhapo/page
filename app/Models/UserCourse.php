@@ -17,11 +17,11 @@ class UserCourse extends Model
         'user_id'
     ];
 
-    public function scopeJoined($query, $id)
+    public function scopeJoined($query, $course)
     {
         if (Auth::check()) {
             $query->where('user_id', '=', Auth::user()->id)
-                ->where('course_id', '=', $id);
+                ->where('course_id', '=', $course->id);
         }
     }
 }

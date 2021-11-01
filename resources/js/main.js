@@ -96,7 +96,7 @@ $(function () {
       })
 
       $.ajax({
-        url: "/addreview",
+        url: "/reviews",
         method: "POST",
         data: {
           rate: rate,

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Auth;
 
 class Course extends Model
 {
@@ -23,7 +24,7 @@ class Course extends Model
 
     public function lessons()
     {
-        return $this->hasMany(Lesson::class);
+        return $this->hasMany(Lesson::class, 'course_id');
     }
 
     public function users()
@@ -57,12 +58,23 @@ class Course extends Model
         return $this->users()->where('role', config('constants.role.student'))->count();
     }
 
-    public function scopeTeacherOfCourse($query, $id)
+    public function getTeachersOfCourseAttribute()
     {
-        $query->leftJoin('user_courses', 'courses.id', 'user_courses.course_id')
-           ->leftJoin('users', 'user_courses.user_id', 'users.id')
-           ->where('users.role', User::ROLE['mentor'])
-           ->where('user_courses.course_id', $id);
+        return $this->users()->where('users.role', User::ROLE['mentor'])->get();
+    }
+
+    public function getAvgRatingAttribute()
+    {
+        return ceil($this->feedback()->avg('rate'));
+    }
+
+    public function getOtherCoursesAttribute()
+    {
+        return $this->where('id', '!=', $this->id)->limit(5)->get();
+    }
+    public function getCheckJoinedCourseAttribute()
+    {
+        return $this->users()->where('user_id', Auth::id())->first();
     }
 
     public function scopefilter($query, $data)
@@ -146,30 +158,18 @@ class Course extends Model
         return $this->feedback()->where('rate', '=', 5)->count();
     }
 
-
-
-
-
-    public function scopeTagsCourse($query, $id)
+    public function scopeTagsCourse($query, $course)
     {
         $query->leftJoin('tag_courses', 'courses.id', 'tag_courses.course_id')
             ->leftJoin('tags', 'tag_courses.tag_id', 'tags.id')
-            ->where('tag_courses.course_id', $id);
+            ->where('tag_courses.course_id', $course);
     }
 
-    public function scopeMentorOfCourse($query, $id)
-    {
-        $query->leftJoin('user_courses', 'courses.id', 'user_courses.course_id')
-            ->leftJoin('users', 'user_courses.user_id', 'users.id')
-            ->where('users.role', User::ROLE['mentor'])
-            ->where('user_courses.course_id', $id);
-    }
-
-    public function scopeInforLessons($query, $id)
+    public function scopeInforLessons($query, $course)
     {
         $query->join('lessons', 'courses.id', '=', 'lessons.course_id')
             ->select('lessons.*')
-            ->where('lessons.course_id', '=', $id);
+            ->where('lessons.course_id', '=', $course);
     }
 
 

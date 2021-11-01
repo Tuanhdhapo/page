@@ -24,16 +24,18 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
-Route::get('courses', [CourseController::class, 'index'])->name('courses');
-Route::get('courses/search', [CourseController::class, 'search'])->name('courses/search');
-Route::get('courses/detail/{id}', [CourseController::class, 'detail'])->name('courses.detail');
-Route::get('insert/{id}', [CourseController::class, 'join'])->middleware('login')->name('insert');
-Route::get('courses/detail/{id}/search', [LessonController::class, 'search'])->middleware('login')->name('filterdetail');
-Route::get('courses/detail/lesson/{id}', [LessonController::class, 'index'])->middleware('login')->name('courses/search/lesson');
-Route::post('/addreview', [ReviewController::class, 'add'])->middleware('login')->name('course.feedback');
-Route::get('/view/{file}', [DocumentController::class, 'show']);
 
-Route::get('/profile', [UserController::class, 'index'])->middleware('login')->name('profile');
-Route::post('/profile/edit', [UserController::class, 'update'])->middleware('login');
+Route::resource('courses', CourseController::class)->only(['index','show']);
+
+Route::middleware(['auth'])->group(function () {
+    Route::resource('user', UserController::class)->only(['show', 'update']);
+    Route::prefix('courses')->group(function () {
+        Route::get('/{course}/join', [CourseController::class, 'join'])->name('courses.join');
+        Route::get('/{course}/leave', [CourseController::class, 'leave'])->name('courses.leave');     
+    });
+    Route::resource('/lessons', LessonController::class)->only(['show']);
+    Route::resource('/reviews', ReviewController::class)->only(['store']);
+    Route::resource('/documents', DocumentController::class)->only(['show']);
+});
 
 Auth::routes();

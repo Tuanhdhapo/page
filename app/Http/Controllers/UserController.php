@@ -10,15 +10,15 @@ use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
-    public function index()
+    public function show()
     {
         $users = User::students()->find(Auth::user()->id);
-          $birthday = Carbon::parse($users->birthday)->format('d/m/Y');
+        $birthday = Carbon::parse($users->birthday)->format('d/m/Y');
         $courses = User::courseAttended()->get();
-       
-
+        
         return view('users.profile', compact('users', 'birthday', 'courses'));
     }
+  
 
     public function update(Request $request)
     {
@@ -27,7 +27,7 @@ class UserController extends Controller
         if ($request->favauser) {
             $image = $request->favauser;
             $fileName = $image->getClientOriginalName();
-            $data['img_path'] = $fileName;
+            $data['img_path'] = url('storage/'.$fileName);
 
             Storage::disk('ava_user')->put($fileName, file_get_contents($image->getRealPath()));
         }
@@ -58,6 +58,6 @@ class UserController extends Controller
 
         $data->save();
 
-        return redirect('/profile');
+        return redirect('user');
     }
 }
