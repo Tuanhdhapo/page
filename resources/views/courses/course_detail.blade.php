@@ -41,7 +41,7 @@
                     <div class="lessons-teacher-reiews-container">
                         <div class="tab-content">
                             <div id="lessons" class="tab-pane fade show active" role="tabpanel">
-                                @include('courses.tab_lessons', [$lessons, $course,$isJoined,$learnedPart,
+                                @include('courses.tab_lessons', [$lessons, $course,$learnedPart,
                                 $totalDocuments])
                             </div>
                             <div id="teacher" class="tab-pane fade " role="tabpanel">
@@ -119,7 +119,7 @@
                         <div class="txt-show-other-courses">
                             <p>Other Courses</p>
                         </div>
-                        @foreach ($otherCourses as $key => $item)
+                        @foreach ($course->other_courses as $key => $item)
                             <div class="show-other-courses">
                                 <p>{{ $key + 1 }}. {{ $item->title }}</p>
                             </div>

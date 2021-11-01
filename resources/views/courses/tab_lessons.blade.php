@@ -9,7 +9,7 @@
         </div>
     </form>
     <div class="col-lg-4 pr-0 align-self-center btn-join-container">
-        @if (Auth::check() && $isJoined == true)
+        @if (Auth::check() && $course->check_joined_course == true)
             <a href="#" class="btn-join-course" id="btn-joined-course">Joined the course</a>
         @else
             <a href="{{ route('courses.join', $course->id) }}" class="btn-join-course" id="btn-join-course">Join the course</a>
@@ -24,7 +24,7 @@
                     <p class="txt-title-lessons">{{ $key + 1 }}. {{ $lesson->title }}</p>
                 </div>
                 <div class="col-lg-4 pl-0 btn-more-lessons">
-                    @if (Auth::check() && $isJoined == true)
+                    @if (Auth::check() && $course->check_joined_course == true)
                         @if ($totalDocuments->count() > 0)
                             @if ($totalDocuments[0]->lesson_id == $lesson->id)
                                 @if ($learnedPart == 0)

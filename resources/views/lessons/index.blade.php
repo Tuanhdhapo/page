@@ -120,7 +120,7 @@
                         <div class="txt-show-other-courses">
                             <p>Other Courses</p>
                         </div>
-                        @foreach ($otherCourses as $key => $item)
+                        @foreach ($course->other_course as $key => $item)
                             <div class="show-other-courses">
                                 <p>{{ $key + 1 }}. {{ $item->title }}</p>
                             </div>

@@ -35,40 +35,10 @@ class CourseController extends Controller
         return view('courses.index', compact('courses', 'mentors', 'tags', 'keyword'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function show(Request $request, Course $course)
     {
-        
-        $tags = Course::tagsCourse($course)->get();
-        $otherCourses = Course::showOtherCourses($course)->get();
         $lessons = Course::inforLessons($course)->paginate(config('constants.pagination_lessons'));
-        $isJoined = UserCourse::joined($course)->first() ? true : false;
         $totalRate  = Feedback::feedbacksOfCourse($course)->sum('rate');
         $totalDocuments = Lesson::documentsOfLesson($lessons->first())->get();
         
@@ -84,41 +54,7 @@ class CourseController extends Controller
             $learnedPart = 0;
         }
 
-        return view('courses.course_detail', compact('course', 'lessons', 'tags', 'otherCourses', 'isJoined', 'totalRate', 'learnedPart', 'totalDocuments'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return view('courses.course_detail', compact('course', 'lessons', 'totalRate', 'learnedPart', 'totalDocuments'));
     }
 
     public function join($id)

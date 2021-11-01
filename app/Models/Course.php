@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Auth;
 
 class Course extends Model
 {
@@ -65,6 +66,15 @@ class Course extends Model
     public function getAvgRatingAttribute()
     {
         return ceil($this->feedback()->avg('rate'));
+    }
+
+    public function getOtherCoursesAttribute()
+    {
+        return $this->where('id', '!=', $this->id)->limit(5)->get();
+    }
+    public function getCheckJoinedCourseAttribute()
+    {
+        return $this->users()->where('user_id', Auth::id())->first();
     }
 
     public function scopefilter($query, $data)
