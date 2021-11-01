@@ -18,7 +18,7 @@
 </div>
 <div class="row m-0 show-lessons-container">
     <div class="col-lg-12">
-        @foreach ($lessons as $key => $lesson)
+        @foreach ($course->lessons as $key => $lesson)
             <div class="row">
                 <div class="col-lg-8 pr-0">
                     <p class="txt-title-lessons">{{ $key + 1 }}. {{ $lesson->title }}</p>

@@ -12,6 +12,7 @@ use App\Models\Lesson;
 use App\Models\ReplyReview;
 use App\Models\UserCourse;
 use Illuminate\Support\Facades\Auth;
+use PHPUnit\Framework\Constraint\Count;
 
 class CourseController extends Controller
 {
@@ -61,22 +62,18 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request, $id)
+    public function show(Request $request, Course $course)
     {
-        $course = Course::find($id);
-        $tags = Course::tagsCourse($id)->get();
-        $otherCourses = Course::showOtherCourses($course->id)->get();
-        $mentors = Course::mentorOfCourse($id)->get();
-        $lessons = Course::inforLessons($id)->paginate(config('constants.pagination_lessons'));
-        $isJoined = UserCourse::joined($id)->first() ? true : false;
-        $reviews  = Feedback::feedbacksOfCourse($course->id)->get();
-        // dd($reviews);
-        $totalRate  = Feedback::feedbacksOfCourse($course->id)->sum('rate');
-        $avgRating = $reviews->count() > 0 ? round($totalRate / $reviews->count()) : 0;
-        $totalDocuments = Lesson::documentsOfLesson($lessons->first()->id)->get();
-
+        
+        $tags = Course::tagsCourse($course)->get();
+        $otherCourses = Course::showOtherCourses($course)->get();
+        $lessons = Course::inforLessons($course)->paginate(config('constants.pagination_lessons'));
+        $isJoined = UserCourse::joined($course)->first() ? true : false;
+        $totalRate  = Feedback::feedbacksOfCourse($course)->sum('rate');
+        $totalDocuments = Lesson::documentsOfLesson($lessons->first())->get();
+        
         if (Auth::check()) {
-            $documentsLearned = Document::documentLearned($lessons->first()->id)->get();
+            $documentsLearned = Document::documentLearned($lessons->first())->get();
         } else {
             $documentsLearned = 0;
         }
@@ -87,9 +84,7 @@ class CourseController extends Controller
             $learnedPart = 0;
         }
 
-       
-
-        return view('courses.course_detail', compact('course', 'lessons', 'tags', 'otherCourses', 'mentors', 'isJoined', 'reviews', 'totalRate', 'learnedPart', 'avgRating', 'totalDocuments'));
+        return view('courses.course_detail', compact('course', 'lessons', 'tags', 'otherCourses', 'isJoined', 'totalRate', 'learnedPart', 'totalDocuments'));
     }
 
     /**
@@ -131,7 +126,7 @@ class CourseController extends Controller
         $course = Course::find($id);
         $course->users()->attach(Auth::user()->id);
 
-        return redirect()->route('courses.join', [$id]);
+        return back();
     }
 
     public function leave($id)

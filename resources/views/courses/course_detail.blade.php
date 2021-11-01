@@ -45,10 +45,10 @@
                                 $totalDocuments])
                             </div>
                             <div id="teacher" class="tab-pane fade " role="tabpanel">
-                                @include('courses.tab_teacher', $mentors)
+                                @include('courses.tab_teacher')
                             </div>
                             <div id="reviews" class="tab-pane ">
-                                @include('courses.tab_review', [$course, $reviews, $totalRate, $avgRating])
+                                @include('courses.tab_review', [$course ,$totalRate])
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                                 <p>Tags :</p>
                             </div>
                             <div class="col-lg-7 pl-0 align-self-center col-txt col-txt-tags">
-                                <p class="course-tags">@foreach ($tags as $tag) #{{ $tag->content }} @endforeach</p>
+                                <p class="course-tags">@foreach ($course->tags as $tag) #{{ $tag->content }} @endforeach</p>
                             </div>
                         </div>
                         <hr>

@@ -6,13 +6,13 @@
     <div class="row show-star">
         <div  class="col-lg-4 col-star-left">
             <div class="avg-txt text-center">
-                <p>{{ $avgRating }}</p>
+                <p>{{ $course->avg_rating }}</p>
             </div>
             <div class="avg-star text-center star-show">
-                @for ($i = 0; $i < $avgRating; $i++)
+                @for ($i = 0; $i < $course->avg_rating; $i++)
                     <i class="fas fa-star checked"></i>
                 @endfor
-                @for ($i = 0; $i < 5 - $avgRating; $i++)
+                @for ($i = 0; $i < 5 - $course->avg_rating; $i++)
                     <i class="fas fa-star"></i>
                 @endfor
             </div>
@@ -27,8 +27,8 @@
                     <div class="col-lg-9 p-0 text-center align-self-center">
                         <div class="progress">
                             <div class="progress-bar bg-success" role="progressbar"
-                                style="width: {{ $reviews->count() > 0 ? ($course->fiveStar / $reviews->count()) * 100 : 0 }}%"
-                                aria-valuenow="{{ $reviews->count() > 0 ? ($course->fiveStar / $reviews->count()) * 100 : 0 }}"
+                                style="width: {{ $course->feedback->count() > 0 ? ($course->fiveStar / $course->feedback->count()) * 100 : 0 }}%"
+                                aria-valuenow="{{ $course->feedback->count() > 0 ? ($course->fiveStar / $course->feedback->count()) * 100 : 0 }}"
                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
@@ -40,8 +40,8 @@
                     <div class="col-lg-9 p-0 text-center align-self-center">
                         <div class="progress">
                             <div class="progress-bar bg-success" role="progressbar"
-                                style="width: {{ $reviews->count() > 0 ? ($course->fourStar / $reviews->count()) * 100 : 0 }}%"
-                                aria-valuenow="{{ $reviews->count() > 0 ? ($course->fourStar / $reviews->count()) * 100 : 0 }}"
+                                style="width: {{ $course->feedback->count() > 0 ? ($course->fourStar / $course->feedback->count()) * 100 : 0 }}%"
+                                aria-valuenow="{{ $course->feedback->count() > 0 ? ($course->fourStar / $course->feedback->count()) * 100 : 0 }}"
                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
@@ -53,8 +53,8 @@
                     <div class="col-lg-9 p-0 text-center align-self-center">
                         <div class="progress">
                             <div class="progress-bar bg-success" role="progressbar"
-                                style="width: {{ $reviews->count() > 0 ? ($course->threeStar / $reviews->count()) * 100 : 0 }}%"
-                                aria-valuenow="{{ $reviews->count() > 0 ? ($course->threeStar / $reviews->count()) * 100 : 0 }}"
+                                style="width: {{ $course->feedback->count() > 0 ? ($course->threeStar / $course->feedback->count()) * 100 : 0 }}%"
+                                aria-valuenow="{{ $course->feedback->count() > 0 ? ($course->threeStar / $course->feedback->count()) * 100 : 0 }}"
                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
@@ -67,8 +67,8 @@
                     <div class="col-lg-9 p-0 text-center align-self-center">
                         <div class="progress">
                             <div class="progress-bar bg-success" role="progressbar"
-                                style="width: {{ $reviews->count() > 0 ? ($course->twoStar / $reviews->count()) * 100 : 0 }}%"
-                                aria-valuenow="{{ $reviews->count() > 0 ? ($course->twoStar / $reviews->count()) * 100 : 0 }}"
+                                style="width: {{ $course->feedback->count() > 0 ? ($course->twoStar / $course->feedback->count()) * 100 : 0 }}%"
+                                aria-valuenow="{{ $course->feedback->count() > 0 ? ($course->twoStar / $course->feedback->count()) * 100 : 0 }}"
                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
@@ -80,8 +80,8 @@
                     <div class="col-lg-9 p-0 text-center align-self-center">
                         <div class="progress">
                             <div class="progress-bar bg-success index-chart" role="progressbar"
-                                style="width: {{ $reviews->count() > 0 ? ($course->oneStar / $reviews->count()) * 100 : 0 }}%"
-                                aria-valuenow="{{ $reviews->count() > 0 ? ($course->oneStar / $reviews->count()) * 100 : 0 }}"
+                                style="width: {{ $course->feedback->count() > 0 ? ($course->oneStar / $course->feedback->count()) * 100 : 0 }}%"
+                                aria-valuenow="{{ $course->feedback->count() > 0 ? ($course->oneStar / $course->feedback->count()) * 100 : 0 }}"
                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
@@ -96,14 +96,15 @@
         <p>Show all reviews <i class="fas fa-sort-down"></i></p>
     </div>
     <div class="row show-cmt-container">
-        @foreach ($reviews as $review)
+        @foreach ($course->feedback as $review)
+            @foreach ($course->users as $user )
             <div class="col-lg-12 show-comment-user">
                 <div class=" d-flex comment-header justify-content-start align-items-center ">
-                    <div  class="ava-user-cmt ">
-                        <img  src="{{ $review->img_path }}" alt="avatar user">
+                    <div  class="ava-user-cmt">
+                        <img  src="{{ $user->img_path }}" alt="avatar user">
                     </div>
                     <div class="name-user-cmt ">
-                        <p>{{ $review->name }}</p>
+                        <p>{{ $user->name }}</p>
                     </div>
                     <div class="star-user-rating ">
                         @for ($i = 0; $i < $review->rate; $i++)
@@ -166,6 +167,7 @@
                 </div>
                 <hr> --}}
             </div>
+            @endforeach
         @endforeach
     </div>
     <div class="row">
