@@ -31,11 +31,11 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('user', UserController::class)->only(['show', 'update']);
     Route::prefix('courses')->group(function () {
         Route::get('/{course}/join', [CourseController::class, 'join'])->name('courses.join');
-        Route::get('/{course}/leave', [CourseController::class, 'leave'])->name('courses.leave');
-        Route::resource('/lessons', LessonController::class)->only(['show']);
-        Route::resource('/reviews', ReviewController::class)->only(['store']);
-        Route::resource('/view/{file}', DocumentController::class)->only(['show']);
+        Route::get('/{course}/leave', [CourseController::class, 'leave'])->name('courses.leave');     
     });
+    Route::resource('/lessons', LessonController::class)->only(['show']);
+    Route::resource('/reviews', ReviewController::class)->only(['store']);
+    Route::resource('/documents', DocumentController::class)->only(['show']);
 });
 
 Auth::routes();
