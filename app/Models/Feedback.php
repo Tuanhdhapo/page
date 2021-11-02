@@ -31,17 +31,9 @@ class Feedback extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'user_id', 'feedback_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
-
-    public function scopeFeedbacksOfCourse($query, $courseId)
-    {
-        $query->leftJoin('users', 'feedback.user_id', 'users.id')
-           ->select('feedback.*', 'users.img_path', 'users.name')
-           ->where('course_id', '=', $courseId);
-    }
-
-    
+        
     public function replyReviews()
     {
         return $this->hasMany(ReplyReview::class, 'feedback_id');
