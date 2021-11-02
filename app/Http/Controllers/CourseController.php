@@ -53,7 +53,7 @@ class CourseController extends Controller
             $learnedPart = 0;
         }
 
-        return view('courses.course_detail', compact('course', 'lessons', 'learnedPart', 'totalDocuments'));
+        return view('courses.show', compact('course', 'lessons', 'learnedPart', 'totalDocuments'));
     }
 
     public function join($id)
