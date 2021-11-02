@@ -39,6 +39,7 @@ class CourseController extends Controller
     public function show(Request $request, Course $course)
     {
         $lessons = Course::inforLessons($course)->paginate(config('constants.pagination_lessons'));
+        $totalRate  = Feedback::feedbacksOfCourse($course)->sum('rate');
         $totalDocuments = Lesson::documentsOfLesson($lessons->first())->get();
         
         if (Auth::check()) {
@@ -53,7 +54,7 @@ class CourseController extends Controller
             $learnedPart = 0;
         }
 
-        return view('courses.show', compact('course', 'lessons', 'learnedPart', 'totalDocuments'));
+        return view('courses.course_detail', compact('course', 'lessons', 'totalRate', 'learnedPart', 'totalDocuments'));
     }
 
     public function join($id)

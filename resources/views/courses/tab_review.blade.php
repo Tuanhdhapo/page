@@ -22,20 +22,72 @@
         </div>
         <div class="col-lg-8 col-star-right">
             <div  class="rating-chart-container">
-                @foreach ($course->number_rate as $star )
                 <div class="row rating-chart justify-content-around">
-                    <div class="col-lg-2 pr-0 text-center align-self-center number-start">{{$star->rate}}</div>
+                    <div class="col-lg-2 pr-0 text-center align-self-center number-start">5 star</div>
                     <div class="col-lg-9 p-0 text-center align-self-center">
                         <div class="progress">
                             <div class="progress-bar bg-success" role="progressbar"
-                                style="width: {{ $course->reviews > 0 ? ($star->total / $course->reviews) * 100 : 0 }}%"
+                                style="width: {{ $course->feedback->count() > 0 ? ($course->fiveStar / $course->feedback->count()) * 100 : 0 }}%"
+                                aria-valuenow="{{ $course->feedback->count() > 0 ? ($course->fiveStar / $course->feedback->count()) * 100 : 0 }}"
                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
-                    <div class="col-lg-1 pl-0 text-center align-self-center total-star-rating">{{ $star->total }}
+                    <div class="col-lg-1 pl-0 text-center align-self-center total-star-rating">{{ $course->fiveStar }}
                     </div>
                 </div>
-                @endforeach
+                <div class="row rating-chart justify-content-around">
+                    <div class="col-lg-2 pr-0 text-center align-self-center number-start">4 star</div>
+                    <div class="col-lg-9 p-0 text-center align-self-center">
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar"
+                                style="width: {{ $course->feedback->count() > 0 ? ($course->fourStar / $course->feedback->count()) * 100 : 0 }}%"
+                                aria-valuenow="{{ $course->feedback->count() > 0 ? ($course->fourStar / $course->feedback->count()) * 100 : 0 }}"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 pl-0 text-center align-self-center total-star-rating">{{ $course->fourStar }}
+                    </div>
+                </div>
+                <div class="row rating-chart justify-content-around">
+                    <div class="col-lg-2 pr-0 text-center align-self-center number-start">3 star</div>
+                    <div class="col-lg-9 p-0 text-center align-self-center">
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar"
+                                style="width: {{ $course->feedback->count() > 0 ? ($course->threeStar / $course->feedback->count()) * 100 : 0 }}%"
+                                aria-valuenow="{{ $course->feedback->count() > 0 ? ($course->threeStar / $course->feedback->count()) * 100 : 0 }}"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 pl-0 text-center align-self-center total-star-rating">
+                        {{ $course->threeStar }}
+                    </div>
+                </div>
+                <div class="row rating-chart justify-content-around">
+                    <div class="col-lg-2 pr-0 text-center align-self-center number-start">2 star</div>
+                    <div class="col-lg-9 p-0 text-center align-self-center">
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar"
+                                style="width: {{ $course->feedback->count() > 0 ? ($course->twoStar / $course->feedback->count()) * 100 : 0 }}%"
+                                aria-valuenow="{{ $course->feedback->count() > 0 ? ($course->twoStar / $course->feedback->count()) * 100 : 0 }}"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 pl-0 text-center align-self-center total-star-rating">{{ $course->twoStar }}
+                    </div>
+                </div>
+                <div class="row rating-chart justify-content-around">
+                    <div class="col-lg-2 pr-0 text-center align-self-center number-start">1 star</div>
+                    <div class="col-lg-9 p-0 text-center align-self-center">
+                        <div class="progress">
+                            <div class="progress-bar bg-success index-chart" role="progressbar"
+                                style="width: {{ $course->feedback->count() > 0 ? ($course->oneStar / $course->feedback->count()) * 100 : 0 }}%"
+                                aria-valuenow="{{ $course->feedback->count() > 0 ? ($course->oneStar / $course->feedback->count()) * 100 : 0 }}"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 pl-0 text-center align-self-center total-star-rating">{{ $course->oneStar }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -45,13 +97,14 @@
     </div>
     <div class="row show-cmt-container">
         @foreach ($course->feedback as $review)
+            @foreach ($course->users as $user )
             <div class="col-lg-12 show-comment-user">
                 <div class=" d-flex comment-header justify-content-start align-items-center ">
                     <div  class="ava-user-cmt">
-                        <img  src="{{ $review->users->img_path }}" alt="avatar user">
+                        <img  src="{{ $user->img_path }}" alt="avatar user">
                     </div>
                     <div class="name-user-cmt ">
-                        <p>{{ $review->users->name }}</p>
+                        <p>{{ $user->name }}</p>
                     </div>
                     <div class="star-user-rating ">
                         @for ($i = 0; $i < $review->rate; $i++)
@@ -114,6 +167,7 @@
                 </div>
                 <hr> --}}
             </div>
+            @endforeach
         @endforeach
     </div>
     <div class="row">
