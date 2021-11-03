@@ -8,13 +8,13 @@
                     </p>
                 </div>
             </a>
-            <button class="navbar-toggler btn-menu" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false">
+            <button class="navbar-toggler btn-menu" type="button" data-toggle="collapse" data-target="#navarNav"
+                aria-controls="navBarNav" aria-expanded="false">
                 <span class="navbar-toggler-icon" id="showHeader"></span>
                 <span class="my-1 mx-1 close fa
                     fa-times" id="hideHeader"></span>
             </button>
-            <div class="collapse navbar-collapse navbar-menu-div" id="navbarNav">
+            <div class="collapse navbar-collapse navbar-menu-div" id="navBarNav">
                 <ul class="navbar-nav nav list-group" role="tablist">
                     <li class="nav-item item-menu">
                         <a class="nav-link text-center {{Route::is('home') ? 'active': ''}} " role="tab"  aria-selected="true"
@@ -34,7 +34,7 @@
                     </li>
                     @if (!Auth::check())
                         <li class="nav-item item-menu">
-                            <a class="nav-link text-center" role="tab" data-bs-toggle="modal" id="btn-regis-login"
+                            <a class="nav-link text-center" role="tab" data-bs-toggle="modal" id="btnRegisLogin"
                                 data-bs-target="#loginModal" href="#">LOGIN/REGISTER
                             </a>
                         </li>

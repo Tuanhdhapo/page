@@ -1,0 +1,163 @@
+@media only screen and (max-width: 1950px) {
+  .header {
+    padding: 5px;
+
+    .containerr {
+      width: 85%;
+      margin: auto;
+    }
+
+    .list-courses {
+      display: none;
+    }
+    .navbar {
+      padding: 0px;
+
+      img {
+        width: 320px;
+      }
+
+      .navbar-menu-div {
+        justify-content: flex-end;
+      }
+
+      .nav-link {
+        font-weight: 700;
+        font-family: san;
+        font-size: 14px;
+        color: $footer-bg;
+        width: 132px;
+        margin-left: 10px;
+        padding: 10px;
+        margin-top: -9px;
+      }
+      .active {
+        background-color: $color-blue;
+        color: $color-button !important;
+        border-radius: 20px;
+        padding: 8px;
+      }
+
+      .nav-link:hover {
+        background-color: $color-blue;
+        border-radius: 20px;
+        color: $color-button !important;
+        padding: 8px;
+      }
+    }
+  }
+
+  .fix-fixed {
+    margin-top: 0px;
+  }
+
+  .alert-danger {
+    margin-top: -20px;
+    background-color: $color-button;
+  }
+}
+
+@media only screen and (max-width: 995px) {
+  .header {
+    .btn-menu {
+      box-shadow: none !important;
+      border: none;
+    }
+
+    button {
+      margin-left: -25px;
+    }
+
+    .navbar-toggler-icon {
+      width: 25px;
+    }
+
+    .navbar {
+      display: block;
+
+      img {
+        width: 300px;
+        margin-left: auto;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+
+    .navbar-nav {
+      margin: auto;
+      margin-top: -30px;
+
+      a {
+        color: red;
+      }
+
+      li {
+        margin-left: 10px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  .header {
+    z-index: 100;
+    width: 100vw;
+    background-color: $color-button;
+    position: fixed;
+
+    .navbar {
+      .active {
+        color: $color-blue !important;
+        background-color: $color-button;
+
+        li {
+          text-align: center;
+          margin: auto;
+        }
+      }
+
+      .navbar-nav {
+        height: 750px;
+        .nav-link {
+          text-align: center;
+          margin-left: 60px;
+          font-family: san;
+          font-size: 16px;
+          margin-top: 15px;
+          width: 150px;
+        }
+      }
+
+      .active:hover {
+        color: $color-blue;
+      }
+    }
+
+    .list-courses {
+      display: block;
+    }
+
+    .close {
+      display: none;
+    }
+
+    .navbar-brand {
+      position: absolute;
+      top: -5px;
+      left: 25%;
+      width: 150px;
+      text-align: center;
+
+      .img-logo img {
+        width: 200px;
+      }
+    }
+
+    .navbar-menu-div {
+      margin: 40px;
+    }
+  }
+}

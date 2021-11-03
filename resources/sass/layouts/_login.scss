@@ -1,0 +1,261 @@
+@media only screen and (max-width: 1950px) {
+.frame-login {
+    display: none;
+  }
+.frame-loginn {
+    position: fixed;
+    margin-top: -130px;
+    margin-left: 40px;
+  }
+
+  .login-register {
+    padding: 0px;
+    margin: 0px;
+    width: 430px;
+    height: 640px;
+    position: relative;
+  }
+
+  .tabs {
+    .button-close {
+      border-radius: 100%;
+      border: none;
+      padding: 0px;
+      margin-left: 95%;
+      margin-top: -17px;
+      position: absolute;
+      width: 40px;
+    }
+    .rememberme {
+      margin-left: 10px;
+      font-size: 18px !important;
+      font-weight: normal;
+    }
+    .rememberme:hover {
+      cursor: pointer;
+    }
+
+    ul {
+      padding: 0px;
+      display: flex;
+    }
+
+    li {
+      list-style: none;
+      margin: auto;
+      width: 50%;
+      height: 70px;
+
+      a {
+        text-decoration: none;
+        color: $color-blue;
+      }
+
+      p {
+        text-align: center;
+        border-bottom: 1px solid $color-blue;
+      }
+    }
+
+    .login {
+      p {
+        padding: 20px;
+        font-size: 25px;
+        font-weight: 700;
+        font-family: utm;
+      }
+    }
+
+    .img-fb {
+      width: 15px;
+      margin-top: -2px;
+    }
+    .img-gg {
+      margin-top: -4px;
+    }
+    .register {
+      p {
+        padding: 20px;
+        font-size: 25px;
+        font-weight: 700;
+        font-family: utm;
+      }
+    }
+
+    .tabs-container {
+      width: 90%;
+
+      label {
+        font-size: 20px;
+        font-family: utm;
+        font-style: bold;
+        color: $footer-bg;
+        font-weight: 700;
+      }
+
+      .form-check-input {
+        height: 23px;
+        width: 23px;
+        float: left;
+        margin-top: 5px;
+      }
+
+      .form-check-input:checked {
+        background-color: $color-blue;
+        padding: 0px;
+        border: none;
+      }
+
+      .check-box:hover {
+        background-color: $color-blue;
+      }
+
+      input {
+        width: 100%;
+        height: 50px;
+        background-color: $bg-input;
+        border: none;
+        margin-bottom: 20px;
+      }
+
+      .user-input {
+        margin-top: -20px;
+      }
+      .login-check {
+        margin: auto;
+      }
+
+      .form-check-label a {
+        text-decoration: none;
+        color: $footer-bg;
+        cursor: pointer;
+      }
+
+      .form-check-label a:hover {
+        color: $message;
+      }
+
+      .forgot {
+        margin-left: 70px;
+        color: $color-blue;
+        font-size: 18px;
+        font-weight: normal;
+      }
+
+      .forgot:hover {
+        color: $message;
+      }
+
+      .login-hapo {
+        margin-left: -30px;
+        width: 200px;
+        background-color: $color-blue;
+        border-radius: 22px;
+        margin-top: 20px;
+        border: $color-blue;
+        font-weight: 700;
+        font-size: 18px;
+        font-family: utm;
+        padding: 8px;
+        box-shadow: 1px -2px 1px 1px $login-mess;
+      }
+
+      .login-registers {
+        margin-left: 0px;
+      }
+
+      .login-hapo:hover {
+        background-color: $message;
+      }
+
+      .login-with {
+        font-style: bold;
+        font-size: 20px;
+        font-family: utm;
+        font-weight: 700;
+        margin: 0px;
+        padding: 2px;
+        background-color: $color-button;
+      }
+
+      .line-login {
+        border-bottom: 1px solid $login-with;
+        text-align: center;
+        line-height: 0.1em;
+        margin-top: 30px;
+        width: 429px;
+        margin-left: -33px;
+      }
+
+      .facebook {
+        width: 100%;
+        margin-top: 10px;
+        background-color: $google-color;
+        height: 55px;
+        border: none;
+      }
+
+      .facebook:hover {
+        background-color: $red;
+      }
+
+      .google {
+        width: 100%;
+        background-color: $fb-color;
+        height: 55px;
+        border: none;
+        margin-top: -90px;
+      }
+
+      .google:hover {
+        background-color: $blue;
+      }
+    }
+  }
+
+  .active-tab {
+    background-color: $color-blue;
+    color: $color-button;
+  }
+}
+
+@media only screen and (max-width: 765px) {
+.frame-loginn {
+    margin-top: 50px;
+    margin-left: 0px;
+    width: 400px;
+  }
+
+  .login-register {
+    padding: 0px;
+    margin: 0px;
+    width: 382px;
+    height: 600px;
+  }
+
+  .line-login {
+    width: 381px !important;
+    margin-left: -30px !important;
+  }
+
+  .tabs .tabs-container input {
+    height: 40px;
+  }
+  .tabs .tabs-container label {
+    font-size: 18px;
+
+    .forgot {
+      margin-left: 24px;
+    }
+  }
+  .tabs .tabs-container .login-hapo {
+    height: 35px;
+    padding: 0px;
+  }
+  .tabs .tabs-container .facebook {
+    height: 45px;
+  }
+  .tabs .tabs-container .google {
+    height: 45px;
+  }
+}

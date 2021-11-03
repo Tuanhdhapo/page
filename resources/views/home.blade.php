@@ -8,7 +8,7 @@
         <div class="frame-mess">
             <div class="frame-hapo">
                 <p>HapoLearn</p>
-                <img id="close-mess" src="{{ asset('images/close-mess.png') }}">
+                <img id="closeMess" src="{{ asset('images/close-mess.png') }}">
             </div>
             <div class="hello">
                 <img src="{{ asset('images/cu.png') }}">

@@ -1,4 +1,4 @@
-<div id="tabs-login"><br>
+<div id="tabsLogin"><br>
     <form class="login" method="POST" action="{{ route('login') }}">
         @csrf
         <div class="input">

@@ -121,10 +121,10 @@
             <p>Leave a Review</p>
         </div>
         <div class="col-lg-12 input-review-container">
-            <form id="form-review">
+            <form id="formReview">
                 @csrf
                 <label class="label-input-review" for="input-review-course">Message</label>
-                <textarea name="review" id="input-review-course" class="form-control" rows="10"></textarea>
+                <textarea name="review" id="inputReviewCourse" class="form-control" rows="10"></textarea>
                 <div class="m-0 d-flex">
                     <div class="align-self-center vote-txt">
                         <p>Vote</p>
@@ -152,11 +152,11 @@
                  <div class="col-lg-9 text-right align-self-center">
                         <span class="err-review">Bạn cần điền đầy đủ trước khi gửi !</span>
                     </div>
-                <input type="hidden" name="courseId" id="course-id" value="{{ $course->id }}">
+                <input type="hidden" name="courseId" id="courseId" value="{{ $course->id }}">
                 <input type="hidden" name="lessonId" id="lesson-id" value="">
-                <input type="hidden" name="userId" id="user-id" @if (Auth::check()) value="{{ Auth::user()->id }} @endif ">
+                <input type="hidden" name="userId" id="userId" @if (Auth::check()) value="{{ Auth::user()->id }} @endif ">
                 <div class="  row m-0 btn-send-review justify-content-end">
-                    <input type="submit" id="btn-send-review" value="Send">
+                    <input type="submit" id="btnSendReview" value="Send">
                 </div>
             </form>
         </div>
