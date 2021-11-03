@@ -140,13 +140,6 @@ class Course extends Model
         ->get();
     }
 
-    public function scopeTagsCourse($query, $course)
-    {
-        $query->leftJoin('tag_courses', 'courses.id', 'tag_courses.course_id')
-            ->leftJoin('tags', 'tag_courses.tag_id', 'tags.id')
-            ->where('tag_courses.course_id', $course);
-    }
-
     public function scopeInforLessons($query, $course)
     {
         $query->join('lessons', 'courses.id', '=', 'lessons.course_id')
