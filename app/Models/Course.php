@@ -70,7 +70,7 @@ class Course extends Model
 
     public function getOtherCoursesAttribute()
     {
-        return $this->where('id', '!=', $this->id)->limit(5)->get();
+        return $this->where('id', '<>', $this->id)->limit(5)->get();
     }
     public function getCheckJoinedCourseAttribute()
     {

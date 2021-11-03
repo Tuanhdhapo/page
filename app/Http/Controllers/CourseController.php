@@ -55,19 +55,16 @@ class CourseController extends Controller
         return view('courses.show', compact('course', 'lessons', 'learnedPart', 'totalDocuments'));
     }
 
-    public function join($id)
+    public function join(Course $course)
     {
-        $course = Course::find($id);
-        $course->users()->attach(Auth::user()->id);
-
+        $course->users()->attach(Auth::user());
         return back();
     }
 
-    public function leave($id)
+    public function leave(Course $course)
     {
-        $course = Course::find($id);
-        $course->users()->detach(Auth::user()->id);
+        $course->users()->detach(Auth::user());
 
-        return redirect()->route('courses');
+        return redirect()->route('courses.show',[$course]);
     }
 }

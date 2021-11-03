@@ -71,11 +71,11 @@
                             </div>
                         </div>
                         <hr>
-                        {{-- <div class="row row-detail">
+                        <div class="row row-detail">
                             <div class="col-lg 12 btn-leave-course">
-                                <a href="{{ route('courses.leave', $course->id) }}">Leave the course</a>
+                                <a href="{{ route('courses.leave', $course) }}">Leave the course</a>
                             </div>
-                        </div> --}}
+                        </div>
                     </div>
                 </div>
             </div>
