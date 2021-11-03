@@ -41,8 +41,9 @@
                     <div class="lessons-teacher-reiews-container">
                         <div class="tab-content">
                             <div id="lessons" class="tab-pane fade show active" role="tabpanel">
-                                @include('courses.tab_lessons', [$lessons, $course,$learnedPart,
-                                $totalDocuments])
+                                {{-- @include('courses.tab_lessons', [ $course,$learnedPart,
+                                $totalDocuments]) --}}
+                                 @include('courses.tab_lessons', [ $course,$lessons])
                             </div>
                             <div id="teacher" class="tab-pane fade " role="tabpanel">
                                 @include('courses.tab_teacher')

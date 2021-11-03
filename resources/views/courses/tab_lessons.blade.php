@@ -24,8 +24,8 @@
                     <p class="txt-title-lessons">{{ $key + 1 }}. {{ $lesson->title }}</p>
                 </div>
                 <div class="col-lg-4 pl-0 btn-more-lessons">
-                    @if (Auth::check() && $course->check_joined_course == true)
-                        @if ($totalDocuments->count() > 0)
+                    @if (Auth::check() && $course->check_joined_course)
+                        {{-- @if ($totalDocuments->count() > 0)
                             @if ($totalDocuments[0]->lesson_id == $lesson->id)
                                 @if ($learnedPart == 0)
                                     <a href="{{ route('course.lessons.show',  ['course' => $course->id, 'lesson' => $lesson->id]) }}">Learn</a>
@@ -39,8 +39,13 @@
                             @else
                                 <a href="{{ route('course.lessons.show',  ['course' => $course->id, 'lesson' => $lesson->id]) }}">Learn</a>
                             @endif
+                        @else --}}
+                        {{-- <a href="{{ route('course.lessons.show',  [$course,$lesson]) }}" onsubmit="return false">Learn</a> --}}
+                        {{-- @endif --}}
+                        @if ($lesson->check_joined_lesson)
+                            <a href="{{ route('course.lessons.show',  [$course,$lesson]) }}">Learn</a>
                         @else
-                        <a href="{{ route('course.lessons.show',  ['course' => $course->id, 'lesson' => $lesson->id]) }}" onsubmit="return false">Learn</a>
+                            <a href="{{ route('lessons.join', $lesson) }}">Learning</a>
                         @endif
                     @endif
                 </div>

@@ -37,22 +37,24 @@ class CourseController extends Controller
  
     public function show(Request $request, Course $course)
     {
-        $lessons = Course::inforLessons($course)->paginate(config('constants.pagination_lessons'));
-        $totalDocuments = Lesson::documentsOfLesson($lessons->first())->get();
+        $lessons = $course->lessons()->paginate(config('constants.pagination'));
+
+        // $totalDocuments = Lesson::documentsOfLesson($lessons->first())->get();
         
-        if (Auth::check()) {
-            $documentsLearned = Document::documentLearned($lessons->first())->get();
-        } else {
-            $documentsLearned = 0;
-        }
+        // if (Auth::check()) {
+        //     $documentsLearned = Document::documentLearned($lessons->first())->get();
+        // } else {
+        //     $documentsLearned = 0;
+        // }
 
-        if (Auth::check() && $documentsLearned->count() != 0 && $totalDocuments->count() != 0) {
-            $learnedPart = $documentsLearned->count() / $totalDocuments->count();
-        } else {
-            $learnedPart = 0;
-        }
+        // if (Auth::check() && $documentsLearned->count() != 0 && $totalDocuments->count() != 0) {
+        //     $learnedPart = $documentsLearned->count() / $totalDocuments->count();
+        // } else {
+        //     $learnedPart = 0; 
+        // }
 
-        return view('courses.show', compact('course', 'lessons', 'learnedPart', 'totalDocuments'));
+        // return view('courses.show', compact('course',  'learnedPart', 'totalDocuments'));
+        return view('courses.show', compact('course','lessons'));
     }
 
     public function join(Course $course)

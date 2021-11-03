@@ -15,5 +15,11 @@ class LessonController extends Controller
     public function show(Course $course,Lesson $lesson)
     {
         return view('lessons.index',compact('course','lesson'));
-    }  
+    }
+
+    public function join(Lesson $lesson)
+    {
+        $lesson->users()->attach(Auth::user());
+       return redirect()->route('lessons.show',[$lesson]);
+    }
 }

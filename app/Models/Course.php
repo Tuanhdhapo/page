@@ -48,6 +48,12 @@ class Course extends Model
         return $this->lessons()->count();
     }
 
+    public function getLessonsAttribute()
+    {
+        return $this->lessons()->get();
+    }
+
+
     public function getCourseTimeAttribute()
     {
         return $this->lessons()->sum('time');
@@ -152,12 +158,12 @@ class Course extends Model
     //         ->where('tag_courses.course_id', $course);
     // }
 
-    public function scopeInforLessons($query, $course)
-    {
-        $query->join('lessons', 'courses.id', '=', 'lessons.course_id')
-            ->select('lessons.*')
-            ->where('lessons.course_id', '=', $course);
-    }
+    // public function scopeInforLessons($query, $course)
+    // {
+    //     $query->join('lessons', 'courses.id', '=', 'lessons.course_id')
+    //         ->select('lessons.*')
+    //         ->where('lessons.course_id', '=', $course);
+    // }
 
 
     public function scopeMainCourse($query)

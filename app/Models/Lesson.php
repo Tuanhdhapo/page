@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Auth;
 
 class Lesson extends Model
 {
@@ -30,14 +31,24 @@ class Lesson extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'user_lessons', 'user_id', 'lesson_id');
+        return $this->belongsToMany(User::class, 'user_lessons', 'lesson_id', 'user_id');
     }
 
-    public function scopeCourseOfLesson($query, $id)
+     public function getCheckJoinedLessonAttribute()
     {
-        $query->leftJoin('courses', 'lessons.course_id', 'courses.id')
-           ->where('lessons.id', $id)
-           ->select('courses.*');
+        return $this->users->contains(Auth::user()->id ?? null);
+    }
+
+    // public function scopeCourseOfLesson($query, $id)
+    // {
+    //     $query->leftJoin('courses', 'lessons.course_id', 'courses.id')
+    //        ->where('lessons.id', $id)
+    //        ->select('courses.*');
+    // }
+
+    public function getJoinAttribute()
+    {
+        return $this->users->contains(Auth::user()->id ?? null);
     }
 
     public function scopeSearch($query, $data)
