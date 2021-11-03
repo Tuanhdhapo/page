@@ -48,7 +48,7 @@
                                 @include('courses.tab_teacher')
                             </div>
                             <div id="reviews" class="tab-pane ">
-                                @include('courses.tab_review', [$course ,$totalRate])
+                                @include('courses.tab_review', [$course])
                             </div>
                         </div>
                     </div>

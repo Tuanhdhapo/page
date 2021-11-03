@@ -39,7 +39,7 @@ class Course extends Model
 
     public function feedback()
     {
-        return $this->hasMany(Feedback::class);
+        return $this->hasMany(Feedback::class, 'course_id');
     }
 
     
@@ -126,36 +126,18 @@ class Course extends Model
             ($data['review'] == config('constants.options.ascending')) ? $query->orderBy('rate') : $query->orderByDesc('rate');
         }
     }
-
     
     public function getreviewsAttribute()
     {
         return $this->feedback()->count();
     }
 
-    public function getOneStarAttribute()
+    public function getNumberRateAttribute()
     {
-        return $this->feedback()->where('rate', '=', 1)->count();
-    }
-
-    public function getTwoStarAttribute()
-    {
-        return $this->feedback()->where('rate', '=', 2)->count();
-    }
-
-    public function getThreeStarAttribute()
-    {
-        return $this->feedback()->where('rate', '=', 3)->count();
-    }
-
-    public function getFourStarAttribute()
-    {
-        return $this->feedback()->where('rate', '=', 4)->count();
-    }
-
-    public function getFiveStarAttribute()
-    {
-        return $this->feedback()->where('rate', '=', 5)->count();
+        return $this->feedback()
+        ->selectRaw('count(*) as total, rate')
+        ->groupBy('rate')
+        ->get();
     }
 
     public function scopeTagsCourse($query, $course)
