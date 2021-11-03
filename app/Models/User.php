@@ -58,7 +58,7 @@ class User extends Authenticatable
 
     public function courses()
     {
-        return $this->belongsToMany(Course::class, 'user_courses', 'lesson_id', 'user_id');
+        return $this->belongsToMany(Course::class, 'user_courses', 'user_id', 'course_id');
     }
 
     public function lessons()
@@ -75,17 +75,7 @@ class User extends Authenticatable
     {
         $query->where('role', User::ROLE['student']);
     }
-
-    public function scopeCourseAttended($query)
-    {
-        $query->join('user_courses', 'users.id', 'user_courses.user_id')
-            ->join('courses', 'user_courses.course_id', 'courses.id')
-            ->where('users.id', '=', Auth::user()->id)
-            ->limit(5)
-            ->orderByDesc('course_id')
-            ->get('courses.*');
-    }
-
+    
     public function replyReviews()
     {
         return $this->hasMany(ReplyReview::class, 'user_id');
