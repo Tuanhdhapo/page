@@ -3,7 +3,7 @@
         <div class="col-lg-12 title-documents">
             <p>Program</p>
         </div>
-        @foreach ($documents as $item)
+        @foreach ($lesson->documents as $item)
         <div class="col-lg-12">
             <hr>
             <div class="row">
@@ -22,11 +22,11 @@
                 <div class="col-lg-8 button-preview-container text-right align-self-center">
                     <a href="{{ url('view', $item->id) }}" data-id="{{ $item->id }}" class="btn-preview"
                         target="_blank" rel="noopener norefer">
-                        @foreach ($documentsLearned as $dcm)
+                        {{-- @foreach ($documentsLearned as $dcm)
                         @if ($dcm->document_id == $item->id)
                             Learned
                         @endif
-                        @endforeach
+                        @endforeach --}}
                     </a>
                 </div>
             </div>

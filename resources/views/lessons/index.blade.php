@@ -31,7 +31,7 @@
                                 <p>Learners :</p>
                             </div>
                             <div class="col-lg-5 pl-0  col-txt col-txt-main">
-                                <p>{{ $numberStudent->numberUserStudent }}</p>
+                                <p>{{ $course->number_user_student }}</p>
                             </div>
                         </div>
                         <hr>
@@ -43,7 +43,7 @@
                                 <p>Times :</p>
                             </div>
                             <div class="col-lg-5 pl-0  col-txt col-txt-main">
-                                <p>{{ $numberStudent->courseTime }} h</p>
+                                <p>{{ $course->course_time   }} h</p>
                             </div>
                         </div>
                         <hr>
@@ -55,7 +55,7 @@
                                 <p>Tags :</p>
                             </div>
                             <div class="col-lg-7 pl-0  col-txt col-txt-main">
-                                <p class="course-tags">@foreach ($tags as $tag) {{ $tag->content }} @endforeach</p>
+                                <p class="course-tags">@foreach ($course->tags as $tag) {{ $tag->content }} @endforeach</p>
                             </div> 
                         </div>
                         <hr>
@@ -71,11 +71,11 @@
                             </div>
                         </div>
                         <hr>
-                        <div class="row row-detail">
+                        {{-- <div class="row row-detail">
                             <div class="col-lg 12 btn-leave-course">
                                 <a href="{{ route('courses.leave', $course->id) }}">Leave the course</a>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -101,16 +101,16 @@
                     <div class="lessons-teacher-reiews-container">
                         <div class="tab-content">
                             <div id="descriptions" class="tab-pane active">
-                                @include('lessons._lesson_infor', [$lessons, $tags])
+                                @include('lessons._lesson_infor',$lesson)
                             </div>
                             <div id="teacher" class="tab-pane">
-                                @include('courses.tab_teacher',$mentors)
+                                @include('courses.tab_teacher')
                             </div>
                             <div id="documents" class="tab-pane">
-                                @include('lessons._document', $documents)
+                                @include('lessons._document',$lesson)
                             </div>
                             <div id="reviews" class="tab-pane">
-                                 @include('courses.tab_review', [$course, $reviews, $totalRate, $avgRating])
+                                 @include('courses.tab_review', [$course])
                             </div>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                         <div class="txt-show-other-courses">
                             <p>Other Courses</p>
                         </div>
-                        @foreach ($course->other_course as $key => $item)
+                        @foreach ($course->show_other_courses as $key => $item)
                             <div class="show-other-courses">
                                 <p>{{ $key + 1 }}. {{ $item->title }}</p>
                             </div>

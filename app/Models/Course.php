@@ -77,6 +77,11 @@ class Course extends Model
         return $this->users()->where('user_id', Auth::id())->first();
     }
 
+    public function getTagsAttribute()
+    {
+        return $this->tags()->get();
+    }
+
     public function scopefilter($query, $data)
     {
         if (isset($data['search_form_input'])) {
@@ -140,6 +145,13 @@ class Course extends Model
         ->get();
     }
 
+    // public function scopeTagsCourse($query, $course)
+    // {
+    //     $query->leftJoin('tag_courses', 'courses.id', 'tag_courses.course_id')
+    //         ->leftJoin('tags', 'tag_courses.tag_id', 'tags.id')
+    //         ->where('tag_courses.course_id', $course);
+    // }
+
     public function scopeInforLessons($query, $course)
     {
         $query->join('lessons', 'courses.id', '=', 'lessons.course_id')
@@ -161,8 +173,8 @@ class Course extends Model
         $query->orderByDesc('id')->limit(3);
     }
 
-    public function scopeShowOtherCourses($query, $courseId)
+     public function getShowOtherCoursesAttribute()
     {
-        $query->where('id', '<>', $courseId)->limit(5);
+        return $this->where('id', '<>', $this->id)->limit(5)->get();
     }
 }

@@ -33,7 +33,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/{course}/join', [CourseController::class, 'join'])->name('courses.join');
         Route::get('/{course}/leave', [CourseController::class, 'leave'])->name('courses.leave');
     });
-    Route::resource('/lessons', LessonController::class)->only(['show']);
+    Route::resource('course.lessons', LessonController::class)->only(['show']);
     Route::resource('/reviews', ReviewController::class)->only(['store']);
     Route::resource('/documents', DocumentController::class)->only(['show']);
 });

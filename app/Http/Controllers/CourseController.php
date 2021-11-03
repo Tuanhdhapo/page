@@ -34,7 +34,6 @@ class CourseController extends Controller
         $courses = Course::filter($data)->paginate(config('constants.pagination'));
         return view('courses.index', compact('courses', 'mentors', 'tags', 'keyword'));
     }
-
  
     public function show(Request $request, Course $course)
     {

@@ -20,7 +20,7 @@ class Lesson extends Model
 
     public function courses()
     {
-        return $this->belongsTo(Course::class);
+        return $this->belongsTo(Course::class,'course_id');
     }
 
     public function feedback()
@@ -49,7 +49,7 @@ class Lesson extends Model
 
     public function documents()
     {
-        return $this->hasMany(Document::class, 'course_id');
+        return $this->hasMany(Document::class, 'lesson_id');
     }
 
     public function scopeDocumentsOfLesson($query, $id)

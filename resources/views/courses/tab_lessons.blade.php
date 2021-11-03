@@ -28,19 +28,19 @@
                         @if ($totalDocuments->count() > 0)
                             @if ($totalDocuments[0]->lesson_id == $lesson->id)
                                 @if ($learnedPart == 0)
-                                    <a href="{{ route('lessons.show',  $lesson->id) }}">Learn</a>
+                                    <a href="{{ route('course.lessons.show',  ['course' => $course->id, 'lesson' => $lesson->id]) }}">Learn</a>
                                 @elseif ($learnedPart > 0 && $learnedPart < 1) 
                                     <i class="fas fa-check-circle icon-check-learning"></i>
-                                    <a href="{{ route('lessons.show',  $lesson->id) }}">Learning</a>
+                                    <a href="{{ route('course.lessons.show',  ['course' => $course->id, 'lesson' => $lesson->id]) }}">Learning</a>
                                 @elseif ($learnedPart == 1)
                                     <i class="fas fa-check-circle icon-check-learned"></i>
-                                    <a href="{{ route('lessons.show',  $lesson->id) }}">Learned</a>
+                                    <a href="{{ route('course.lessons.show',  ['course' => $course->id, 'lesson' => $lesson->id]) }}">Learned</a>
                                 @endif
                             @else
-                                <a href="{{ route('lessons.show',  $lesson->id) }}">Learn</a>
+                                <a href="{{ route('course.lessons.show',  ['course' => $course->id, 'lesson' => $lesson->id]) }}">Learn</a>
                             @endif
                         @else
-                        <a href="{{ route('lessons.show',  $lesson->id) }}" onsubmit="return false">Learn</a>
+                        <a href="{{ route('course.lessons.show',  ['course' => $course->id, 'lesson' => $lesson->id]) }}" onsubmit="return false">Learn</a>
                         @endif
                     @endif
                 </div>
