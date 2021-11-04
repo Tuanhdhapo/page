@@ -26,11 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $courses = Course::orderByDesc('id')->limit(3)->get();
-        $otherCourses = Course::orderBy('id')->limit(3)->get();
-        $totalUsers = User::all()->count();
-        $totalCourses = Course::all()->count();
-        $totalLessons = Lesson::all()->count();
+        $totalUsers = User::where('role', config('constants.role.student'))->count();
+        $totalCourses = Course::count();
+        $totalLessons = Lesson::count();
+        $courses = Course::HomeOtherCourse()->get();
+        $otherCourses = Course::HomeOtherCOurse()->get();
 
         return view('home', compact('courses', 'otherCourses', 'totalUsers', 'totalCourses', 'totalLessons'));
     }

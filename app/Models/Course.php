@@ -62,14 +62,9 @@ class Course extends Model
         return $this->users()->where('role', config('constants.role.teacher'))->get();
     }
 
-    public function getAvgRatingAttribute()
-    {
-        return ceil($this->feedback()->avg('rate'));
-    }
-
     public function getOtherCoursesAttribute()
     {
-        return $this->where('id', '<>', $this->id)->limit(5)->get();
+        return $this->where('id', '<>', $this->id)->limit(config('constants.showcourse.othercourse'))->get();
     }
     
     public function getCheckJoinedCourseAttribute()
@@ -80,11 +75,6 @@ class Course extends Model
     public function getTagsAttribute()
     {
         return $this->tags()->get();
-    }
-
-    public function getShowOtherCoursesAttribute()
-    {
-        return $this->where('id', '<>', $this->id)->limit(5)->get();
     }
 
     public function scopefilter($query, $data)
@@ -148,5 +138,15 @@ class Course extends Model
         ->selectRaw('count(*) as total, rate')
         ->groupBy('rate')
         ->get();
+    }
+
+    public function getAvgRatingAttribute()
+    {
+        return ceil($this->feedback()->avg('rate'));
+    }
+    
+    public function scopeHomeOtherCourse($query)
+    {
+       $query->inRandomOrder()->limit(config('constants.showcourse.course'));
     }
 }

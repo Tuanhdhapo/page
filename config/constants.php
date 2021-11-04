@@ -1,6 +1,12 @@
 <?php
 
 return [
+
+    'showcourse' => [
+        'course' => 3,
+        'othercourse' => 5,
+    ],
+    
     'pagination' => 10,
 
     'role' => [

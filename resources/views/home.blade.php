@@ -50,18 +50,18 @@
         @foreach ($courses as $course )
             <div class="col-xl-4 col-md-4 d-flex justify-content-center">
                 <div class="card-hapo">
-                        <img src="{{ asset($course->img_path) }}" class="card-img-top" alt="hjs" />
-                        <div class="card-body">
-                            <p class="card-title text-center">
-                                {{ $course->title }}<span>Tutorial</span>
-                            </p>
-                            <p class="card-text text-center text-title">
-                               {{ $course->description }}
-                            </p>
-                            <div class="text-center take-course">
-                                <a href="#" class="btn btn-primary">Take This Course</a>
-                            </div>
+                    <img src="{{ asset($course->img_path) }}" class="card-img-top" alt="hjs" />
+                    <div class="card-body">
+                        <p class="card-title text-center">
+                            {{ $course->title }}<span>Tutorial</span>
+                        </p>
+                        <p class="card-text text-center text-title">
+                            {{ $course->description }}
+                        </p>
+                        <div class="text-center take-course">
+                            <a href="#" class="btn btn-primary">Take This Course</a>
                         </div>
+                    </div>
                 </div>
             </div>
         @endforeach
