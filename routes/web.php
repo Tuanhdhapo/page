@@ -34,7 +34,6 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/{course}/leave', [CourseController::class, 'leave'])->name('courses.leave');
     });
     Route::resource('course.lessons', LessonController::class)->only(['show']);
-    Route::get('/{lesson}/join', [CourseController::class, 'join'])->name('lessons.join');
     Route::resource('/reviews', ReviewController::class)->only(['store']);
     Route::resource('/documents', DocumentController::class)->only(['show']);
 });

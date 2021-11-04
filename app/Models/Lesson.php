@@ -34,9 +34,9 @@ class Lesson extends Model
         return $this->belongsToMany(User::class, 'user_lessons', 'lesson_id', 'user_id');
     }
 
-     public function getCheckJoinedLessonAttribute()
+    public function getCheckJoinedLessonAttribute()
     {
-        return $this->users->contains(Auth::user()->id ?? null);
+        return $this->users()->where('user_id', Auth::id())->first();
     }
 
     // public function scopeCourseOfLesson($query, $id)

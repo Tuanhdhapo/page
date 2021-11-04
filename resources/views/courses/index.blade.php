@@ -13,8 +13,8 @@
                     </div>
                 </div>
                 <div class="search">
-                    <input class="search-input" type="search" name="search_form_input"
-                        placeholder="Search..." aria-label="Search" @if (isset($keyword)) value={{ $keyword }} @endif>
+                    <input class="search-input" type="search" name="keyword"
+                        placeholder="Search..." aria-label="Search"  value="{{ request('keyword') }}">
                     <img src="{{ asset('images/glass.png') }}" alt="glass">
                 </div>
                 <div class="search-button">

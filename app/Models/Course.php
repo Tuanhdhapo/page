@@ -42,17 +42,10 @@ class Course extends Model
         return $this->hasMany(Feedback::class, 'course_id');
     }
 
-    
     public function getNumberLessonAttribute()
     {
         return $this->lessons()->count();
     }
-
-    public function getLessonsAttribute()
-    {
-        return $this->lessons()->get();
-    }
-
 
     public function getCourseTimeAttribute()
     {
@@ -66,7 +59,7 @@ class Course extends Model
 
     public function getTeachersOfCourseAttribute()
     {
-        return $this->users()->where('users.role', User::ROLE['mentor'])->get();
+        return $this->users()->where('role', config('constants.role.teacher'))->get();
     }
 
     public function getAvgRatingAttribute()
@@ -78,6 +71,7 @@ class Course extends Model
     {
         return $this->where('id', '<>', $this->id)->limit(5)->get();
     }
+    
     public function getCheckJoinedCourseAttribute()
     {
         return $this->users()->where('user_id', Auth::id())->first();
@@ -86,6 +80,11 @@ class Course extends Model
     public function getTagsAttribute()
     {
         return $this->tags()->get();
+    }
+
+    public function getShowOtherCoursesAttribute()
+    {
+        return $this->where('id', '<>', $this->id)->limit(5)->get();
     }
 
     public function scopefilter($query, $data)
@@ -149,38 +148,5 @@ class Course extends Model
         ->selectRaw('count(*) as total, rate')
         ->groupBy('rate')
         ->get();
-    }
-
-    // public function scopeTagsCourse($query, $course)
-    // {
-    //     $query->leftJoin('tag_courses', 'courses.id', 'tag_courses.course_id')
-    //         ->leftJoin('tags', 'tag_courses.tag_id', 'tags.id')
-    //         ->where('tag_courses.course_id', $course);
-    // }
-
-    // public function scopeInforLessons($query, $course)
-    // {
-    //     $query->join('lessons', 'courses.id', '=', 'lessons.course_id')
-    //         ->select('lessons.*')
-    //         ->where('lessons.course_id', '=', $course);
-    // }
-
-
-    public function scopeMainCourse($query)
-    {
-        $query->withCount(['users' => function ($subquery) {
-            $subquery->where('role', config('constants.role.student'));
-        }
-        ])->orderByDesc('users_count')->limit(3);
-    }
-
-    public function scopeOtherCourse($query)
-    {
-        $query->orderByDesc('id')->limit(3);
-    }
-
-     public function getShowOtherCoursesAttribute()
-    {
-        return $this->where('id', '<>', $this->id)->limit(5)->get();
     }
 }

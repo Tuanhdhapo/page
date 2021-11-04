@@ -10,6 +10,8 @@ namespace App\Http\Controllers;
     use App\Models\Document;
     use Illuminate\Support\Facades\Auth;
 
+use function PHPUnit\Framework\returnSelf;
+
 class LessonController extends Controller
 {
     public function show(Course $course,Lesson $lesson)
@@ -17,9 +19,10 @@ class LessonController extends Controller
         return view('lessons.index',compact('course','lesson'));
     }
 
-    public function join(Lesson $lesson)
+    public function join(Lesson $lesson,Course $course)
     {
         $lesson->users()->attach(Auth::user());
-       return redirect()->route('lessons.show',[$lesson]);
+    //    return redirect()->route('course.lessons.show',  [$course,$lesson]);
+       return view('home');
     }
 }
