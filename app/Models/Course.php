@@ -79,9 +79,9 @@ class Course extends Model
 
     public function scopefilter($query, $data)
     {
-        if (isset($data['search_form_input'])) {
-            $query->where('title', 'like', '%' . $data['search_form_input'] . '%')
-                ->orWhere('description', 'like', '%' . $data['search_form_input'] . '%');
+        if (isset($data['keyword'])) {
+            $query->where('title', 'like', '%' . $data['keyword'] . '%')
+                ->orWhere('description', 'like', '%' . $data['keyword'] . '%');
         }
         
         if (isset($data['sort'])) {
