@@ -24,17 +24,4 @@ class CourseController extends Controller
         $lessons = $course->lessons()->paginate(config('constants.pagination'));
         return view('courses.show', compact('course','lessons'));
     }
-
-    public function join(Course $course)
-    {
-        $course->users()->attach(Auth::user());
-        return back();
-    }
-
-    public function leave(Course $course)
-    {
-        $course->users()->detach(Auth::user());
-
-        return redirect()->route('courses.show',[$course]);
-    }
 }

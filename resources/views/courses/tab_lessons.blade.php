@@ -12,7 +12,11 @@
         @if (Auth::check() && $course->check_joined_course == true)
             <a href="#" class="btn-join-course" id="btn-joined-course">Joined the course</a>
         @else
-            <a href="{{ route('courses.join', $course) }}" class="btn-join-course" id="btn-join-course">Join the course</a>
+            <form action="{{ route('course-users.store') }}" method="POST">
+                @csrf
+                    <input class="d-none" type="text" name="course_id" value="{{ $course->id }}">
+                    <button type="submit" class="btn-join-course" id="btn-join-course">Join the course</button>
+            </form>
         @endif
     </div>
 </div>

@@ -73,7 +73,11 @@
                         <hr>
                         <div class="row row-detail">
                             <div class="col-lg 12 btn-leave-course">
-                                <a href="{{ route('courses.leave', $course) }}">Leave the course</a>
+                                <form action="{{route('course-users.destroy', [$course])}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit">Leave the course</button>
+                                </form>
                             </div>
                         </div>
                     </div>
