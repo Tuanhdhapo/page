@@ -11,6 +11,7 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CourseUserController;
+use App\Http\Controllers\ReplyController;
 
 /*
 |--------------------------------------------------------------------------

@@ -12,14 +12,10 @@ class UserController extends Controller
 {
     public function show()
     {
-        $users = User::students()->find(Auth::user()->id);
-        $birthday = Carbon::parse($users->birthday)->format('d/m/Y');
-        $courses = User::courseAttended()->get();
-        
-        return view('users.profile', compact('users', 'birthday', 'courses'));
+        $user = Auth::user();
+        return view('users.profile', compact('user'));
     }
   
-
     public function update(Request $request)
     {
         $data = User::find($request->fid);
@@ -58,6 +54,6 @@ class UserController extends Controller
 
         $data->save();
 
-        return redirect('user');
+        return back();
     }
 }
