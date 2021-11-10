@@ -127,7 +127,7 @@ class Course extends Model
         }
     }
     
-    public function getreviewsAttribute()
+    public function getNumberOfReviewsAttribute()
     {
         return $this->feedback()->count();
     }
@@ -147,6 +147,6 @@ class Course extends Model
     
     public function scopeHomeOtherCourse($query)
     {
-       $query->inRandomOrder()->limit(config('constants.showcourse.course'));
+        $query->inRandomOrder()->limit(config('constants.showcourse.course'));
     }
 }

@@ -28,7 +28,7 @@
                     <div class="col-lg-9 p-0 text-center align-self-center">
                         <div class="progress">
                             <div class="progress-bar bg-success" role="progressbar"
-                                style="width: {{ $course->reviews > 0 ? ($star->total / $course->reviews) * 100 : 0 }}%"
+                                style="width: {{ $course->number_of_reviews > 0 ? ($star->total / $course->number_of_reviews) * 100 : 0 }}%"
                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
