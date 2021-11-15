@@ -22,7 +22,6 @@ class LessonController extends Controller
     public function join(Lesson $lesson, Course $course)
     {
         $lesson->users()->attach(Auth::user());
-    //    return redirect()->route('course.lessons.show',  [$course,$lesson]);
         return view('home');
     }
 }
