@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Course;
+use App\Models\Feedback;
 use App\Models\User;
 use App\Models\Tag;
 
