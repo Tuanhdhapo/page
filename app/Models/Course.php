@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Auth;
-use SebastianBergmann\CodeCoverage\Report\Xml\Totals;
 
 class Course extends Model
 {
@@ -148,7 +147,7 @@ class Course extends Model
         foreach ($numbers as $number) {
             $widthrate[] = ($number->total / $reviews) * 100;
         }
-          return array_reverse($widthrate);
+        return array_reverse($widthrate);
     }
 
     public function getAvgRatingAttribute()
