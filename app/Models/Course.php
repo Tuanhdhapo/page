@@ -127,7 +127,7 @@ class Course extends Model
         }
     }
     
-    public function getreviewsAttribute()
+    public function getNumberOfReviewsAttribute()
     {
         return $this->feedback()->count();
     }
@@ -140,6 +140,16 @@ class Course extends Model
         ->get();
     }
 
+    public function getWidthReviewAttribute()
+    {
+        $numbers = $this->feedback()->selectRaw('count(*) as total, rate')->groupBy('rate')->get();
+        $reviews = $this->getNumberOfReviewsAttribute();
+        foreach ($numbers as $number) {
+            $widthrate[] = ($number->total / $reviews) * 100;
+        }
+        return array_reverse($widthrate);
+    }
+
     public function getAvgRatingAttribute()
     {
         return ceil($this->feedback()->avg('rate'));
@@ -147,6 +157,6 @@ class Course extends Model
     
     public function scopeHomeOtherCourse($query)
     {
-       $query->inRandomOrder()->limit(config('constants.showcourse.course'));
+        $query->inRandomOrder()->limit(config('constants.showcourse.course'));
     }
 }

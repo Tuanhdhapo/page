@@ -1,5 +1,15 @@
 <div class="row ml-0 mr-0 detail-lessons-container">
     <form class="row form-search-detail" method="get">
+    @if(session('success'))
+        <div class="alert alert-success text-center message-sesson">
+            <i class="mr-2 fas fa-check-circle"></i> {{ session('success') }}
+        </div>    
+    @endif
+    @if(session('error'))
+        <div class="alert alert-danger text-center message-sesson">
+            <i class="mr-2 fas fa-check-circle"></i> {{ session('error') }}
+        </div>    
+    @endif
         <div class="col-lg-8 detail-lessons">
             <input type="text" class="form-control search-lessons" name="key_detail_course" placeholder="Search"
                 aria-label="Search" @if (isset($keyword)) value={{ $keyword }} @endif>

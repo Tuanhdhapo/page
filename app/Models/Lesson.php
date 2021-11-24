@@ -21,7 +21,7 @@ class Lesson extends Model
 
     public function courses()
     {
-        return $this->belongsTo(Course::class,'course_id');
+        return $this->belongsTo(Course::class, 'course_id');
     }
 
     public function feedback()
@@ -38,13 +38,6 @@ class Lesson extends Model
     {
         return $this->users()->where('user_id', Auth::id())->first();
     }
-
-    // public function scopeCourseOfLesson($query, $id)
-    // {
-    //     $query->leftJoin('courses', 'lessons.course_id', 'courses.id')
-    //        ->where('lessons.id', $id)
-    //        ->select('courses.*');
-    // }
 
     public function getJoinAttribute()
     {

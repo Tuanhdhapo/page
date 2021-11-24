@@ -22,18 +22,17 @@
         </div>
         <div class="col-lg-8 col-star-right">
             <div  class="rating-chart-container">
-                @foreach ($course->number_rate as $star )
+                @foreach ($course->number_rate as $key=>$star)
                 <div class="row rating-chart justify-content-around">
-                    <div class="col-lg-2 pr-0 text-center align-self-center number-start">{{$star->rate}}</div>
+                    <div class="col-lg-2 pr-0 text-center align-self-center number-start">{{$key+1}}</div>
                     <div class="col-lg-9 p-0 text-center align-self-center">
                         <div class="progress">
                             <div class="progress-bar bg-success" role="progressbar"
-                                style="width: {{ $course->reviews > 0 ? ($star->total / $course->reviews) * 100 : 0 }}%"
+                                style="width: {{$course->width_review[4-$key]}}%"
                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
-                    <div class="col-lg-1 pl-0 text-center align-self-center total-star-rating">{{ $star->total }}
-                    </div>
+                    <div class="col-lg-1 pl-0 text-center align-self-center total-star-rating">{{$star->total}}</div>
                 </div>
                 @endforeach
             </div>

@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Course;
+use App\Models\Feedback;
 use App\Models\User;
 use App\Models\Tag;
-use Illuminate\Support\Facades\Auth;
 
 class CourseController extends Controller
 {
@@ -19,9 +19,9 @@ class CourseController extends Controller
         return view('courses.index', compact('courses', 'mentors', 'tags'));
     }
  
-    public function show(Request $request, Course $course)
+    public function show(Course $course)
     {
         $lessons = $course->lessons()->paginate(config('constants.pagination'));
-        return view('courses.show', compact('course','lessons'));
+        return view('courses.show', compact('course', 'lessons'));
     }
 }
